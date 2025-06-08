@@ -1,12 +1,12 @@
-import React from 'react'
-import Layout from '../Layout/Layout'
+import React from "react";
+import Layout from "../Layout/Layout";
 
 function HomePage() {
   return (
     <Layout>
-      homepage
+      <h1 className="text-3xl font-bold underline">Home Page</h1>
     </Layout>
-  )
+  );
 }
 
-export default HomePage
+export default HomePage;
