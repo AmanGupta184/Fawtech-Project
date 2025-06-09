@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "../Layout/Layout";
+import Corosuel from "../Component/Corosuel";
 
 function HomePage() {
   return (
     <Layout>
-      <h1 className="text-3xl font-bold underline">Home Page</h1>
+      <Corosuel/>
     </Layout>
   );
 }
