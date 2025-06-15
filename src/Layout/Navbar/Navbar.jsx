@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Products from '../../Pages/Products';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -18,10 +18,10 @@ const Navbar = () => {
         </div>
         {/* Navigation links on the right */}
         <div className="hidden md:flex space-x-6">
-          <a href="/" className="text-white hover:text-gray-300">Home</a>
-          <a href="/about" className="text-white hover:text-gray-300">About</a>
-          <a href="/products" className="text-white hover:text-gray-300">Products & Categories</a>
-          <a href="/contact" className="text-white hover:text-gray-300">Contact</a>
+          <Link to="/" className="text-white hover:text-gray-300">Home</Link>
+          <Link to="/about" className="text-white hover:text-gray-300">About</Link>
+          <Link to="/products" className="text-white hover:text-gray-300">Products & Categories</Link>
+          <Link to="/contact" className="text-white hover:text-gray-300">Contact</Link>
         </div>
         {/* Hamburger menu for mobile, on the right */}
         <div className="md:hidden">
@@ -45,10 +45,10 @@ const Navbar = () => {
       {/* Dropdown menu for mobile */}
       {isMenuOpen && (
         <div className="md:hidden bg-gray-700 px-4 pt-2 pb-4 space-y-2">
-          <a href="/" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">Home</a>
-          <a href="/about" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">About</a>
-          <a href="/products" className="text-white hover:text-gray-300">Products & Categories</a>
-          <a href="/contact" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">Contact</a>
+          <Link to="/" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">Home</Link>
+          <Link to="/about" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">About</Link>
+          <Link to="/products" className="block text-white hover:text-gray-300 px-2 py-1 rounded">Products & Categories</Link>
+          <Link to="/contact" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">Contact</Link>
         </div>
       )}
     </nav>
