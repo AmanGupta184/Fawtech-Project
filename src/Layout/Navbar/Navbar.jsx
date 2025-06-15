@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Products from '../../Pages/Products';
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-6">
           <a href="/" className="text-white hover:text-gray-300">Home</a>
           <a href="/about" className="text-white hover:text-gray-300">About</a>
-          <a href="/services" className="text-white hover:text-gray-300">Services</a>
+          <a href="/products" className="text-white hover:text-gray-300">Products & Categories</a>
           <a href="/contact" className="text-white hover:text-gray-300">Contact</a>
         </div>
         {/* Hamburger menu for mobile, on the right */}
@@ -46,7 +47,7 @@ const Navbar = () => {
         <div className="md:hidden bg-gray-700 px-4 pt-2 pb-4 space-y-2">
           <a href="/" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">Home</a>
           <a href="/about" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">About</a>
-          <a href="/services" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">Services</a>
+          <a href="/products" className="text-white hover:text-gray-300">Products & Categories</a>
           <a href="/contact" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">Contact</a>
         </div>
       )}
