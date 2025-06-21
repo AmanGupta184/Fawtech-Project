@@ -14,8 +14,8 @@ const Footer = () => {
             FawTech Electronics Trading LLC
           </h3>
           <p className="text-white-800 dark:text-gray-100">
-            <p>Your one-stop shop for the latest electronics</p>
-            <p>and gadgets. Stay connected with us!</p>
+            <h6>Your one-stop shop for the latest electronics</h6>
+            <h6>and gadgets. Stay connected with us!</h6>
           </p>
         </div>
           {/* Shop Categories */}
