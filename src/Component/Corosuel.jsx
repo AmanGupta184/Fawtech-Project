@@ -5,8 +5,10 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
-import Image1 from "../Assets/Images/Image1.jpg";
-import Image2 from "../Assets/Images/Image2.jpg";
+import Image1 from "../Assets/Images/img1.jpeg";
+import Image2 from "../Assets/Images/img2.jpeg";
+import Image3 from "../Assets/Images/img3.jpeg";
+import Image4 from "../Assets/Images/img4.jpeg"
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -49,7 +51,7 @@ function Corosuel() {
 
       <SwiperSlide>
         <div className="relative w-full h-full">
-          <img className="w-full h-full object-cover" src={Image1} alt="" />
+          <img className="w-full h-full object-cover" src={Image3} alt="" />
           <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-center p-2">
             Slide 3 Caption
           </div>
@@ -58,7 +60,7 @@ function Corosuel() {
 
       <SwiperSlide>
         <div className="relative w-full h-full">
-          <img className="w-full h-full object-cover" src={Image2} alt="" />
+          <img className="w-full h-full object-cover" src={Image4} alt="" />
           <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-center p-2">
             Slide 4 Caption
           </div>
