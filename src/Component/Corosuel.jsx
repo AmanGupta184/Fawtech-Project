@@ -17,7 +17,7 @@ import "swiper/css/scrollbar";
 function Corosuel() {
   return (
     <Swiper
-      className="w-full h-[60vh]"
+      className="w-full h-[60vh] z-10"
       spaceBetween={50}
       slidesPerView={1}
       modules={[Navigation, A11y, Autoplay]}
@@ -25,7 +25,7 @@ function Corosuel() {
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
+      onSlideChange={() => console.log('slide change')}
       autoplay={{
         delay: 2500,
         disableOnInteraction: false,
@@ -33,37 +33,37 @@ function Corosuel() {
     >
       <SwiperSlide>
         <div className="relative w-full h-full">
-          <img className="w-full h-full object-cover" src={Image1} alt="" />
-          <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-center p-2">
+          <img className="w-full h-full object-cover" src={Image1} alt="Slide 1" />
+          {/* <div className="absolute bottom-0 w-full bg-gray-800 dark:bg-gray-900 bg-opacity-70 text-gray-100 dark:text-gray-200 text-center p-2">
             Slide 1 Caption
-          </div>
+          </div> */}
         </div>
       </SwiperSlide>
 
       <SwiperSlide>
         <div className="relative w-full h-full">
-          <img className="w-full h-full object-cover" src={Image2} alt="" />
-          <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-center p-2">
+          <img className="w-full h-full object-cover" src={Image2} alt="Slide 2" />
+          {/* <div className="absolute bottom-0 w-full bg-gray-800 dark:bg-gray-900 bg-opacity-70 text-gray-100 dark:text-gray-200 text-center p-2">
             Slide 2 Caption
-          </div>
+          </div> */}
         </div>
       </SwiperSlide>
 
       <SwiperSlide>
         <div className="relative w-full h-full">
-          <img className="w-full h-full object-cover" src={Image3} alt="" />
-          <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-center p-2">
+          <img className="w-full h-full object-cover" src={Image3} alt="Slide 3" />
+          {/* <div className="absolute bottom-0 w-full bg-gray-800 dark:bg-gray-900 bg-opacity-70 text-gray-100 dark:text-gray-200 text-center p-2">
             Slide 3 Caption
-          </div>
+          </div> */}
         </div>
       </SwiperSlide>
 
       <SwiperSlide>
         <div className="relative w-full h-full">
-          <img className="w-full h-full object-cover" src={Image4} alt="" />
-          <div className="absolute bottom-0 w-full bg-black bg-opacity-50 text-white text-center p-2">
+          <img className="w-full h-full object-cover" src={Image4} alt="Slide 4" />
+          {/* <div className="absolute bottom-0 w-full bg-gray-800 dark:bg-gray-900 bg-opacity-70 text-gray-100 dark:text-gray-200 text-center p-2">
             Slide 4 Caption
-          </div>
+          </div> */}
         </div>
       </SwiperSlide>
     </Swiper>

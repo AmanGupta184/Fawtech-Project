@@ -8,23 +8,21 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="bg-gray-800 dark:bg-gray-900 p-4 shadow-md transition-colors duration-300">
+    <nav className="fixed top-0 w-full bg-gray-800 dark:bg-gray-900 p-4 shadow-md transition-colors duration-300 z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center space-x-2 cursor-pointer">
-          {/* Placeholder for logo image */}
-          <span className="text-white dark:text-gray-200 font-semibold text-xl">FawTech</span>
+          <span className="text-white dark:text-gray-100 font-semibold text-xl">FawTech</span>
         </div>
         {/* Navigation links and theme toggle on the right */}
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/" className="text-white dark:text-gray-200 hover:text-gray-300 dark:hover:text-gray-400">Home</Link>
-          <Link to="/about" className="text-white dark:text-gray-200 hover:text-gray-300 dark:hover:text-gray-400">About</Link>
-          <Link to="/products" className="text-white dark:text-gray-200 hover:text-gray-300 dark:hover:text-gray-400">Products</Link>
-          <Link to="/contact" className="text-white dark:text-gray-200 hover:text-gray-300 dark:hover:text-gray-400">Contact</Link>
-          {/* Theme toggle button */}
+          <Link to="/" className="text-white dark:text-gray-100 hover:text-gray-300 dark:hover:text-gray-400">Home</Link>
+          <Link to="/about" className="text-white dark:text-gray-100 hover:text-gray-300 dark:hover:text-gray-400">About</Link>
+          <Link to="/products" className="text-white dark:text-gray-100 hover:text-gray-300 dark:hover:text-gray-400">Products</Link>
+          <Link to="/contact" className="text-white dark:text-gray-100 hover:text-gray-300 dark:hover:text-gray-400">Contact</Link>
           <button
             onClick={toggleTheme}
-            className="text-white dark:text-gray-200 focus:outline-none"
+            className="text-white dark:text-gray-100 focus:outline-none"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? (
@@ -38,12 +36,11 @@ const Navbar = () => {
             )}
           </button>
         </div>
-        {/* Hamburger menu for mobile, on the right */}
+        {/* Hamburger menu and theme toggle for mobile */}
         <div className="md:hidden flex items-center space-x-4">
-          {/* Theme toggle button for mobile */}
           <button
             onClick={toggleTheme}
-            className="text-white dark:text-gray-200 focus:outline-none"
+            className="text-white dark:text-gray-100 focus:outline-none"
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? (
@@ -58,7 +55,7 @@ const Navbar = () => {
           </button>
           <button
             onClick={toggleMenu}
-            className="text-white dark:text-gray-200 focus:outline-none"
+            className="text-white dark:text-gray-100 focus:outline-none"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -76,10 +73,10 @@ const Navbar = () => {
       {/* Dropdown menu for mobile */}
       {isMenuOpen && (
         <div className="md:hidden bg-gray-700 dark:bg-gray-800 px-4 pt-2 pb-4 space-y-2">
-          <Link to="/" className="block text-white dark:text-gray-200 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Home</Link>
-          <Link to="/about" className="block text-white dark:text-gray-200 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">About</Link>
-          <Link to="/products" className="block text-white dark:text-gray-200 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Products & Categories</Link>
-          <Link to="/contact" className="block text-white dark:text-gray-200 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Contact</Link>
+          <Link to="/" className="block text-white dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Home</Link>
+          <Link to="/about" className="block text-white dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">About</Link>
+          <Link to="/products" className="block text-white dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Products & Categories</Link>
+          <Link to="/contact" className="block text-white dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Contact</Link>
         </div>
       )}
     </nav>
