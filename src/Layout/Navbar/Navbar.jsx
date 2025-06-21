@@ -13,8 +13,8 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center space-x-2 cursor-pointer">
-          <img src={logo} alt="FawTech Logo" className="h-8 w-8 object-contain" />
-          <span className="text-white dark:text-gray-100 font-semibold text-xl">FawTech</span>
+          <Link to="/"><img src={logo} alt="FawTech Logo" className="h-10 w-14 object-contain" /></Link>
+          <Link to="/" className="text-white dark:text-gray-100 font-semibold text-xl">FawTech</Link>
         </div>
         {/* Navigation links and theme toggle on the right */}
         <div className="hidden md:flex items-center space-x-6">

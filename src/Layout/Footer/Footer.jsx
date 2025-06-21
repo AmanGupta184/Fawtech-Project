@@ -6,10 +6,10 @@ const Footer = () => {
 
   return (
       <footer className="bg-gray-900 text-white p-6 mt-auto">
-        <div className="container mx-auto grid md:grid-cols-4 gap-1">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
           {/* About Section */}
         <div className="flex-1 min-w-[200px] mb-5">
-          <img src={logo} alt="FawTech Logo" className="h-8 w-8 object-contain" />
+          <img src={logo} alt="FawTech Logo" className="h-20 w-25 object-contain" />
           <h3 className="text-xl font-semibold mb-2 text-white-100 dark:text-gray-100">
             FawTech Electronics Trading LLC
           </h3>
