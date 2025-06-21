@@ -42,12 +42,12 @@ function Contact() {
             <h3 className="font-semibold mb-2">Address & Phone</h3>
             <p>
               <strong>Store Address:</strong> 
-               <p className='pl-20'>Office No:113, ELHAM MOHAMED AMIN MIRZA,</p>
-               <p className='pl-20'>22B st, ABU HAIL DUBAI, U.A.E</p>
+               <p className='pl-20 font-semibold '>Office No:113, ELHAM MOHAMED AMIN MIRZA,</p>
+               <p className='pl-20 font-semibold'>22B st, ABU HAIL DUBAI, U.A.E</p>
             </p>
             <p>
               <strong>Phone:</strong>
-               <p className='pl-16'>+91-7011805001</p>
+               <p className='pl-16 font-semibold'>+91-7011805001</p>
             </p>
             
           </div>
