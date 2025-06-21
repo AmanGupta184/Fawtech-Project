@@ -1,33 +1,64 @@
-import React, { useState } from 'react';
-import {Link} from 'react-router-dom';
+import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../Context/ThemeContext'; // Assuming a ThemeContext for theme management
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext); // Use context to manage theme
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="bg-gray-800 p-4 shadow-md">
+    <nav className="bg-gray-800 dark:bg-gray-900 p-4 shadow-md transition-colors duration-300">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center space-x-2 cursor-pointer">
-         {/*for image */}
-
-
-          {/* Optional: site name next to logo */}
-          <span className="text-white font-semibold text-xl">FawTech</span>
+          {/* Placeholder for logo image */}
+          <span className="text-white dark:text-gray-200 font-semibold text-xl">FawTech</span>
         </div>
-        {/* Navigation links on the right */}
-        <div className="hidden md:flex space-x-6">
-          <Link to="/" className="text-white hover:text-gray-300">Home</Link>
-          <Link to="/about" className="text-white hover:text-gray-300">About</Link>
-          <Link to="/products" className="text-white hover:text-gray-300">Products</Link>
-          <Link to="/contact" className="text-white hover:text-gray-300">Contact</Link>
+        {/* Navigation links and theme toggle on the right */}
+        <div className="hidden md:flex items-center space-x-6">
+          <Link to="/" className="text-white dark:text-gray-200 hover:text-gray-300 dark:hover:text-gray-400">Home</Link>
+          <Link to="/about" className="text-white dark:text-gray-200 hover:text-gray-300 dark:hover:text-gray-400">About</Link>
+          <Link to="/products" className="text-white dark:text-gray-200 hover:text-gray-300 dark:hover:text-gray-400">Products</Link>
+          <Link to="/contact" className="text-white dark:text-gray-200 hover:text-gray-300 dark:hover:text-gray-400">Contact</Link>
+          {/* Theme toggle button */}
+          <button
+            onClick={toggleTheme}
+            className="text-white dark:text-gray-200 focus:outline-none"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+              </svg>
+            )}
+          </button>
         </div>
         {/* Hamburger menu for mobile, on the right */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center space-x-4">
+          {/* Theme toggle button for mobile */}
+          <button
+            onClick={toggleTheme}
+            className="text-white dark:text-gray-200 focus:outline-none"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+              </svg>
+            )}
+          </button>
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none"
+            className="text-white dark:text-gray-200 focus:outline-none"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? (
@@ -44,11 +75,11 @@ const Navbar = () => {
       </div>
       {/* Dropdown menu for mobile */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-700 px-4 pt-2 pb-4 space-y-2">
-          <Link to="/" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">Home</Link>
-          <Link to="/about" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">About</Link>
-          <Link to="/products" className="block text-white hover:text-gray-300 px-2 py-1 rounded">Products & Categories</Link>
-          <Link to="/contact" className="block text-white hover:bg-gray-600 px-2 py-1 rounded">Contact</Link>
+        <div className="md:hidden bg-gray-700 dark:bg-gray-800 px-4 pt-2 pb-4 space-y-2">
+          <Link to="/" className="block text-white dark:text-gray-200 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Home</Link>
+          <Link to="/about" className="block text-white dark:text-gray-200 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">About</Link>
+          <Link to="/products" className="block text-white dark:text-gray-200 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Products & Categories</Link>
+          <Link to="/contact" className="block text-white dark:text-gray-200 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Contact</Link>
         </div>
       )}
     </nav>
