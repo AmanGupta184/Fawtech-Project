@@ -5,10 +5,13 @@ import HomeContent from "../Component/HomeContent";
 
 function HomePage() {
   return (
-    <Layout>
-      <Corosuel/>
-      <HomeContent/>
-    </Layout>
+    <div className="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 min-h-screen flex flex-col">
+      {/* Optional: add some padding if needed */}
+      <Layout>
+        <Corosuel />
+        <HomeContent />
+      </Layout>
+    </div>
   );
 }
 
