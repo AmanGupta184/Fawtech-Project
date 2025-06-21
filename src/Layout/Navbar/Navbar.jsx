@@ -20,7 +20,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-6">
           <Link to="/" className="text-white hover:text-gray-300">Home</Link>
           <Link to="/about" className="text-white hover:text-gray-300">About</Link>
-          <Link to="/products" className="text-white hover:text-gray-300">Products & Categories</Link>
+          <Link to="/products" className="text-white hover:text-gray-300">Products</Link>
           <Link to="/contact" className="text-white hover:text-gray-300">Contact</Link>
         </div>
         {/* Hamburger menu for mobile, on the right */}
