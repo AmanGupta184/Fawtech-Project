@@ -66,8 +66,8 @@ const Products = () => {
               return (
                 <div
                   key={index}
-                  className={`self-start bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg ${
-                  isOpen ? 'shadow-xl' : ''
+                  className={`self-start bg-white rounded-lg shadow-md overflow-hidden transition-shadow duration-300 hover:shadow-lg ${
+                    isOpen ? 'shadow-xl' : ''
                   }`}
                 >
                   <img
@@ -82,7 +82,7 @@ const Products = () => {
 
                   {/* Arrow at bottom center */}
                   <div
-                    className="flex justify-center pb-4"
+                    className="flex justify-center pb-4 cursor-pointer"
                     onClick={() => toggleCard(index)}
                   >
                     <KeyboardArrowDownIcon
@@ -93,14 +93,22 @@ const Products = () => {
                     />
                   </div>
 
-                  {/* Collapsible section */}
-                  {isOpen && section.items.length > 0 && (
-                    <ul className="px-6 pb-6 list-disc list-inside text-gray-700 space-y-1">
-                      {section.items.map((item, i) => (
-                        <li key={i}>{item}</li>
-                      ))}
-                    </ul>
-                  )}
+                  {/* Collapsible section with Tailwind transition and delay */}
+                  <div
+                    className={`transition-all duration-300 delay-200 ease-in-out overflow-hidden ${
+                      isOpen ? 'max-h-screen' : 'max-h-0'
+                    }`}
+                  >
+                    <div className="px-6 pb-6">
+                      {section.items.length > 0 && (
+                        <ul className="list-disc list-inside space-y-1 text-gray-700">
+                          {section.items.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
                 </div>
               );
             })}
