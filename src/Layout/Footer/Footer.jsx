@@ -1,65 +1,75 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import logo from '../Navbar/FawtechLogo.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-200 dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-10 px-5">
-      <div className="max-w-7xl mx-auto flex flex-wrap justify-between">
-        {/* About Section */}
+      <footer className="bg-gray-900 text-white p-6 mt-auto">
+        <div className="container mx-auto grid md:grid-cols-4 gap-1">
+          {/* About Section */}
         <div className="flex-1 min-w-[200px] mb-5">
-          <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+          <img src={logo} alt="FawTech Logo" className="h-8 w-8 object-contain" />
+          <h3 className="text-xl font-semibold mb-2 text-white-100 dark:text-gray-100">
             FawTech Electronics Trading LLC
           </h3>
-          <p className="text-gray-800 dark:text-gray-100">
-            Your one-stop shop for the latest electronics and gadgets. Stay connected with us!
+          <p className="text-white-800 dark:text-gray-100">
+            <p>Your one-stop shop for the latest electronics</p>
+            <p>and gadgets. Stay connected with us!</p>
           </p>
         </div>
-        {/* Quick Links */}
-        <div className="flex-1 min-w-[200px] mb-5">
-          <h4 className="font-semibold mb-2 text-gray-800 dark:text-gray-100">Quick Links</h4>
-          <ul className="list-none p-0">
-            <li>
-              <Link to="/" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/products" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline">
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link to="/faq" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline">
-                FAQ
-              </Link>
-            </li>
-          </ul>
+          {/* Shop Categories */}
+          <div>
+            <h4 className="font-semibold mb-2">Shop Categories</h4>
+            <ul className="space-y-1 text-gray-400 text-sm">
+              <li>Custom PC</li>
+              <li>PC Components</li>
+              <li>Console</li>
+              <li>SD Memory</li>
+              <li>Tablets</li>
+            </ul>
+          </div>
+          
+          {/* Information */}
+          <div>
+            <h4 className="font-semibold mb-2">Information</h4>
+            <ul className="space-y-1 text-gray-400 text-sm">
+              <li>Contact Us</li>
+              <li>About Us</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+          
+          {/* Contact Info */}
+          <div>
+            <h4 className="font-semibold mb-2">Contact Us</h4>
+            <p className="text-gray-400 text-sm">
+              Store Address: <p>113, ELHAM MOHAMED AMIN MIRZA,</p>
+            <p>ABU HAIL DUBAI, U.A.E</p> 
+            </p>
+            <p className="text-gray-400 text-sm mt-1">
+              Phone: +971-523297987
+            </p>
+            <p className="text-gray-400 text-sm mt-1">
+              Timings: 11am-6pm (Mon-Sat) Sunday Holiday
+            </p>
+            <p className="text-gray-400 text-sm mt-1">
+              Mail: noor@fawtech.co
+            </p>
+            {/* Social icons can be added here */}
+            <div className="flex space-x-2 mt-2">
+              <a href="/" className="text-gray-400 hover:text-white">Facebook</a>
+              <a href="/" className="text-gray-400 hover:text-white">Twitter</a>
+              <a href="/" className="text-gray-400 hover:text-white">Instagram</a>
+            </div>
+          </div>
         </div>
-        {/* Contact Us */}
-        <div className="flex-1 min-w-[200px] mb-5">
-          <h4 className="font-semibold mb-2 text-gray-800 dark:text-gray-100">Contact Us</h4>
-          <p className="text-gray-800 dark:text-gray-100">113, ELHAM MOHAMED AMIN MIRZA, ABU HAIL DUBAI, U.A.E</p>
-          <p className="text-gray-800 dark:text-gray-100">Email: noorlakdawala21@gmail.com</p>
-          <p className="text-gray-800 dark:text-gray-100">Phone: +971523297987</p>
-        </div>
-      </div>
-      {/* Bottom Bar */}
+        {/* Bottom Bar */}
       <div className="mt-5 border-t border-gray-400 dark:border-gray-700 pt-3 text-center text-sm text-gray-600 dark:text-gray-400">
         © {currentYear} FawTech Electronics Trading LLC. All rights reserved.
       </div>
-    </footer>
+      </footer>
   );
 };
 
