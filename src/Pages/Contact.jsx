@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../Layout/Layout'
+import Shopimg from '../Assets/Images/ShopImage.jpg'
 
 function Contact() {
   return (
@@ -25,7 +26,7 @@ function Contact() {
         {/* Cover Image */}
         <div className="w-full mb-6">
           <img
-            src="https://images.unsplash.com/photo-1508780709619-7897d6d17037"
+            src={Shopimg}
             alt="Office"
             className="w-full h-60 object-cover rounded"
           />
@@ -34,12 +35,30 @@ function Contact() {
         {/* Address & Phone Info */}
 
         <div className="grid md:grid-cols-2 gap-8 mb-6">
-          {/* Map */}
+        
+          {/* Address */}
+          <div className="border p-4 rounded shadow">
+            
+            <h3 className="font-semibold mb-2">Address & Phone</h3>
+            <p>
+              <strong>Store Address:</strong> 
+               <p className='pl-20'>Office No:113, ELHAM MOHAMED AMIN MIRZA,</p>
+               <p className='pl-20'>22B st, ABU HAIL DUBAI, U.A.E</p>
+            </p>
+            <p>
+              <strong>Phone:</strong>
+               <p className='pl-16'>+91-7011805001</p>
+            </p>
+            
+          </div>
+          
+
+            {/* Map */}
         <div className="mb-8">
           <iframe
-            src="https://www.google.com/maps?q=Nehru%20Place%20New%20Delhi&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3429.4368142349085!2d55.3170987751661!3d25.272084277662934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f434ba433d3e1%3A0x791c2dfb45ae055f!2s22B%20St%20-%20Dubai%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2sin!4v1750517178870!5m2!1sen!2sin"
             width="100%"
-            height="300"
+            height="350"
             className="rounded shadow"
             allowFullScreen
             loading="lazy"
@@ -47,18 +66,7 @@ function Contact() {
           ></iframe>
         </div>
 
-          {/* Address */}
-          <div className="border p-4 rounded shadow">
-            <h3 className="font-semibold mb-2">Address & Phone</h3>
-            <p>
-              <strong>Store Address:</strong> 
-              113, ELHAM MOHAMED AMIN MIRZA, ABU HAIL DUBAI, U.A.E
-            </p>
-            <p>
-              <strong>Phone:</strong> +91-7011805001
-            </p>
-          </div>
-          
+
           {/* Hours */}
           {/* <div className="border p-4 rounded shadow">
             <h3 className="font-semibold mb-2">Hours</h3>
