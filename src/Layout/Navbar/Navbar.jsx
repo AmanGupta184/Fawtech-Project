@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../Context/ThemeContext'; // Assuming a ThemeContext for theme management
-import logo from "./FawtechLogo.png"
+import logo from "./FawtechLogo-removebg.png"
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center space-x-2 cursor-pointer">
-          <Link to="/"><img src={logo} alt="FawTech Logo" className="h-10 w-14 object-contain" /></Link>
+          <Link to="/"><img src={logo} alt="FawTech Logo" className="h-10 w-14 object-contain bg-trasparent" /></Link>
           <Link to="/" className="text-white dark:text-gray-100 font-semibold text-xl">FawTech</Link>
         </div>
         {/* Navigation links and theme toggle on the right */}

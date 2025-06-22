@@ -62,7 +62,7 @@ const Products = () => {
           Our Product Categories
         </h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {products.map((section, index) => {
             const isOpen = openIndex === index;
             return (
