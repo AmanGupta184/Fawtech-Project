@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Navbar/FawtechLogo.png'
+import logo from '../Navbar/fawtech.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
         {/* About Section */}
         <div className="min-w-0 mb-5">
-          <img src={logo} alt="FawTech Logo" className="h-20 w-24 object-contain" />
+          <img src={logo} alt="FawTech Logo" className="h-20 w-40 object-contain" />
           <h3 className="text-xl font-semibold mb-2 text-white dark:text-gray-100">
             FawTech Electronics Trading LLC
           </h3>
