@@ -9,8 +9,8 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="fixed top-0 w-full bg-gray-800 dark:bg-gray-900 p-4 shadow-md transition-colors duration-300 z-50">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+    <nav className="fixed top-0 w-full bg-gray-800 dark:bg-gray-900 shadow-md transition-colors duration-300 z-50 box-border">
+      <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
         {/* Logo on the left */}
         <div className="flex items-center space-x-2 cursor-pointer">
           <Link to="/"><img src={logo} alt="FawTech Logo" className="h-10 w-14 object-contain" /></Link>
@@ -39,7 +39,7 @@ const Navbar = () => {
           </button>
         </div>
         {/* Hamburger menu and theme toggle for mobile */}
-        <div className="md:hidden flex items-center space-x-4">
+        <div className="md:hidden flex items-center space-x-4 overflow-hidden">
           <button
             onClick={toggleTheme}
             className="text-white dark:text-gray-100 focus:outline-none"
@@ -74,7 +74,7 @@ const Navbar = () => {
       </div>
       {/* Dropdown menu for mobile */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-700 dark:bg-gray-800 px-4 pt-2 pb-4 space-y-2">
+        <div className="md:hidden bg-gray-700 dark:bg-gray-800 px-4 pt-2 pb-4 space-y-2 w-full box-border">
           <Link to="/" className="block text-white dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Home</Link>
           <Link to="/about" className="block text-white dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">About</Link>
           <Link to="/products" className="block text-white dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-700 px-2 py-1 rounded">Products & Categories</Link>
