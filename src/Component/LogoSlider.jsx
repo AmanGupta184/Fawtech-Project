@@ -9,18 +9,18 @@ const LogoSlider = () => {
   const [logos,setLogos] =useState(Logo);
 
   return (
-    <div className="w-full h-32 py-10 px-4 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100 shadow-md">
+    <div className="w-full py-10 px-4 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-100 shadow-md">
       <Swiper
         modules={[Autoplay]}
         spaceBetween={24} // More spacing between logos
         slidesPerView={10}
         slidesPerGroup={1}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 1000, disableOnInteraction: false }}
         breakpoints={{
           320: { slidesPerView: 3 },
           640: { slidesPerView: 6 },
-          1024: { slidesPerView: 10 },
+          1024: { slidesPerView: 8 },
         }}
         className="mySwiper"
       >
@@ -30,7 +30,7 @@ const LogoSlider = () => {
               <img
                 src={logo.image}
                 alt={`Logo`}
-                className="h-12 object-contain"
+                className="h-14 object-contain"
               />
             </div>
           </SwiperSlide>
