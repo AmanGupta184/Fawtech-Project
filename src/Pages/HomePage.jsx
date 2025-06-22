@@ -11,7 +11,7 @@ function HomePage() {
       <Layout>
         <Corosuel />
         <HomeContent />
-        <LogoSlider/>
+        <LogoSlider />
       </Layout>
     </div>
   );
