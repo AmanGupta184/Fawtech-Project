@@ -47,4 +47,8 @@ export const Logo = [
     id:12,
     image: require('../Assets/Logo/XboxLogo.jpg')
   },
+  {
+    id:13,
+    image: require('../Assets/Logo/AmdLogo.png')
+  },
 ];
