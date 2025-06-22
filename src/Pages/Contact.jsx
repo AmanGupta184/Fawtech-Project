@@ -5,9 +5,9 @@ import Shopimg from '../Assets/Images/ShopImage.jpg';
 function Contact() {
   return (
     <Layout>
-      <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-100">
+      <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-100  p-4">
         {/* Header */}
-        <header className="bg-gray-100 dark:bg-gray-900 p-4 flex items-center justify-between">
+        {/* <header className="bg-gray-100 dark:bg-gray-950 p-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <img src="https://via.placeholder.com/40" alt="Logo" className="h-10 w-10" />
             <h1 className="text-xl font-bold text-red-600">Fawtech Computers</h1>
@@ -17,10 +17,10 @@ function Contact() {
               Call Us +91-7011805001
             </button>
           </div>
-        </header>
+        </header> */}
 
         {/* Main Content */}
-        <main className="flex-1 p-6 bg-white dark:bg-gray-900">
+        <main className="flex-1 p-6 bg-white dark:bg-gray-950 mt-16">
           {/* Title */}
           <h2 className="text-3xl font-semibold text-center mb-6">Contact Us</h2>
 
@@ -29,7 +29,7 @@ function Contact() {
             <img
               src={Shopimg}
               alt="Office"
-              className="w-full h-60 object-cover rounded shadow"
+              className="w-full h-96 object-cover rounded shadow"
             />
           </div>
 
