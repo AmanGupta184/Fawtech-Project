@@ -17,7 +17,7 @@ import "swiper/css/scrollbar";
 function Corosuel() {
   return (
     <Swiper
-      className="w-full h-[60vh] z-10"
+      className="w-full h-[80vh] z-10"
       spaceBetween={50}
       slidesPerView={1}
       modules={[Navigation, A11y, Autoplay]}
