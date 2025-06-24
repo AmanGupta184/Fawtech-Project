@@ -46,9 +46,9 @@ const Footer = () => {
             Store Address: <span>113, ELHAM MOHAMED AMIN MIRZA,</span>
             <span> ABU HAIL DUBAI, U.A.E</span>
           </p>
-          <p className="text-gray-400 text-sm mt-1">
+          {/* <p className="text-gray-400 text-sm mt-1">
             Phone: +971-523297987
-          </p>
+          </p> */}
           <p className="text-gray-400 text-sm mt-1">
             Timings: 11am-6pm (Mon-Sat) Sunday Holiday
           </p>
