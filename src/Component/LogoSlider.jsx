@@ -34,7 +34,7 @@ const LogoSlider = () => {
                 <img
                   src={logo.image}
                   alt={`Logo`}
-                  className="h-14 object-contain"
+                  className="h-18 object-contain"
                 />
               </div>
             </SwiperSlide>
