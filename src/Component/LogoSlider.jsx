@@ -30,11 +30,11 @@ const LogoSlider = () => {
         >
           {logos.map((logo) => (
             <SwiperSlide key={logo.id}>
-              <div className="flex justify-center items-center h-20">
+              <div className="flex justify-center items-center h-22">
                 <img
                   src={logo.image}
                   alt={`Logo`}
-                  className="h-18 object-contain"
+                  className="h-16 object-contain"
                 />
               </div>
             </SwiperSlide>
