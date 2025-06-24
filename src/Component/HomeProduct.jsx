@@ -11,7 +11,7 @@ const HomeProduct = () => {
   const randomProducts = getRandomProducts(ProductData, 3);
 
   return (
-    <div className="w-full py-16 px-4 bg-white dark:bg-gray-900">
+    <div className="w-full py-16 px-4 bg-white dark:bg-gray-950">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-12">
         Our Products
       </h2>
@@ -34,11 +34,11 @@ const HomeProduct = () => {
               <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">
                 {product.description}
               </p>
-              <ul className="text-sm text-gray-600 dark:text-gray-400 list-disc pl-5">
+              {/* <ul className="text-sm text-gray-600 dark:text-gray-400 list-disc pl-5">
                 {product.items.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           </div>
         ))}

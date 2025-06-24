@@ -49,6 +49,34 @@ export const Logo = [
   },
   {
     id:13,
-    image: require('../Assets/Logo/AmdLogo.png')
+    image: require('../Assets/Logo/AMDLogo.jpeg')
+  },
+  {
+    id:14,
+    image: require('../Assets/Logo/AcerLogo.jpeg')
+  },
+  {
+    id:15,
+    image: require('../Assets/Logo/AppleLogo.jpeg')
+  },
+  {
+    id:16,
+    image: require('../Assets/Logo/DellLogo.jpeg')
+  },
+  {
+    id:17,
+    image: require('../Assets/Logo/HarmonKardonLogo.jpeg')
+  },
+  {
+    id:18,
+    image: require('../Assets/Logo/IntelLogo.jpg')
+  },
+  {
+    id:19,
+    image: require('../Assets/Logo/SonyLogo.jpeg')
+  },
+  {
+    id:20,
+    image: require('../Assets/Logo/ToshibaLogo.jpeg')
   },
 ];
