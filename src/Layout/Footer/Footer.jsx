@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Navbar/FawtechLogo.png'
+import logo from '../Navbar/fawtech.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,10 +9,10 @@ const Footer = () => {
       <div className="container mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-2">
         {/* About Section */}
         <div className="min-w-0 mb-5">
-          <img src={logo} alt="FawTech Logo" className="h-20 w-24 object-contain" />
-          <h3 className="text-xl font-semibold mb-2 text-white dark:text-gray-100">
+          <img src={logo} alt="FawTech Logo" className="h-20 w-40 pl-4 object-contain" />
+          {/* <h3 className="text-xl font-semibold mb-2 text-white dark:text-gray-100">
             FawTech Electronics Trading LLC
-          </h3>
+          </h3> */}
           <p className="text-gray-400 dark:text-gray-100 text-sm">
             <span>Your one-stop shop for the latest electronics</span>
             <span> and gadgets. Stay connected with us!</span>
@@ -46,9 +46,9 @@ const Footer = () => {
             Store Address: <span>113, ELHAM MOHAMED AMIN MIRZA,</span>
             <span> ABU HAIL DUBAI, U.A.E</span>
           </p>
-          <p className="text-gray-400 text-sm mt-1">
+          {/* <p className="text-gray-400 text-sm mt-1">
             Phone: +971-523297987
-          </p>
+          </p> */}
           <p className="text-gray-400 text-sm mt-1">
             Timings: 11am-6pm (Mon-Sat) Sunday Holiday
           </p>
