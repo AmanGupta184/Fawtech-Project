@@ -12,7 +12,7 @@ const HomeProduct = () => {
 
   return (
     <div className="w-full py-16 px-4 bg-white dark:bg-gray-950">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-12">
+      <h2 className="text-3xl md:text-3xl font-semibold text-center text-gray-800 dark:text-white mb-12">
         Our Products
       </h2>
 
@@ -46,9 +46,9 @@ const HomeProduct = () => {
 
       <div className="flex justify-center mt-10">
         <Link to="/products">
-          <button className="px-6 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition duration-300 dark:bg-blue-500 dark:hover:bg-blue-600">
-            View More
-          </button>
+          <button className="px-6 py-3 bg-blue-600 text-white rounded-xl font-medium hover:bg-blue-700 transition duration-300 dark:bg-red-600 dark:hover:bg-red-700">
+          View More
+        </button>
         </Link>
       </div>
     </div>
