@@ -11,7 +11,7 @@ const HomeProduct = () => {
   const randomProducts = getRandomProducts(ProductData, 3);
 
   return (
-    <div className="w-full py-16 px-4 bg-white dark:bg-gray-950">
+    <div className="w-full py-16 px-4 bg-gray-50 dark:bg-gray-950">
       <h2 className="text-3xl md:text-3xl font-semibold text-center text-gray-800 dark:text-white mb-12">
         Our Products
       </h2>

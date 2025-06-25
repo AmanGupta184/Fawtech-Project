@@ -13,7 +13,7 @@ const LogoSlider = () => {
       <h2 className="text-center text-3xl font-semibold mb-10 text-gray-800 dark:text-gray-100">
         Our Brands
       </h2>
-      <div className="w-full py-10 px-4 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 shadow-md">
+      <div className="w-full py-10 px-4 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 shadow-md">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={24} // More spacing between logos
