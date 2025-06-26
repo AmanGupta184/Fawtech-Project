@@ -8,7 +8,7 @@ function Contact() {
   return (
     <Layout>
       <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-100 p-4 overflow-x-hidden">
-        <main className="flex-1 p-4 md:p-8 bg-white dark:bg-gray-950 mt-16 rounded-lg shadow-lg">
+        <main className="flex-1 p-4 md:p-8 dark:bg-gray-950 mt-16">
           {/* Title */}
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-6">
             Contact Us
