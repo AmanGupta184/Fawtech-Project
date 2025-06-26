@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
-const ProductCard = ({ section, index, isOpen, toggleCard }) => {
+const ProductCard = ({ section, index, isOpen, toggleCard, hoveredIndex, setHoveredIndex }) => {
+  const [selectedProductIndex, setSelectedProductIndex] = useState(null);
+  const isBlurred = hoveredIndex !== null && hoveredIndex !== index;
+
   return (
-   <div
-  className={`flex flex-col bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md transition-shadow duration-300 hover:shadow-lg dark:hover:shadow-gray-600 
-  ${isOpen ? 'shadow-xl dark:shadow-gray-600' : ''}`}
-  style={{ alignSelf: 'start' }}
->
+    <div
+      className={`flex flex-col bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg dark:hover:shadow-gray-600 
+      ${isOpen ? 'shadow-xl dark:shadow-gray-600' : ''} 
+      ${isBlurred ? 'blur-sm opacity-60 scale-[0.98]' : ''}`}
+      onMouseEnter={() => setHoveredIndex(index)}
+      onMouseLeave={() => setHoveredIndex(null)}
+    >
       <img
         src={section.image}
         alt={section.category}
-        className="w-full h-48 object-cover object-center"
+        className="w-full h-48 object-cover object-center rounded-t-lg"
       />
+
       <div className="p-6 flex flex-col items-center text-center">
         <h2 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
           {section.category}
@@ -22,7 +28,7 @@ const ProductCard = ({ section, index, isOpen, toggleCard }) => {
         </p>
       </div>
 
-      {/* Arrow at bottom center */}
+      {/* Arrow to expand */}
       <div
         className="flex justify-center pb-4 cursor-pointer"
         onClick={() => toggleCard(index)}
@@ -35,9 +41,9 @@ const ProductCard = ({ section, index, isOpen, toggleCard }) => {
         />
       </div>
 
-      {/* Collapsible section */}
+      {/* Dropdown Content */}
       <div
-        className={`transition-all duration-300 delay-200 ease-in-out overflow-hidden ${
+        className={`transition-all duration-300 ease-in-out overflow-hidden ${
           isOpen ? 'max-h-screen' : 'max-h-0'
         }`}
       >
@@ -47,29 +53,24 @@ const ProductCard = ({ section, index, isOpen, toggleCard }) => {
               {section.items.map((item, i) => (
                 <li
                   key={i}
-                  className="relative w-full max-w-md"
+                  className="w-full max-w-md"
+                  onClick={() =>
+                    setSelectedProductIndex(selectedProductIndex === i ? null : i)
+                  }
                 >
-                  <div className="peer flex items-center space-x-4 bg-gray-100 dark:bg-gray-700 px-6 py-4 rounded-lg transition-all duration-300 ease-in-out hover:scale-105 hover:z-10">
-                    {typeof item === 'string' ? (
-                      <span className="mx-auto text-lg font-medium">{item}</span>
-                    ) : (
-                      <>
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className="w-10 h-10 object-cover rounded-md shadow"
-                        />
-                        <span className="text-base font-medium">{item.name}</span>
-                      </>
-                    )}
+                  <div className="flex items-center space-x-4 bg-gray-100 dark:bg-gray-700 px-6 py-4 rounded-lg transition-all duration-300 ease-in-out hover:scale-105 cursor-pointer">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-10 h-10 object-cover rounded-md shadow"
+                    />
+                    <span className="text-base font-medium">{item.name}</span>
                   </div>
-                  {/* Blur overlay on all non-hovered peers */}
-                  <style jsx>{`
-                    li:hover ~ li .peer:not(:hover) {
-                      filter: blur(2px);
-                      opacity: 0.7;
-                    }
-                  `}</style>
+                  {selectedProductIndex === i && (
+                    <div className="mt-2 text-sm text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900 px-4 py-2 rounded-md border dark:border-gray-700 shadow">
+                      {item.description}
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
