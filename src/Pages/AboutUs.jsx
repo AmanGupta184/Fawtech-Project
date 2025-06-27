@@ -53,52 +53,65 @@ function AboutUs() {
           </div>
         </section>
 
-        {/* Brands Carousel */}
-        <section className="max-w-6xl mx-auto py-12 px-4">
-          <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white mb-10">
-            Our Brands
-          </h2>
-          <div className="relative overflow-hidden">
-            <Swiper
-              modules={[Autoplay]}
-              spaceBetween={30}
-              slidesPerView={5}
-              loop={true}
-              autoplay={{ delay: 4000, disableOnInteraction: false }}
-              breakpoints={{
-                320: { slidesPerView: 2 },
-                640: { slidesPerView: 3 },
-                1024: { slidesPerView: 5 },
-              }}
-              className="mySwiper"
-            >
-              {Logo.map((logo) => (
-                <SwiperSlide key={logo.id}>
-                  <div className="relative flex justify-center items-center h-32 transform transition-transform duration-500 hover:scale-110">
-                    <div className="absolute inset-0 bg-gray-400 dark:bg-gray-700 opacity-20 rounded-lg transform rotate-3 scale-95"></div>
-                    <img
-                      src={logo.image}
-                      alt={`Logo ${logo.id}`}
-                      className="h-20 object-contain z-10"
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+       {/* Brands Carousel */}
+<section className="max-w-6xl mx-auto py-12 px-4">
+  <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white mb-10">
+    Our Brands
+  </h2>
+  <div
+    className="relative overflow-hidden group"
+    onMouseEnter={() => {
+      const swiper = document.querySelector('.mySwiper')?.swiper;
+      if (swiper) swiper.autoplay.stop();
+    }}
+    onMouseLeave={() => {
+      const swiper = document.querySelector('.mySwiper')?.swiper;
+      if (swiper) swiper.autoplay.start();
+    }}
+  >
+    <Swiper
+      modules={[Autoplay]}
+      spaceBetween={30}
+      slidesPerView={5}
+      loop={true}
+      speed={3000}
+      autoplay={{
+        delay: 0,
+        disableOnInteraction: false,
+      }}
+      breakpoints={{
+        320: { slidesPerView: 2 },
+        640: { slidesPerView: 3 },
+        1024: { slidesPerView: 5 },
+      }}
+      className="mySwiper"
+    >
+      {Logo.map((logo) => (
+        <SwiperSlide key={logo.id}>
+          <div className="relative flex justify-center items-center h-32 transform transition-transform duration-500 hover:scale-110">
+            <div className="absolute inset-0 bg-gray-400 dark:bg-gray-700 opacity-20 rounded-lg transform rotate-3 scale-95"></div>
+            <img
+              src={logo.image}
+              alt={`Logo ${logo.id}`}
+              className="h-20 object-contain z-10"
+            />
           </div>
-          <style jsx>{`
-            .mySwiper {
-              padding: 20px 0;
-            }
-            .swiper-slide {
-              perspective: 1000px;
-            }
-            .swiper-slide-active {
-              transform: scale(1.1);
-              z-index: 10;
-            }
-          `}</style>
-        </section>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+
+  {/* Smooth Continuous Movement Style */}
+  <style jsx>{`
+    .mySwiper {
+      padding: 20px 0;
+    }
+    .swiper-wrapper {
+      transition-timing-function: linear !important;
+    }
+  `}</style>
+</section>
+
 
         {/* Product Portfolio */}
         <section className="max-w-6xl mx-auto py-12 px-4 bg-gray-50 dark:bg-gray-800 rounded-xl shadow-lg">
