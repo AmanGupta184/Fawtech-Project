@@ -1,6 +1,6 @@
 export const ProductData = [
   {
-    category: 'Gaming Products',
+    category: 'Gaming PC`s',
     description: 'Explore the latest in gaming with cutting-edge consoles and handhelds. Fawtech brings you immersive experiences with high-performance gear.',
     items: ['PlayStation 5', 'Xbox Series X|S', 'Steam Deck', 'Nintendo Switch', 'Gaming Accessories'],
     image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&h=400',
@@ -12,7 +12,7 @@ export const ProductData = [
     image: 'https://images.pexels.com/photos/2089698/pexels-photo-2089698.jpeg?auto=compress&cs=tinysrgb&w=800&h=400',
   },
   {
-    category: 'Graphics Cards',
+    category: 'Gaming PCs',
     description: 'Deliver next-gen graphics and performance with industry-leading GPUs perfect for gaming, design, and AI tasks.',
     items: ['Nvidia', 'PNY Technologies', 'Asus'],
     image: 'https://i.pinimg.com/originals/5f/fc/3f/5ffc3f6bcf60bb8e0c239d1633ca6fb0.jpg?auto=compress&cs=tinysrgb&w=800&h=400',

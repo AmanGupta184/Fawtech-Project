@@ -13,7 +13,7 @@ const HomeProduct = () => {
   return (
     <div className="w-full py-16 px-4 bg-gray-50 dark:bg-gray-950">
       <h2 className="text-3xl md:text-3xl font-semibold text-center text-gray-800 dark:text-white mb-12">
-        Our Products
+        Product Categories
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-20 max-w-7xl mx-auto">
