@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../Layout/Layout";
 
 // Replace these with your actual images or placeholder images
-import Shopimg from "../Assets/Images/ShopImage.jpg";
+import Shopimg from "../Assets/Images/Shop.jpg";
 
 function Contact() {
   return (
