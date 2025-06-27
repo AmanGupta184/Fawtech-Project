@@ -56,7 +56,7 @@ function AboutUs() {
        {/* Brands Carousel */}
 <section className="max-w-6xl mx-auto py-12 px-4">
   <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white mb-10">
-    Our Brands
+    Our Collaboration
   </h2>
   <div
     className="relative overflow-hidden group"

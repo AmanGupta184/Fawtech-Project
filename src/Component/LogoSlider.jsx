@@ -1,32 +1,47 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules"; // Removed Navigation
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Logo } from "../Context/Logo";
 
 const LogoSlider = () => {
-  const [logos, setLogos] = useState(Logo);
+  const [logos] = useState(Logo);
+
+  // Hover handler refs autoplay control
+  const handleMouseEnter = () => {
+    const swiper = document.querySelector(".logoSwiper")?.swiper;
+    if (swiper) swiper.autoplay.stop();
+  };
+
+  const handleMouseLeave = () => {
+    const swiper = document.querySelector(".logoSwiper")?.swiper;
+    if (swiper) swiper.autoplay.start();
+  };
 
   return (
     <div className="bg-gray-50 dark:bg-gray-950 pt-10 text-gray-800 dark:text-gray-100">
       <h2 className="text-center text-3xl font-semibold mb-10 text-gray-800 dark:text-gray-100">
-        Our Brands
+        Our Collaboration
       </h2>
-      <div className="w-full py-10 px-4 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 shadow-md">
+      <div
+        className="w-full py-10 px-4 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 shadow-md"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={24} // More spacing between logos
+          spaceBetween={24}
           slidesPerView={10}
-          slidesPerGroup={1}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 1000, disableOnInteraction: false }}
+          loop={true}
+          speed={3000}
+          autoplay={{ delay: 0, disableOnInteraction: false }}
           breakpoints={{
             320: { slidesPerView: 3 },
             640: { slidesPerView: 6 },
             1024: { slidesPerView: 8 },
           }}
-          className="mySwiper"
+          className="logoSwiper"
         >
           {logos.map((logo) => (
             <SwiperSlide key={logo.id}>
@@ -42,6 +57,9 @@ const LogoSlider = () => {
         </Swiper>
 
         <style jsx>{`
+          .swiper-wrapper {
+            transition-timing-function: linear !important;
+          }
           .swiper-pagination-bullet {
             background: #9ca3af;
             opacity: 0.7;
