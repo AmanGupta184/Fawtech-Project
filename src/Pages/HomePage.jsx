@@ -8,7 +8,6 @@ import HomeProduct from "../Component/HomeProduct";
 function HomePage() {
   return (
     <div>
-      {/* Optional: add some padding if needed */}
       <Layout>
         <Corosuel />
         <HomeContent />
