@@ -6,9 +6,9 @@ import {
   Autoplay,
 } from "swiper/modules";
 import Image1 from "../Assets/Images/laptop.jpg";
-import Image2 from "../Assets/Images/drones.png";
+import Image2 from "../Assets/Images/drones2.jpg";
 import Image3 from "../Assets/Images/pc.png";
-import Image4 from "../Assets/Images/vr.jpg";
+import Image4 from "../Assets/Images/vr5.png";
 import Image5 from "../Assets/Images/console.png";
 
 import "swiper/css";
