@@ -62,7 +62,7 @@ const ProductCard = ({ section, index, isOpen, toggleCard, hoveredIndex, setHove
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-10 h-10 object-cover rounded-md shadow"
+                      className="w-10 h-10 object-fill rounded-md shadow"
                     />
                     <span className="text-base font-medium">{item.name}</span>
                   </div>
