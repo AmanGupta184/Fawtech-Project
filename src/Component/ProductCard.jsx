@@ -3,15 +3,12 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const ProductCard = ({ section, index, isOpen, toggleCard, hoveredIndex, setHoveredIndex }) => {
   const [selectedProductIndex, setSelectedProductIndex] = useState(null);
-  const isBlurred = hoveredIndex !== null && hoveredIndex !== index;
 
   return (
     <div
       className={`flex flex-col bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg dark:hover:shadow-gray-600 
       ${isOpen ? 'shadow-xl dark:shadow-gray-600' : ''} 
-      ${isBlurred ? 'blur-sm opacity-60 scale-[0.98]' : ''}`}
-      onMouseEnter={() => setHoveredIndex(index)}
-      onMouseLeave={() => setHoveredIndex(null)}
+      hover:scale-[1.02]`}
     >
       <img
         src={section.image}
@@ -67,7 +64,7 @@ const ProductCard = ({ section, index, isOpen, toggleCard, hoveredIndex, setHove
                     <span className="text-base font-medium">{item.name}</span>
                   </div>
                   {selectedProductIndex === i && (
-                    <div className="mt-2 text-sm text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900 px-4 py-2 rounded-md border dark:border-gray-700 shadow">
+                    <div className="mt-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-900 px-4 py-2 rounded-md border dark:border-gray-700 shadow">
                       {item.description}
                     </div>
                   )}

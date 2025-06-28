@@ -21,17 +21,18 @@ const Products = () => {
             Our Product Categories
           </h1>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 w-full">
+          <div className="flex flex-wrap justify-center gap-4 w-full">
             {products.map((section, index) => (
-              <ProductCard
-                key={index}
-                section={section}
-                index={index}
-                isOpen={openIndex === index}
-                toggleCard={toggleCard}
-                hoveredIndex={hoveredIndex}
-                setHoveredIndex={setHoveredIndex}
-              />
+              <div key={index} className="w-full md:w-[48%] lg:w-[48%]">
+                <ProductCard
+                  section={section}
+                  index={index}
+                  isOpen={openIndex === index}
+                  toggleCard={toggleCard}
+                  hoveredIndex={hoveredIndex}
+                  setHoveredIndex={setHoveredIndex}
+                />
+              </div>
             ))}
           </div>
         </div>
