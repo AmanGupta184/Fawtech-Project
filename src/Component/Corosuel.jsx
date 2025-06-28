@@ -11,7 +11,7 @@ function Corosuel() {
   const [slides] = useState(CorosuelData);
 
   return (
-    <div className="relative w-full mt-16 h-[50vh] md:h-[70vh]">
+    <div className="relative w-full mt-16 h-[30vh] md:h-[70vh]">
       <Swiper
         modules={[Navigation, A11y, Autoplay]}
         spaceBetween={0}
