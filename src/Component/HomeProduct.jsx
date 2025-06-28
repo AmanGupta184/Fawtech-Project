@@ -10,7 +10,7 @@ const HomeProduct = () => {
   const randomProducts = getRandomProducts(ProductData, 3);
 
   return (
-    <section className="py-20 px-6 bg-gray-50 dark:bg-gray-900">
+    <section className="py-10 px-6 bg-gray-50 dark:bg-gray-900">
       <h2 className="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-12 animate__animated animate__zoomIn">
         Explore Our Categories
       </h2>

@@ -2,54 +2,31 @@ import React from 'react'
 
 function HomeContent() {
   return (
-    <section 
-      id="home" 
-      className=" flex items-center justify-center py-16 px-4 transition-colors duration-300
-        bg-gradient-to-b from-gray-50 to-gray-50 dark:from-gray-900 dark:to-gray-900"
+    <section
+      id="home"
+      className="flex items-center justify-center py-20 px-6 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-900 transition-colors duration-500"
     >
       <div className="container mx-auto text-center">
         {/* Hero Section */}
-        <div className="mb-12 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 
-            text-gray-900 dark:text-white bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+        <div className="mb-16 animate-slide-in-up">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-transparent bg-clip-text bg-gradient-to-r from-gray-950 to-gray-950 dark:from-blue-300 dark:to-purple-300">
             Welcome to Fawtech Electronics Trading
           </h2>
-          <p className="text-xl md:text-2xl font-medium text-gray-700 dark:text-gray-200 max-w-2xl mx-auto">
-            Your premium destination for cutting-edge electronics and IT peripherals.
+          <p className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Your trusted source for cutting-edge electronics and IT peripherals, delivering innovation and quality.
           </p>
         </div>
 
-        {/* Vision and Mission Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="group relative bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg 
-            dark:shadow-gray-700 transform transition-all duration-500 hover:scale-105 
-            hover:shadow-2xl dark:hover:shadow-gray-600 overflow-hidden">
+        {/* Vision Card */}
+        <div className="max-w-3xl mx-auto">
+          <div className="group relative bg-white dark:bg-gray-800 p-10 rounded-2xl shadow-xl dark:shadow-gray-700 transition-all duration-500 hover:scale-102 hover:shadow-2xl overflow-hidden">
             {/* Card Background Gradient Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 
-              dark:from-blue-900 dark:to-purple-900 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-            <h3 className="relative text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900 dark:to-purple-900 opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
+            <h3 className="relative text-3xl font-bold mb-4 text-gray-900 dark:text-white">
               Our Vision
             </h3>
-            <p className="relative text-gray-700 dark:text-gray-200 text-lg">
-              To become a premium destination for Computer & IT Peripherals shopping, representing 
-              international brands and empowering a smarter, more connected world through innovative, 
-              reliable, and sustainable electronic solutions.
-            </p>
-          </div>
-
-          <div className="group relative bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg 
-            dark:shadow-gray-700 transform transition-all duration-500 hover:scale-105 
-            hover:shadow-2xl dark:hover:shadow-gray-600 overflow-hidden">
-            {/* Card Background Gradient Effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-purple-100 
-              dark:from-blue-900 dark:to-purple-900 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
-            <h3 className="relative text-2xl md:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
-              Our Mission
-            </h3>
-            <p className="relative text-gray-700 dark:text-gray-200 text-lg">
-              To create a world-class shopping destination, offering high-quality electronic products 
-              that combine innovation, performance, and sustainability, enhancing the way people live, 
-              work, and connect.
+            <p className="relative text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
+              To lead as the premier destination for computer and IT peripherals, representing top international brands and driving a smarter, connected world through innovative and sustainable solutions.
             </p>
           </div>
         </div>
