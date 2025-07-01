@@ -1,62 +1,126 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { motion, AnimatePresence } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Logo } from "../Context/Logo";
 import "../Styles/logo-slider.css"; // External CSS
 
 const LogoSlider = () => {
-  const [logos] = useState(Logo);
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleMouseEnter = () => {
-    const swiper = document.querySelector(".logoSwiper")?.swiper;
-    if (swiper) swiper.autoplay.stop();
+  useEffect(() => {
+    // Simulate loading for 1.5 seconds
+    const timer = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Animation variants for logo slides
+  const slideVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
+    exit: { opacity: 0, x: -50, transition: { duration: 0.5 } },
   };
 
-  const handleMouseLeave = () => {
-    const swiper = document.querySelector(".logoSwiper")?.swiper;
-    if (swiper) swiper.autoplay.start();
+  // Animation variants for hover effect
+  const hoverVariants = {
+    hover: { scale: 1.15, transition: { duration: 0.3 } },
+    tap: { scale: 0.95 },
   };
 
   return (
-    <section className="py-10 px-6 bg-gray-50 dark:bg-gray-900">
-      <h2 className="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-12 animate__animated animate__zoomIn">
-        Our Trusted Brands
-      </h2>
-      <div
-        className="w-full py-12 px-6 bg-white dark:bg-gray-800 rounded-3xl shadow-xl"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <Swiper
-          modules={[Autoplay]}
-          spaceBetween={30}
-          slidesPerView={7}
-          loop={true}
-          speed={2500}
-          autoplay={{ delay: 0, disableOnInteraction: false }}
-          breakpoints={{
-            320: { slidesPerView: 2 },
-            640: { slidesPerView: 4 },
-            1024: { slidesPerView: 7 },
-          }}
-          className="logoSwiper linear-transition"
-        >
-          {logos.map((logo) => (
-            <SwiperSlide key={logo.id} className="transition-transform duration-300">
-              <div className="flex justify-center items-center h-24 group">
-                <img
-                  src={logo.image}
-                  alt={`Logo ${logo.id}`}
-                  className="h-16 object-contain transition-transform duration-300 group-hover:scale-125"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    <>
+      {/* Loading Animation */}
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            className="fixed inset-0 flex items-center justify-center bg-white dark:bg-gray-900 z-50"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <motion.div
+              className="w-12 h-12 border-4 border-t-blue-500 border-gray-200 dark:border-gray-700 rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="bg-gray-50 md:mt-0 dark:bg-gray-900 transition-colors duration-300">
+        <section className="max-w-8xl mx-auto py-12 px-4">
+          <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white mb-10">
+            Featured Brands
+          </h2>
+          <div
+            className="relative overflow-hidden group"
+            onMouseEnter={() => {
+              const swiper = document.querySelector(".mySwiper")?.swiper;
+              if (swiper) swiper.autoplay.stop();
+            }}
+            onMouseLeave={() => {
+              const swiper = document.querySelector(".mySwiper")?.swiper;
+              if (swiper) swiper.autoplay.start();
+            }}
+          >
+            <Swiper
+              modules={[Autoplay]}
+              spaceBetween={30}
+              slidesPerView={5}
+              loop={true}
+              speed={3000}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                320: { slidesPerView: 2 },
+                640: { slidesPerView: 3 },
+                1024: { slidesPerView: 5 },
+              }}
+              className="mySwiper"
+            >
+              {Logo.map((logo) => (
+                <SwiperSlide key={logo.id}>
+                  <motion.div
+                    className="relative flex justify-center items-center h-32"
+                    variants={slideVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    whileHover="hover"
+                    whileTap="tap"
+                  >
+                    <motion.div
+                      className="absolute inset-0 bg-gray-200 dark:bg-gray-700 opacity-20 rounded-lg transform rotate-3 scale-95"
+                      variants={hoverVariants}
+                    />
+                    <motion.img
+                      src={logo.image}
+                      alt={`Logo ${logo.id}`}
+                      className="h-20 object-contain z-10"
+                      variants={hoverVariants}
+                    />
+                  </motion.div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          {/* Smooth Continuous Movement Style */}
+          <style jsx>{`
+            .mySwiper {
+              padding: 20px 0;
+            }
+            .swiper-wrapper {
+              transition-timing-function: linear !important;
+            }
+          `}</style>
+        </section>
       </div>
-    </section>
+    </>
   );
 };
 

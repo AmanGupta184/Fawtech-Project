@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../Layout/Layout";
 import Corosuel from "../Component/Corosuel";
 import HomeContent from "../Component/HomeContent";
-// import LogoSlider from "../Component/LogoSlider";
+import LogoSlider from "../Component/LogoSlider";
 import HomeProduct from "../Component/HomeProduct";
 
 function HomePage() {
@@ -11,7 +11,7 @@ function HomePage() {
       <Layout>
         <Corosuel />
         <HomeContent />
-        {/* <LogoSlider /> */}
+        <LogoSlider />
         <HomeProduct/>
       </Layout>
     </div>
