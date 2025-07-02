@@ -1,10 +1,11 @@
-// ProductData.js (Refactored with ES6 imports)
+// ProductData.js (with new products and brand cards)
 
 import PS5Image from '../Assets/Images/Products/PS5_Image_Edited.png';
 import XboxImage from '../Assets/Images/Products/xboxConsole.png';
 import SwitchImage from '../Assets/Images/Products/switch.jpg';
 import GamingAccessoriesImage from '../Assets/Images/Products/mouse.jpg';
 import ConsolesCover from '../Assets/Images/Products/consoles.jpg';
+
 
 import LenovoImage from '../Assets/Images/Products/lenovo_laptops.jpg';
 import DellImage from '../Assets/Images/Products/dellLaptop.png';
@@ -49,18 +50,19 @@ import OtherCover from '../Assets/Images/Products/pexels-photo-4792736.jpg';
 export const ProductData = [
   {
     category: 'Gaming Products',
-    description: 'Explore the latest in gaming with cutting-edge consoles and handhelds. Fawtech brings you immersive experiences with high-performance gear.',
+    description: 'Explore top-tier consoles and immersive VR gaming with next-gen performance and accessories.',
     items: [
-      { name: 'PlayStation 5', image: PS5Image, description: 'Sony’s next-gen console with immersive haptics, ray tracing, and ultra-fast SSD.' },
       { name: 'Xbox Series X|S', image: XboxImage, description: 'Microsoft’s powerful consoles for 4K gaming and backward compatibility.' },
       { name: 'Nintendo Switch', image: SwitchImage, description: 'Portable console with Joy-Con support and a huge game library.' },
+      { name: 'Steam Deck', image: XboxImage, description: 'Valve’s handheld PC gaming device with Steam OS.' },
+      { name: 'Meta Quest (Oculus)', image: XboxImage, description: 'Wireless VR headset from Meta with immersive features and standalone functionality.' },
       { name: 'Gaming Accessories', image: GamingAccessoriesImage, description: 'Controllers, headsets, and other gear to complete your setup.' },
     ],
     image: ConsolesCover,
   },
   {
     category: 'Laptops',
-    description: 'Explore the latest in gaming with cutting-edge consoles and handhelds. Fawtech brings you immersive experiences with high-performance gear.',
+    description: 'Work, create, and game with top-tier laptops from trusted brands, designed for power, performance, and portability.',
     items: [
       { name: 'Lenovo', image: LenovoImage, description: 'Reliable laptops ideal for both work and play.' },
       { name: 'Dell', image: DellImage, description: 'High-performance laptops with excellent support.' },
@@ -91,35 +93,58 @@ export const ProductData = [
   },
   {
     category: 'Memory Cards',
-    description: 'High-speed memory cards for photography, mobile storage, and professional equipment - fast, reliable, and secure.',
+    description: 'High-speed and high-capacity SD and NVMe cards for all your storage needs — from casual use to professional photography.',
     items: [
-      { name: 'Sandisk', image: SandiskImage, description: 'Trusted memory cards for every need.' },
-      { name: 'NVM Express', image: NVMeImage, description: 'Fast NVMe storage for high-speed data access.' },
+      { name: 'SanDisk', image: SandiskImage, description: 'Owned by Western Digital, known for high-quality SD cards across use cases.' },
+      { name: 'Lexar', image: SandiskImage, description: 'High-speed SD cards for prosumers and professionals.' },
+      { name: 'Toshiba', image: SandiskImage, description: 'Durable, high-capacity cards ideal for cameras and mobile devices.' },
+      { name: 'Transcend', image: SandiskImage, description: 'Affordable and reliable cards for everyday use.' },
+      { name: 'Kingston', image: SandiskImage, description: 'Memory solutions known for durability and value.' },
     ],
     image: MemoryCover,
   },
   {
-    category: 'Tablets',
-    description: "Versatile tablets that keep you connected, productive, and entertained - whether you're on the go or at home.",
+    category: 'Apple',
+    description: 'Premium Apple products to enhance your digital life, from tablets to wearables and must-have accessories.',
     items: [
-      { name: 'Apple', image: IpadImage, description: 'iPads with powerful chips and premium design.' },
-      { name: 'Samsung', image: SamsungTabImage, description: 'Galaxy Tabs built for productivity and entertainment.' },
-      { name: 'Accessories', image: TabletAccessoriesImage, description: 'Covers, keyboards, and more for your tablet.' },
+      { name: 'iPad', image: IpadImage, description: 'iPads with powerful chips and premium design.' },
+      { name: 'Apple Watch', image: AppleWatchImage, description: 'Track your health, stay connected, and more.' },
+      { name: 'Apple Accessories', image: AppleAccessoriesImage, description: 'Enhance your Apple device experience.' },
     ],
     image: TabletsCover,
   },
   {
-    category: 'Wearable Devices',
-    description: 'Stay active and informed with stylish wearable tech designed to sync seamlessly with your devices',
+    category: 'Samsung',
+    description: 'Explore the Samsung ecosystem with devices and storage solutions known for speed, design, and reliability.',
     items: [
-      { name: 'Apple Watch', image: AppleWatchImage, description: 'Track your health, stay connected, and more.' },
+      { name: 'Galaxy Tab', image: SamsungTabImage, description: 'Galaxy Tabs built for productivity and entertainment.' },
       { name: 'Samsung Watch', image: SamsungWatchImage, description: 'Smart features and fitness tracking on your wrist.' },
+      { name: 'Samsung Accessories', image: SamsungAccessoriesImage, description: 'Chargers, cases, and wearables for Galaxy devices.' },
+      { name: 'Samsung SD Cards', image: SamsungAccessoriesImage, description: 'EVO and PRO series known for high speed and reliability.' },
     ],
     image: WearablesCover,
   },
   {
+    category: 'Sony',
+    description: 'Sony’s world-class entertainment products—from consoles to professional-grade memory cards.',
+    items: [
+      { name: 'PlayStation 5', image: PS5Image, description: 'Sony’s next-gen console with immersive haptics, ray tracing, and ultra-fast SSD.' },
+      { name: 'PlayStation VR', image: PS5Image, description: 'Virtual reality headset that brings games to life with motion and sound.' },
+      { name: 'Sony SD Cards', image: PS5Image, description: 'High-performance memory cards preferred by photographers and videographers.' },
+    ],
+    image: ConsolesCover,
+  },
+  {
+    category: 'Logitech',
+    description: 'Logitech offers professional and gaming-grade peripherals with a reputation for reliability and performance.',
+    items: [
+      { name: 'Logitech Peripherals', image: LogitechImage, description: 'Reliable peripherals for everyday and gaming use.' },
+    ],
+    image: PeripheralsCover,
+  },
+  {
     category: 'Drones',
-    description: 'Premium electronics and trusted accessories from world-renowned brands, tailored to upgrade your digital lifestyle.',
+    description: 'Capture stunning visuals with industry-leading drones perfect for both professionals and hobbyists.',
     items: [
       { name: 'DJI', image: DJIImage, description: 'Industry-leading drones with high-res cameras.' },
     ],
@@ -129,10 +154,6 @@ export const ProductData = [
     category: 'Other Electronics & Accessories',
     description: 'Premium electronics and trusted accessories from world-renowned brands, tailored to upgrade your digital lifestyle.',
     items: [
-      { name: 'Apple Accessories', image: AppleAccessoriesImage, description: 'Enhance your Apple device experience.' },
-      { name: 'Samsung Accessories', image: SamsungAccessoriesImage, description: 'Chargers, cases, and wearables for Galaxy devices.' },
-      { name: 'Logitech Peripherals', image: LogitechImage, description: 'Reliable peripherals for everyday and gaming use.' },
-      { name: 'Sony Electronics', image: SonyImage, description: 'High-quality gadgets and entertainment devices.' },
       { name: 'Dyson Products', image: DysonImage, description: 'Innovative vacuums, hair tools, and more.' },
       { name: 'JBL & Harman Kardon Speakers', image: JBLImage, description: 'Rich sound and premium build for music lovers.' },
     ],
