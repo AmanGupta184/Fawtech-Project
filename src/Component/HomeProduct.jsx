@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ProductData } from "../Context/ProductData";
+import { motion, AnimatePresence } from "framer-motion";
 
 const HomeProduct = () => {
   const getRandomProducts = (data, count) => {
@@ -8,44 +9,114 @@ const HomeProduct = () => {
   };
 
   const randomProducts = getRandomProducts(ProductData, 3);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading for 1.5 seconds
+    const timer = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Animation variants for section
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  // Animation variants for products
+  const productVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, delay: i * 0.2 },
+    }),
+  };
+
+  // Animation variants for button
+  const buttonVariants = {
+    hover: { scale: 1.05, backgroundColor: "#2563eb" }, // Darker blue on hover
+    tap: { scale: 0.95 },
+  };
 
   return (
-    <section className="py-10 px-6 bg-gray-50 dark:bg-gray-900">
-      <h2 className="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-12 animate__animated animate__zoomIn">
-        Explore Our Categories
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-        {randomProducts.map((product, index) => (
-          <div
-            key={index}
-            className="relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group animate__animated animate__fadeIn animate__delay-1s"
+    <>
+      {/* Loading Animation */}
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            className="fixed inset-0 flex items-center justify-center bg-white dark:bg-gray-900 z-50"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
           >
-            <img
-              src={product.image}
-              alt={product.category}
-              className="w-full h-64 object-fill group-hover:scale-110 transition-transform duration-500"
+            <motion.div
+              className="w-12 h-12 border-4 border-t-blue-500 border-gray-200 dark:border-gray-700 rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-indigo-600/80 dark:from-indigo-800/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="p-6 relative z-10">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                {product.category}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                {product.description}
-              </p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center mt-12">
-        <a
-          href="/products"
-          className="px-8 py-3 bg-indigo-500 dark:bg-indigo-400 text-white rounded-full font-semibold hover:bg-indigo-600 dark:hover:bg-indigo-500 transition-colors animate__animated animate__pulse animate__infinite"
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <motion.section
+        className="py-10 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+        variants={sectionVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.h2
+          className="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-12"
+          initial={{ scale: 0.9 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
         >
-          View All Products
-        </a>
-      </div>
-    </section>
+          Explore Our Categories
+        </motion.h2>
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto"
+          initial="hidden"
+          animate="visible"
+        >
+          {randomProducts.map((product, index) => (
+            <motion.div
+              key={index}
+              className="relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg"
+              custom={index}
+              variants={productVariants}
+            >
+              <motion.img
+                src={product.image}
+                alt={product.category}
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                whileHover={{ scale: 1.1 }}
+                initial={{ scale: 1 }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-600/80 dark:from-blue-800/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="p-6 relative z-10">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+                  {product.category}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  {product.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+        <div className="flex justify-center mt-12">
+          <motion.a
+            href="/products"
+            className="px-8 py-3 bg-blue-500 text-white rounded-full font-semibold transition-colors"
+            variants={buttonVariants}
+            whileHover="hover"
+            whileTap="tap"
+          >
+            View All Products
+          </motion.a>
+        </div>
+      </motion.section>
+    </>
   );
 };
 
