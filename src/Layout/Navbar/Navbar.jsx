@@ -81,7 +81,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/"
-                className={`font-semibold text-xl ${
+                className={`font-extrabold text-xl ${
                   theme === "dark" ? "text-gray-100" : "text-blue-600"
                 }`}
               >
