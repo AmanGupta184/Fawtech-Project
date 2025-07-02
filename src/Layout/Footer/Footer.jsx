@@ -125,7 +125,7 @@ const Footer = () => {
               Timings: 11am-6pm (Mon-Sat) Sunday Holiday
             </p>
             <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">
-              Mail: noor@fawtech.co
+              E-mail: noor@fawtech.com
             </p>
             <div className="flex space-x-2 mt-2">
               <motion.a
