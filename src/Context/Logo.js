@@ -40,10 +40,6 @@ export const Logo = [
     image: require('../Assets/Logo/PnyLogo.jpg')
   },
   {
-    id:11,
-    image: require('../Assets/Logo/SamsungLogo.jpg')
-  },
-  {
     id:12,
     image: require('../Assets/Logo/XboxLogo.jpg')
   },
