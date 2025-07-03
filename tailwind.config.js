@@ -6,6 +6,7 @@ module.exports = {
   ],
    theme: {
     extend: {
+      transform: ['group-hover'],
       keyframes: {
         fadeIn: {
           '0%': {
