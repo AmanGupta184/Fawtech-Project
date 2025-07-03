@@ -55,7 +55,7 @@ const LogoSlider = () => {
             Featured Brands
           </h2>
           <div
-            className="relative overflow-hidden group"
+            className="relative overflow-hidden bg-blue-700 group"
             onMouseEnter={() => {
               const swiper = document.querySelector(".mySwiper")?.swiper;
               if (swiper) swiper.autoplay.stop();
