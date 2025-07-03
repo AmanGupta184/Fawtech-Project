@@ -29,7 +29,7 @@ function HomeContent() {
   };
 
   return (
-    <>
+    <div>
       {/* Loading Animation */}
       <AnimatePresence>
         {isLoading && (
@@ -50,7 +50,7 @@ function HomeContent() {
 
       <motion.section
         id="home"
-        className="flex items-center justify-center py-20 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-500"
+        className="flex items-center justify-center py-20 px-6 mt-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-500"
         variants={sectionVariants}
         initial="hidden"
         animate="visible"
@@ -82,7 +82,7 @@ function HomeContent() {
           </motion.div>
 
           {/* Vision Card */}
-          <motion.div
+          {/* <motion.div
             className="max-w-3xl mx-auto"
             variants={cardVariants}
             whileHover="hover"
@@ -94,7 +94,6 @@ function HomeContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              {/* Card Background Gradient Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 opacity-0 group-hover:opacity-30 transition-opacity duration-500" />
               <h3 className="relative text-4xl font-bold mb-4 text-gray-900 dark:text-gray-200">
                 Our Vision
@@ -103,10 +102,10 @@ function HomeContent() {
                 To lead as the premier destination for computer and IT peripherals, representing top international brands and driving a smarter, connected world through innovative and sustainable solutions.
               </p>
             </motion.div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </motion.section>
-    </>
+    </div>
   );
 }
 
