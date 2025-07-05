@@ -46,14 +46,18 @@ const SolutionsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-12 text-center"
+          className="mb-12 flex flex-col items-center justify-center text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
             Driving Global Reach with Tailored <br /> Tech Solutions
           </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Fawtech Electronics specializes in delivering innovative electronics and IT solutions worldwide from the heart of Dubai.
+          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl">
+            Fawtech Electronics specializes in delivering innovative electronics
+            and IT solutions worldwide from the heart of Dubai.
           </p>
+          <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl">
+            We aim to provide the "most out of the products for the best prices," ensuring innovation, performance, and sustainability in every solution we offer.
+         </p>
           <button
             onClick={() => navigate("/contact")}
             className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
