@@ -6,17 +6,17 @@ const banners = [
   {
     title: "Explore Innovation",
     subtitle: "Discover cutting-edge electronics & IT solutions.",
-    image: "/images/banner1.jpg",
+    image: require('../Assets/Images/appleBanner.jpg'),
   },
   {
     title: "Global Distribution",
     subtitle: "Expanding across the Middle East, Asia & Europe.",
-    image: "/images/banner2.jpg",
+    image:require('../Assets/Images/dysonBanner.jpg'),
   },
   {
     title: "Fawtech Electronics",
     subtitle: "Your trusted partner in technology excellence.",
-    image: "/images/banner3.jpg",
+    image: require('../Assets/Images/gamingBanner.jpg'),
   },
 ];
 
