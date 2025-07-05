@@ -22,8 +22,8 @@ const steps = [
 ];
 
 const chartData = [
-  { year: 2020, value: 25, color: "from-gray-300 to-blue-200" },
-  { year: 2022, value: 50, color: "from-blue-500 to-blue-300" },
+  { year: 2022, value: 25, color: "from-gray-300 to-blue-200" },
+  { year: 2023, value: 50, color: "from-blue-500 to-blue-300" },
   { year: 2024, value: 75, color: "from-blue-600 to-blue-500" },
   { year: 2025, value: 100, color: "from-blue-600 to-blue-950", highlight: true },
 ];
