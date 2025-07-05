@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 
@@ -31,7 +31,7 @@ const chartData = [
 function Graph() {
   const [openIndex, setOpenIndex] = useState(0);
   const controls = useAnimation();
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref, inView } = useInView({ triggerOnce: false, threshold: 0.2 });
 
   const maxBarHeight = 256;
   const maxValue = Math.max(...chartData.map((bar) => bar.value));
@@ -78,9 +78,8 @@ function Graph() {
               >
                 <div
                   className="flex justify-between items-center cursor-pointer"
-                  onClick={() =>
-                    setOpenIndex(index === openIndex ? null : index)
-                  }
+                  onClick={() => setOpenIndex(index === openIndex ? null : index)}
+                  aria-expanded={openIndex === index}
                 >
                   <h3
                     className={`font-bold text-base sm:text-lg ${
@@ -96,17 +95,20 @@ function Graph() {
                   </div>
                 </div>
 
-                {openIndex === index && (
-                  <motion.p
-                    className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    {step.description}
-                  </motion.p>
-                )}
+                <AnimatePresence initial={false}>
+                  {openIndex === index && (
+                    <motion.p
+                      key="desc"
+                      className="mt-4 text-gray-600 dark:text-gray-300 text-sm sm:text-base"
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.4 }}
+                    >
+                      {step.description}
+                    </motion.p>
+                  )}
+                </AnimatePresence>
               </motion.div>
             ))}
           </motion.div>
@@ -136,11 +138,12 @@ function Graph() {
           </motion.div>
 
           <div className="relative w-full h-64">
+            {/* Y-Axis Ticks */}
             <div className="absolute left-0 w-full h-full flex flex-col justify-between">
               {yAxisTicks.map((tick, i) => (
                 <div
                   key={i}
-                  className="w-full border-t border-gray-200 dark:border-gray-700 text-xs text-gray-400 dark:text-gray-500"
+                  className="w-full border-t border-gray-200 dark:border-gray-700 text-[11px] text-gray-400 dark:text-gray-500"
                 >
                   <span className="absolute left-0 -ml-6 sm:-ml-8 -mt-2">
                     {tick}%
@@ -156,6 +159,7 @@ function Graph() {
               Market size
             </span>
 
+            {/* Bar chart */}
             <div className="flex items-end justify-between h-full w-full px-2 sm:px-4 relative z-10">
               {chartData.map((bar, i) => (
                 <div
@@ -165,7 +169,7 @@ function Graph() {
                   <motion.span
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.4, delay: i * 0.1 }} // Reduced delay
+                    transition={{ duration: 0.6, delay: i * 0.1 }}
                     className="text-xs sm:text-sm font-bold text-gray-800 dark:text-white mb-2"
                   >
                     {bar.value}%
@@ -182,20 +186,23 @@ function Graph() {
                           }
                         : {}
                     }
-                    transition={{ duration: 0.5, ease: "easeOut" }} // Removed staggered delay
-                    className={`w-full bg-gradient-to-t ${bar.color} rounded-t-md flex flex-col justify-end items-center min-h-[1.5rem] relative`}
+                    transition={{ duration: 2, ease: "easeOut" }}
+                    className={`w-full bg-gradient-to-t ${bar.color} ${
+                      bar.highlight ? "ring-2 ring-yellow-400" : ""
+                    } rounded-t-md flex flex-col justify-end items-center min-h-[1.5rem] relative`}
                   >
-                    {/* {bar.highlight && (
-                      <div className="absolute -top-10 text-blue-500 text-base sm:text-lg">
+                    {/* Optional Star */}
+                    {bar.highlight && (
+                      <div className="absolute -top-14 text-yellow-400 text-lg">
                         ⭐
                       </div>
-                    )} */}
+                    )}
                   </motion.div>
 
                   <motion.span
                     initial={{ opacity: 0, y: 10 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.3, delay: 0.5 }} // Reduced delay
+                    transition={{ duration: 0.5, delay: 0.5 }}
                     className="text-xs text-gray-600 dark:text-gray-400 mt-2"
                   >
                     {bar.year}
