@@ -57,7 +57,7 @@ function AboutPage() {
     <Layout>
       <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
         {/* Hero Section */}
-        <header className="relative bg-gradient-to-b from-blue-200 to-blue-100 dark:from-gray-950 dark:to-gray-900 h-96 py-16 md:py-24">
+        <header className="relative bg-gradient-to-b from-blue-200 to-blue-100 dark:from-gray-950 dark:to-gray-900 h-56 py-16 md:py-24">
           <div className="absolute inset-0 bg-gray-200 dark:bg-gray-900 opacity-20 dark:opacity-40"></div>
           <div className="relative max-w-6xl mx-auto px-4 text-center">
             <motion.h1
@@ -70,18 +70,15 @@ function AboutPage() {
             >
               About Fawtech
             </motion.h1>
-            <motion.div
+            {/* <motion.div
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="max-w-3xl mx-auto font-bold space-y-4 text-gray-600 dark:text-gray-200 text-base md:text-lg"
+              className="max-w-3xl mx-auto font-bold space-y-4 h-20 text-gray-600 dark:text-gray-200 text-base md:text-lg"
             >
-              <p>
-                We aim to provide the "most out of the products for the best prices," ensuring innovation, performance, and sustainability in every solution we offer.
-              </p>
-            </motion.div>
+            </motion.div> */}
           </div>
         </header>
 
