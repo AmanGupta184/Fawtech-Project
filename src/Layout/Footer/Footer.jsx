@@ -29,7 +29,7 @@ const Footer = () => {
 
   return (
     <motion.footer
-      className="bg-gray-200 dark:bg-gray-800 text-gray-900 dark:text-white p-6 mt-auto box-border overflow-x-hidden"
+      className="bg-white-200 dark:bg-gray-800 text-gray-900 dark:text-white p-6 mt-auto box-border overflow-x-hidden"
       variants={footerVariants}
       initial="hidden"
       animate="visible"
