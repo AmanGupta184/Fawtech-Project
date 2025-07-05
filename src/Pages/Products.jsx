@@ -14,7 +14,7 @@ const Products = () => {
 
   return (
     <Layout>
-      <div className="bg-white dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-100 px-2 sm:px-4 pt-20 pb-10">
+      <div className="bg-white dark:bg-gray-900 min-h-screen text-gray-800 dark:text-gray-100 px-2 sm:px-4 pt-28 pb-10">
         <div className="max-w-screen-xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 text-center">
             Our Product Categories

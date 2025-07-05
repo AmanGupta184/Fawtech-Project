@@ -1,4 +1,3 @@
-// Loading.js
 import React from 'react';
 
 const Loading = () => {
@@ -19,7 +18,8 @@ const Loading = () => {
           position: 'absolute', 
           width: '80px', 
           height: '40px', 
-          background: '#007BFF', 
+          background: '#FFFFFF', // White fill
+          border: '4px solid #007BFF', // Blue outline
           borderRadius: '20px', 
           top: '30px', 
           animation: 'spin 1.5s infinite linear' 
@@ -28,7 +28,8 @@ const Loading = () => {
           position: 'absolute', 
           width: '80px', 
           height: '40px', 
-          background: '#FF4040', 
+          background: '#FFFFFF', // White fill
+          border: '4px solid #2563eb', // Darker blue outline
           borderRadius: '20px', 
           top: '30px', 
           transform: 'rotate(180deg)', 
@@ -39,5 +40,16 @@ const Loading = () => {
     </div>
   );
 };
+
+// Add the animation keyframes to the component
+const styleSheet = document.styleSheets[0];
+if (styleSheet) {
+  styleSheet.insertRule(`
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  `, styleSheet.cssRules.length);
+}
 
 export default Loading;

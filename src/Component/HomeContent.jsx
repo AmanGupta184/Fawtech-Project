@@ -65,18 +65,18 @@ function HomeContent() {
           </motion.div>
 
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 dark:text-white"
+            className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white"
             variants={fadeInUp}
           >
-            Welcome to Fawtech Electronics Trading {" "}
-            <span className="text-blue-600">Innovations</span> Technologies
+            Fawtech Electronics is UAE's leading online electronics store. {" "}
+            <p className="text-blue-600">Modernization{" "}<span className="text-black">& Technologies</span> </p>
           </motion.h1>
 
           <motion.p
             className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            Your trusted source for cutting-edge electronics and IT peripherals, delivering innovation and quality.
+            One stop destination for all electronics products like Mobiles,Laptops,Gaming PC,Drones,Dyson Products and many more..
           </motion.p>
 
           <motion.div
