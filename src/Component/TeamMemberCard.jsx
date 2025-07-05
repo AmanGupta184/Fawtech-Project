@@ -7,6 +7,7 @@ import {
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
+import QR from "../Assets/Person/QR.png";
 
 // Reusable Stat Circle Component
 const StatCircle = ({ percent, label }) => {
@@ -57,37 +58,37 @@ const TeamMemberCard = () => {
     <div className="bg-blue-50 dark:bg-gray-900 p-6 rounded-xl grid md:grid-cols-2 gap-8 items-center">
       {/* Left Side - Info */}
       <div className="flex flex-col items-center gap-4 text-center">
-  <div className="flex items-center gap-3">
-    <div className="w-5 h-5 rounded-full border-2 border-blue-500" />
-    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-      Noor Mohammed
-    </h2>
-  </div>
-  <p className="text-gray-500 dark:text-gray-300">Founder & CEO</p>
+        <div className="flex items-center gap-3">
+          <div className="w-5 h-5  " />
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+            Noor Mohammed
+          </h2>
+        </div>
+        <p className="text-gray-500 dark:text-gray-300">Founder & CEO</p>
 
-  <div className="flex gap-4 text-gray-600 dark:text-gray-300 text-xl mt-2">
-    <FaFacebookF aria-label="Facebook" />
-    <FaInstagram aria-label="Instagram" />
-    <FaTwitter aria-label="Twitter" />
-    <FaLinkedin aria-label="LinkedIn" />
-  </div>
+        <div className="flex gap-4 text-gray-600 dark:text-gray-300 text-xl mt-2">
+          <FaFacebookF aria-label="Facebook" />
+          <FaInstagram aria-label="Instagram" />
+          <FaTwitter aria-label="Twitter" />
+          <FaLinkedin aria-label="LinkedIn" />
+        </div>
 
-  <img
-    src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://fawtech.ae"
-    alt="QR Code to Fawtech Website"
-    className="w-28 h-28 mt-4"
-  />
-</div>
-
+        <img
+          src={QR}
+          alt="QR Code to Fawtech Website"
+          className="w-28 h-28 mt-4"
+        />
+      </div>
 
       {/* Right Side - Mission and Stats */}
       <div ref={ref} className="flex flex-col gap-6">
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
-          Founded in 2023, Fawtech Electronics Trading L.L.C is a Dubai-based electronics company
-          dedicated to delivering premium gaming consoles, IT peripherals, and consumer electronics.
-          With a strong presence in DAFZA and JAFZA, we ensure fast and efficient global distribution.
-          Our commitment lies in offering high-performance products, competitive pricing, and
-          exceptional customer support across markets in the Middle East and beyond.
+          Founded and led by Noor Mohammed, a visionary entrepreneur with deep
+          expertise in the tech and trading industry, Fawtech continues to grow
+          by building strong relationships with global suppliers and clients.
+          Under his leadership, the company emphasizes swift delivery,
+          transparent service, and strategic partnerships that help businesses
+          thrive in an ever-evolving digital landscape.
         </p>
 
         <div className="flex items-center gap-8">
