@@ -1,6 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer"; // Removed motion import
 import { useNavigate } from "react-router-dom";
 import { SiQuicktime } from "react-icons/si";
 import { GrUserExpert } from "react-icons/gr";
@@ -41,11 +40,8 @@ const SolutionsSection = () => {
     <section className="bg-gray-50 dark:bg-[#0f172a] py-20 px-4 sm:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
-        <motion.div
+        <div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
           className="mb-12 flex flex-col items-center justify-center text-center"
         >
           <h2 className="text-2xl md:text-2xl font-bold text-gray-900 dark:text-white">
@@ -57,23 +53,20 @@ const SolutionsSection = () => {
           </p>
           <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl">
             We aim to provide the "most out of the products for the best prices," ensuring innovation, performance, and sustainability in every solution we offer.
-         </p>
+          </p>
           <button
             onClick={() => navigate("/contact")}
             className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
           >
             Learn more
           </button>
-        </motion.div>
+        </div>
 
         {/* Cards */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {solutions.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
               className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-lg transition"
             >
               <div className="mb-4">{item.icon}</div>
@@ -83,7 +76,7 @@ const SolutionsSection = () => {
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 {item.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

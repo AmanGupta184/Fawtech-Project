@@ -165,7 +165,7 @@ function Graph() {
                   <motion.span
                     initial={{ opacity: 0, y: 20 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.4, delay: i * 0.2 }}
+                    transition={{ duration: 0.4, delay: i * 0.1 }} // Reduced delay
                     className="text-xs sm:text-sm font-bold text-gray-800 dark:text-white mb-2"
                   >
                     {bar.value}%
@@ -182,7 +182,7 @@ function Graph() {
                           }
                         : {}
                     }
-                    transition={{ duration: 0.5 + i * 0.2, ease: "easeOut" }}
+                    transition={{ duration: 0.5, ease: "easeOut" }} // Removed staggered delay
                     className={`w-full bg-gradient-to-t ${bar.color} rounded-t-md flex flex-col justify-end items-center min-h-[1.5rem] relative`}
                   >
                     {/* {bar.highlight && (
@@ -195,7 +195,7 @@ function Graph() {
                   <motion.span
                     initial={{ opacity: 0, y: 10 }}
                     animate={inView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.3, delay: 0.5 + i * 0.2 }}
+                    transition={{ duration: 0.3, delay: 0.5 }} // Reduced delay
                     className="text-xs text-gray-600 dark:text-gray-400 mt-2"
                   >
                     {bar.year}
