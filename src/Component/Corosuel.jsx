@@ -6,49 +6,55 @@ const banners = [
   {
     title: "Explore Innovation",
     subtitle: "Discover cutting-edge electronics & IT solutions.",
-    image: "/images/banner1.jpg", // Replace with your image path
+    image: "../Assets/Images/gamingBanner.jpg",
   },
   {
     title: "Global Distribution",
     subtitle: "Expanding across the Middle East, Asia & Europe.",
-    image: "/images/banner2.jpg",
+    image: "../Assets/Images/dysonBanner.jpg",
   },
   {
     title: "Fawtech Electronics",
     subtitle: "Your trusted partner in technology excellence.",
-    image: "/images/banner3.jpg",
+    image: "../Assets/Images/appleBanner.jpg",
   },
 ];
 
 const BannerCarousel = () => {
   const [index, setIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % banners.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused]);
 
   const nextSlide = () => setIndex((index + 1) % banners.length);
   const prevSlide = () =>
     setIndex((index - 1 + banners.length) % banners.length);
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden shadow-lg dark:bg-black">
+    <div
+      className="relative w-full h-[300px] md:h-[400px] overflow-hidden shadow-lg dark:bg-black"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full"
         >
           {/* Image Background */}
           <img
             src={banners[index].image}
-            alt="Banner"
+            alt={banners[index].title}
             className="w-full h-full object-cover"
           />
 
@@ -67,12 +73,14 @@ const BannerCarousel = () => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
+        aria-label="Previous Slide"
         className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
       >
         ❮
       </button>
       <button
         onClick={nextSlide}
+        aria-label="Next Slide"
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/40 text-white p-2 rounded-full transition"
       >
         ❯
@@ -84,8 +92,11 @@ const BannerCarousel = () => {
           <button
             key={i}
             onClick={() => setIndex(i)}
+            aria-label={`Go to slide ${i + 1}`}
             className={`w-3 h-3 rounded-full ${
-              i === index ? "bg-white" : "bg-white/50"
+              i === index
+                ? "bg-white dark:bg-white"
+                : "bg-white/50 dark:bg-gray-600"
             }`}
           />
         ))}
