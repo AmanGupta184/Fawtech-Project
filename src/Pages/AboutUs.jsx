@@ -43,9 +43,9 @@ const services = [
     icon: <TfiApple className="w-8 h-8 text-blue-600" />,
   },
   {
-    title: "JBL Speakers",
+    title: "Speakers",
     description:
-      "Experience premium sound with our JBL speakers, suitable for music lovers and gamers alike.",
+      "Experience premium sound with our JBL speakers,Harman Kardon suitable for music lovers and gamers alike.",
     icon: <BsSpeaker className="w-8 h-8 text-blue-600" />,
   },
 ];
