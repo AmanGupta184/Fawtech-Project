@@ -91,7 +91,7 @@ const Navbar = () => {
 
             {/* Navigation links and theme toggle on the right */}
             <div className="hidden md:flex items-center space-x-6">
-              {["Home", "About", "Products", "Contact"].map((item) => (
+              {["Home", "Products","About", "Contact"].map((item) => (
                 <motion.div
                   key={item}
                   variants={linkVariants}
