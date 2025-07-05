@@ -1,30 +1,28 @@
-
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Sample banners
+// Sample banners with images
 const banners = [
   {
     title: "Explore Innovation",
     subtitle: "Discover cutting-edge electronics & IT solutions.",
-    bg: "bg-gradient-to-r from-blue-500 to-indigo-600",
+    image: "/images/banner1.jpg", // Replace with your image path
   },
   {
     title: "Global Distribution",
     subtitle: "Expanding across the Middle East, Asia & Europe.",
-    bg: "bg-gradient-to-r from-cyan-400 to-sky-500",
+    image: "/images/banner2.jpg",
   },
   {
     title: "Fawtech Electronics",
     subtitle: "Your trusted partner in technology excellence.",
-    bg: "bg-gradient-to-r from-indigo-600 to-violet-500",
+    image: "/images/banner3.jpg",
   },
 ];
 
 const BannerCarousel = () => {
   const [index, setIndex] = useState(0);
 
-  // Auto-slide every 5s
   useEffect(() => {
     const timer = setInterval(() => {
       setIndex((prev) => (prev + 1) % banners.length);
@@ -33,10 +31,11 @@ const BannerCarousel = () => {
   }, []);
 
   const nextSlide = () => setIndex((index + 1) % banners.length);
-  const prevSlide = () => setIndex((index - 1 + banners.length) % banners.length);
+  const prevSlide = () =>
+    setIndex((index - 1 + banners.length) % banners.length);
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden rounded-xl shadow-lg">
+    <div className="relative w-full h-[400px] overflow-hidden shadow-lg dark:bg-black">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -44,10 +43,24 @@ const BannerCarousel = () => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 0.8 }}
-          className={`absolute inset-0 flex flex-col justify-center items-center text-white text-center p-6 ${banners[index].bg}`}
+          className="absolute inset-0 w-full h-full"
         >
-          <h2 className="text-3xl md:text-5xl font-bold">{banners[index].title}</h2>
-          <p className="text-lg md:text-2xl mt-4">{banners[index].subtitle}</p>
+          {/* Image Background */}
+          <img
+            src={banners[index].image}
+            alt="Banner"
+            className="w-full h-full object-cover"
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center p-6">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              {banners[index].title}
+            </h2>
+            <p className="text-lg md:text-2xl mt-4">
+              {banners[index].subtitle}
+            </p>
+          </div>
         </motion.div>
       </AnimatePresence>
 
