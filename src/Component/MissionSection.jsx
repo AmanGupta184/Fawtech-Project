@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaPlus } from "react-icons/fa";
+import p1 from '../Assets/Person/p1.jpg';
+import p2 from '../Assets/Person/p2.jpg';
+import p3 from '../Assets/Person/p3.jpg';
 
 const stats = [
   {
@@ -49,17 +52,17 @@ const MissionSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <h2 className="text-xl font-bold leading-tight mb-6">
-            Founded in 2023, Fawtech Electronics Trading L.L.C is a Dubai-based electronics company specializing in gaming products, IT peripherals, graphics cards, memory cards, tablets, and wearable devices.
+          <h2 className="text-4xl font-bold leading-tight mb-6">
+            Fawtech <span className=" text-blue-600">Electronics</span> 
           </h2>
 
           <div className="space-y-4 text-gray-700 dark:text-gray-300 mb-6 text-base leading-relaxed">
             <p>
-              Strategically located in Dubai, surrounded by international banks and hotels, Fawtech leverages its position in DAFZA and JAFZA for efficient global distribution.
-            </p>
-            <p>
-              We aim to provide the "most out of the products for the best prices," ensuring innovation, performance, and sustainability in every solution we offer.
-            </p>
+            At Fawtech, we believe technology should be fast, affordable, and everywhere.
+          </p>
+          <p>
+            Empowering businesses and gamers alike with cutting-edge electronics and seamless distribution.
+          </p>
           </div>
 
           <div className="flex items-center space-x-4 mt-6">
@@ -70,17 +73,17 @@ const MissionSection = () => {
 
             <div className="flex items-center space-x-[-10px] ml-2">
               <img
-                src="https://randomuser.me/api/portraits/men/32.jpg"
+                src={p1}
                 alt="avatar1"
                 className="w-10 h-10 rounded-full border-2 border-white"
               />
               <img
-                src="https://randomuser.me/api/portraits/men/33.jpg"
+                src={p2}
                 alt="avatar2"
                 className="w-10 h-10 rounded-full border-2 border-white"
               />
               <img
-                src="https://randomuser.me/api/portraits/women/34.jpg"
+                src={p3}
                 alt="avatar3"
                 className="w-10 h-10 rounded-full border-2 border-white"
               />
