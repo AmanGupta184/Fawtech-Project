@@ -35,7 +35,7 @@ const BannerCarousel = () => {
     setIndex((index - 1 + banners.length) % banners.length);
 
   return (
-    <div className="relative w-full h-[250px] sm:h-[400px] overflow-hidden shadow-lg dark:bg-black">
+    <div className="relative w-full h-[250px] sm:h-[500px] overflow-hidden shadow-lg dark:bg-black">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -49,7 +49,7 @@ const BannerCarousel = () => {
           <img
             src={banners[index].image}
             alt="Banner"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-fill"
           />
 
           {/* Overlay */}
