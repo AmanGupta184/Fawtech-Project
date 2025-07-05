@@ -69,7 +69,7 @@ function HomeContent() {
             variants={fadeInUp}
           >
             Fawtech Electronics is UAE's leading online electronics store. {" "}
-            <p className="text-blue-600">Modernization{" "}<span className="text-black">& Technologies</span> </p>
+            <p className="text-blue-600 text-center">Modernization{" "}<span className="text-black dark:text-white">& Technologies</span> </p>
           </motion.h1>
 
           <motion.p
