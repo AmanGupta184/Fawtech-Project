@@ -1,47 +1,43 @@
-import React, { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { ThemeContext } from "../../Context/ThemeContext";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "./FawtechLogo.png";
 
+const navItems = ["Home", "Products", "About", "Contact"];
+
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isImageLoaded, setIsImageLoaded] = useState(false); // New state for image loading
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const location = useLocation();
+
   const toggleMenu = () => setMenuOpen(!isMenuOpen);
 
-  // Preload the logo image
-  useEffect(() => {
-    const img = new Image();
-    img.src = logo;
-    img.onload = () => setIsImageLoaded(true);
-    img.onerror = () => setIsImageLoaded(true); // Fallback if image fails
-    return () => {
-      img.onload = null;
-      img.onerror = null;
-    };
-  }, [logo]);
-
-  // Animation variants for navbar
   const navbarVariants = {
     hidden: { y: -100, opacity: 0 },
     visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
   };
 
-  // Animation variants for mobile menu
   const menuVariants = {
-    hidden: { height: 0, opacity: 0 },
-    visible: { height: "auto", opacity: 1, transition: { duration: 0.3 } },
+    hidden: { opacity: 0, y: -10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring", stiffness: 100, damping: 15 },
+    },
+    exit: { opacity: 0, y: -10, transition: { duration: 0.2 } },
   };
 
-  // Animation variants for nav links
   const linkVariants = {
-    hover: { scale: 1.1, color: theme === "dark" ? "#93c5fd" : "#2563eb" },
+    hover: { scale: 1.1 },
     tap: { scale: 0.95 },
   };
 
+  const isActive = (path) => location.pathname === path;
+
   return (
     <motion.nav
+      role="navigation"
       className={`fixed top-0 w-full h-20 ${
         theme === "dark"
           ? "bg-gray-900 text-gray-100"
@@ -52,19 +48,18 @@ const Navbar = () => {
       animate="visible"
     >
       <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
-        {/* Logo on the left */}
+        {/* Logo */}
         <motion.div
           className="flex items-center space-x-2 cursor-pointer"
           whileHover={{ scale: 1.05 }}
         >
-          <Link to="/">
-            {isImageLoaded && (
-              <img
-                src={logo}
-                alt="FawTech Logo"
-                className="h-full max-h-12 w-auto object-contain"
-              />
-            )}
+          <Link to="/" aria-label="Go to homepage">
+            <img
+              src={logo}
+              alt="FawTech Logo"
+              className="h-12 w-auto object-contain"
+              loading="lazy"
+            />
           </Link>
           <Link
             to="/"
@@ -76,27 +71,37 @@ const Navbar = () => {
           </Link>
         </motion.div>
 
-        {/* Navigation links and theme toggle on the right */}
+        {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
-          {["Home", "Products", "About", "Contact"].map((item) => (
-            <motion.div
-              key={item}
-              variants={linkVariants}
-              whileHover="hover"
-              whileTap="tap"
-            >
-              <Link
-                to={`/${item.toLowerCase()}`}
-                className={`${
-                  theme === "dark"
-                    ? "text-gray-100 hover:text-blue-300"
-                    : "text-gray-900 hover:text-blue-600"
-                } transition`}
+          {navItems.map((item) => {
+            const path = `/${item.toLowerCase()}`;
+            const isCurrent = isActive(path);
+            const activeColor =
+              theme === "dark" ? "text-blue-400" : "text-blue-600";
+
+            return (
+              <motion.div
+                key={item}
+                variants={linkVariants}
+                whileHover="hover"
+                whileTap="tap"
               >
-                {item === "Products" ? "Products & Categories" : item}
-              </Link>
-            </motion.div>
-          ))}
+                <Link
+                  to={path}
+                  className={`transition font-medium ${
+                    theme === "dark"
+                      ? "text-gray-100 hover:text-blue-300"
+                      : "text-gray-900 hover:text-blue-600"
+                  } ${isCurrent ? `${activeColor} font-semibold` : ""}`}
+                  aria-label={`Navigate to ${item}`}
+                >
+                  {item === "Products" ? "Products & Categories" : item}
+                </Link>
+              </motion.div>
+            );
+          })}
+
+          {/* Theme Toggle */}
           <motion.button
             onClick={toggleTheme}
             className={`focus:outline-none ${
@@ -107,12 +112,7 @@ const Navbar = () => {
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -121,12 +121,7 @@ const Navbar = () => {
                 />
               </svg>
             ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -138,8 +133,8 @@ const Navbar = () => {
           </motion.button>
         </div>
 
-        {/* Hamburger menu and theme toggle for mobile */}
-        <div className="md:hidden flex items-center space-x-4 overflow-hidden">
+        {/* Mobile Menu Toggle */}
+        <div className="md:hidden flex items-center space-x-4">
           <motion.button
             onClick={toggleTheme}
             className={`focus:outline-none ${
@@ -150,12 +145,7 @@ const Navbar = () => {
             aria-label="Toggle theme"
           >
             {theme === "dark" ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -164,12 +154,7 @@ const Navbar = () => {
                 />
               </svg>
             ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -179,6 +164,7 @@ const Navbar = () => {
               </svg>
             )}
           </motion.button>
+
           <motion.button
             onClick={toggleMenu}
             className={`focus:outline-none ${
@@ -187,79 +173,63 @@ const Navbar = () => {
             whileHover={{ scale: 1.2 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
           </motion.button>
         </div>
       </div>
 
-      {/* Dropdown menu for mobile */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
+            id="mobile-menu"
             className={`md:hidden ${
               theme === "dark" ? "bg-gray-800" : "bg-gray-100"
             } px-4 pt-2 pb-4 space-y-2 w-full box-border`}
             variants={menuVariants}
             initial="hidden"
             animate="visible"
-            exit="hidden"
+            exit="exit"
           >
-            {["Home", "Products", "About", "Contact"].map((item, index) => (
-              <motion.div
-                key={item}
-                variants={{
-                  hidden: { x: -20, opacity: 0 },
-                  visible: {
-                    x: 0,
-                    opacity: 1,
-                    transition: { delay: index * 0.1 },
-                  },
-                }}
-                initial="hidden"
-                animate="visible"
-              >
-                <Link
-                  to={`/${item.toLowerCase()}`}
-                  className={`block ${
-                    theme === "dark"
-                      ? "text-gray-100 hover:bg-gray-700"
-                      : "text-gray-900 hover:bg-gray-200"
-                  } px-2 py-1 rounded transition`}
-                  onClick={() => setMenuOpen(false)}
+            {navItems.map((item, index) => {
+              const path = `/${item.toLowerCase()}`;
+              const isCurrent = isActive(path);
+              const activeColor =
+                theme === "dark" ? "text-blue-400" : "text-blue-600";
+
+              return (
+                <motion.div
+                  key={item}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
                 >
-                  {item === "Products" ? "Products & Categories" : item}
-                </Link>
-              </motion.div>
-            ))}
+                  <Link
+                    to={path}
+                    className={`block px-2 py-1 rounded transition ${
+                      theme === "dark"
+                        ? "text-gray-100 hover:bg-gray-700"
+                        : "text-gray-900 hover:bg-gray-200"
+                    } ${isCurrent ? `${activeColor} font-semibold` : ""}`}
+                    onClick={() => setMenuOpen(false)}
+                    aria-label={`Navigate to ${item}`}
+                  >
+                    {item === "Products" ? "Products & Categories" : item}
+                  </Link>
+                </motion.div>
+              );
+            })}
           </motion.div>
         )}
       </AnimatePresence>
