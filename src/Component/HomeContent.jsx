@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import React,{useEffect} from "react";
+import { motion, useAnimation } from "framer-motion"; // Removed AnimatePresence
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 
 function HomeContent() {
-  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
 
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: false });
   const controls = useAnimation();
-
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false),100);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     if (inView) {
@@ -54,23 +48,6 @@ function HomeContent() {
 
   return (
     <div className="bg-white dark:bg-gray-950 transition-colors duration-500">
-      <AnimatePresence>
-        {isLoading && (
-          <motion.div
-            className="fixed inset-0 flex items-center justify-center bg-white dark:bg-gray-900 z-50"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <motion.div
-              className="w-12 h-12 border-4 border-t-blue-500 border-gray-200 dark:border-gray-700 rounded-full"
-              animate={{ rotate: 360 }}
-              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <motion.section
         ref={ref}
         className="flex items-center justify-center px-6 py-24 min-h-[80vh]"
