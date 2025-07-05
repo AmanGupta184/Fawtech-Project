@@ -8,7 +8,7 @@ import ConsolesCover from '../Assets/Images/Products/consoles.jpg';
 import SteamDeck from '../Assets/Images/Products/steamDeck.png';
 import MetaQuest from '../Assets/Images/Products/metaQuest.png';
 
-import LenovoImage from '../Assets/Images/Products/lenovo_laptops.jpg';
+// import LenovoImage from '../Assets/Images/Products/lenovo_laptops.jpg';
 import LenovoLegionImage from '../Assets/Images/Products/LenovoLegion.png';
 import LenovoLOQImage from '../Assets/Images/Products/LenovoLOQ.png';
 import DellImage from '../Assets/Images/Products/dellLaptop.png';
@@ -28,7 +28,7 @@ import AsusImage from '../Assets/Images/Products/asusGPU.png';
 import GraphicsCardCover from '../Assets/Images/Products/graphics-card.jpg';
 
 import SandiskImage from '../Assets/Images/Products/sandiskProduct.png';
-import NVMeImage from '../Assets/Images/Products/nvmExpressCard.png';
+// import NVMeImage from '../Assets/Images/Products/nvmExpressCard.png';
 import LexarImage from '../Assets/Images/Products/lexar.png';
 import ToshibaImage from '../Assets/Images/Products/toshibaMemory.png';
 import TranscendImage from '../Assets/Images/Products/Transcend.png';
@@ -40,7 +40,7 @@ import MW123Image from '../Assets/Images/Products/MacMW123.png';
 import MW0Y3Image from '../Assets/Images/Products/MacMW0Y3.png';
 import MC6T4Image from '../Assets/Images/Products/MacMC6T4.png';
 import SamsungTabImage from '../Assets/Images/Products/samsungTab.png';
-import TabletAccessoriesImage from '../Assets/Images/Products/tablet_accessories.png';
+// import TabletAccessoriesImage from '../Assets/Images/Products/tablet_accessories.png';
 import TabletsCover from '../Assets/Images/Products/tablets.jpg';
 
 import AppleWatchImage from '../Assets/Images/Products/appleWatch.png';
@@ -63,7 +63,7 @@ import Predator from '../Assets/Images/Products/predator.png';
 import AppleAccessoriesImage from '../Assets/Images/Products/appleAccessories.png';
 import SamsungAccessoriesImage from '../Assets/Images/Products/Samsung_accessories.jpg';
 import LogitechImage from '../Assets/Images/Products/logitechPeripherals.png';
-import SonyImage from '../Assets/Images/Products/sonyElectronics.png';
+// import SonyImage from '../Assets/Images/Products/sonyElectronics.png';
 import SonySDImage from '../Assets/Images/Products/SonySD.png';
 import PSVRImage from '../Assets/Images/Products/PSVR.png';
 import DysonImage from '../Assets/Images/Products/dyson.jpg';
