@@ -246,7 +246,7 @@ const Navbar = () => {
                 animate="visible"
                 exit="hidden"
               >
-                {["Home", "About", "Products", "Contact"].map((item, index) => (
+                {["Home", "Products", "About", "Contact"].map((item, index) => (
                   <motion.div
                     key={item}
                     variants={{

@@ -48,7 +48,7 @@ const SolutionsSection = () => {
           transition={{ duration: 0.6 }}
           className="mb-12 flex flex-col items-center justify-center text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+          <h2 className="text-2xl md:text-2xl font-bold text-gray-900 dark:text-white">
             Driving Global Reach with Tailored <br /> Tech Solutions
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300 max-w-2xl">

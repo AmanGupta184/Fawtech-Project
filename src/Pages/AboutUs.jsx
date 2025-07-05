@@ -55,30 +55,21 @@ function AboutPage() {
 
   return (
     <Layout>
-      <div className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
+      <div className="dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
         {/* Hero Section */}
-        <header className="relative bg-gradient-to-b from-blue-200 to-blue-100 dark:from-gray-950 dark:to-gray-900 h-56 py-16 md:py-24">
+        <header className="relative dark:from-gray-950 dark:to-gray-900">
           <div className="absolute inset-0 bg-gray-200 dark:bg-gray-900 opacity-20 dark:opacity-40"></div>
-          <div className="relative max-w-6xl mx-auto px-4 text-center">
+          <div className="relative max-w-6xl mx-auto px-4 text-center pt-28">
             <motion.h1
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl font-extrabold text-gray-800 mt-10 dark:text-white mb-6 tracking-tight"
+              className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white tracking-tight"
             >
               About Fawtech
             </motion.h1>
-            {/* <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="max-w-3xl mx-auto font-bold space-y-4 h-20 text-gray-600 dark:text-gray-200 text-base md:text-lg"
-            >
-            </motion.div> */}
           </div>
         </header>
 

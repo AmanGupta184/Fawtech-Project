@@ -2,10 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
 import "swiper/css";
-import "swiper/css/navigation";
 
 // Animation variants
 const fadeUp = {
@@ -23,8 +22,8 @@ const TestimonialCard = ({ img, index }) => {
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       variants={fadeUp}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      className="bg-white rounded-xl shadow-md p-6 h-full flex flex-col justify-between"
+      transition={{ duration: 0.6, delay: index * 0.15 }}
+      className="bg-white rounded-xl shadow-lg p-6 h-full flex flex-col justify-between hover:shadow-xl transition-shadow duration-300"
     >
       <div>
         <div className="flex items-center mb-4 space-x-1">
@@ -57,28 +56,21 @@ function TestimonialsPage() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section className="py-20 min-h-fit bg-blue-50 dark:bg-gray-900 p-6  gap-8">
-      <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-        {/* Title & Arrows Section */}
+    <section className="py-20 min-h-fit bg-blue-50 dark:bg-gray-900 px-4 overflow-x-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
+        {/* Title Section */}
         <motion.div
           ref={ref}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={fadeUp}
           transition={{ duration: 0.6 }}
+          className="flex flex-col items-start"
         >
-          <FaQuoteLeft className="text-4xl text-blue-600 mb-4" />
-          <h2 className="text-3xl md:text-4xl font-extrabold text-blue-600 leading-tight mb-6">
+          <FaQuoteLeft className="text-3xl md:text-4xl text-blue-600 mb-4" />
+          <h2 className="text-2xl md:text-4xl font-extrabold text-blue-600 leading-tight mb-6">
             Client testimonials <br /> and real success stories
           </h2>
-          <div className="flex space-x-3 mt-6">
-            <button className="swiper-button-prev w-10 h-10 flex items-center justify-center bg-white rounded-full shadow hover:bg-gray-200">
-              ←
-            </button>
-            <button className="swiper-button-next w-10 h-10 flex items-center justify-center bg-white rounded-full shadow hover:bg-gray-200">
-              →
-            </button>
-          </div>
         </motion.div>
 
         {/* Testimonial Swiper Section */}
@@ -87,21 +79,20 @@ function TestimonialsPage() {
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={fadeUp}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="col-span-2"
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="col-span-1 md:col-span-2"
         >
           <Swiper
-            modules={[Navigation]}
-            navigation={{
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            }}
-            spaceBetween={30}
+            spaceBetween={20}
             slidesPerView={1}
+            modules={[Autoplay]}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
             breakpoints={{
-              768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
+              640: { slidesPerView: 1, spaceBetween: 20 },
+              768: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
             }}
+            loop={true}
           >
             {["men/32", "men/33", "women/34"].map((img, index) => (
               <SwiperSlide key={index}>
