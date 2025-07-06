@@ -1,156 +1,103 @@
-// import React from 'react';
+import React from "react";
 
-// const Loading = () => {
-//   return (
-//     <div style={{ 
-//       display: 'flex', 
-//       justifyContent: 'center', 
-//       alignItems: 'center', 
-//       height: '100vh', 
-//       flexDirection: 'column' 
-//     }}>
-//       <div style={{ 
-//         position: 'relative', 
-//         width: '100px', 
-//         height: '100px' 
-//       }}>
-//         <div style={{ 
-//           position: 'absolute', 
-//           width: '80px', 
-//           height: '40px', 
-//           background: '#FFFFFF', // White fill
-//           border: '4px solid #007BFF', // Blue outline
-//           borderRadius: '20px', 
-//           top: '30px', 
-//           animation: 'spin 1.5s infinite linear' 
-//         }}></div>
-//         <div style={{ 
-//           position: 'absolute', 
-//           width: '80px', 
-//           height: '40px', 
-//           background: '#FFFFFF', // White fill
-//           border: '4px solid #2563eb', // Darker blue outline
-//           borderRadius: '20px', 
-//           top: '30px', 
-//           transform: 'rotate(180deg)', 
-//           animation: 'spin 1.5s infinite linear' 
-//         }}></div>
-//       </div>
-//       <span style={{ color: '#888', marginTop: '20px' }}>LOADING...</span>
-//     </div>
-//   );
-// };
-
-// // Add the animation keyframes to the component
-// const styleSheet = document.styleSheets[0];
-// if (styleSheet) {
-//   styleSheet.insertRule(`
-//     @keyframes spin {
-//       0% { transform: rotate(0deg); }
-//       100% { transform: rotate(360deg); }
-//     }
-//   `, styleSheet.cssRules.length);
-// }
-
-// export default Loading;
-import React from 'react';
-
-const Loading = () => {
+const InfinityLoader = () => {
   return (
-    <>
-      <div className="flex items-center justify-center h-screen bg-white dark:bg-gray-900">
-        <div className="loader-container">
-          {Array.from({ length: 20 }).map((_, index) => (
-            <div className="particle" key={index}></div>
-          ))}
-        </div>
-      </div>
+    <div className="flex items-center justify-center h-screen bg-white">
+      <svg
+        className="container"
+        x="0px"
+        y="0px"
+        viewBox="0 0 55 23.1"
+        height="100"
+        width="300"
+        preserveAspectRatio="xMidYMid meet"
+      >
+        {/* Animated Gradient + Glow Filter */}
+        <defs>
+          <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="cyan">
+              <animate
+                attributeName="stop-color"
+                values="cyan;magenta;yellow;cyan"
+                dur="4s"
+                repeatCount="indefinite"
+              />
+            </stop>
+            <stop offset="100%" stopColor="blue">
+              <animate
+                attributeName="stop-color"
+                values="blue;purple;red;blue"
+                dur="4s"
+                repeatCount="indefinite"
+              />
+            </stop>
+          </linearGradient>
 
-      <style>{`
-        .loader-container {
-          --uib-size: 200px;
-          --uib-color: blue;
-          --uib-speed: 1.75s;
-          position: relative;
-          height: var(--uib-size);
-          width: var(--uib-size);
-          animation: rotate calc(var(--uib-speed) * 6) linear infinite;
-        }
+          <filter id="animatedGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="0" dy="0" stdDeviation="2.5" floodColor="white" floodOpacity="0.8" />
+            <feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="white" floodOpacity="0.4" />
+          </filter>
+        </defs>
 
-        @keyframes rotate {
-          0% { transform: rotate(0deg); }
-          100% { transform: rotate(360deg); }
-        }
+        {/* Background Track */}
+        <path
+          className="track"
+          fill="none"
+          strokeWidth="4"
+          pathLength="100"
+          d="M26.7,12.2c3.5,3.4,7.4,7.8,12.7,7.8c5.5,0,9.6-4.4,9.6-9.5C49,5,45.1,1,39.8,1
+             c-5.5,0-9.5,4.2-13.1,7.8l-3.4,3.3c-3.6,3.6-7.6,7.8-13.1,7.8C4.9,20,1,16,1,10.5C1,5.4,5.1,1,10.6,1
+             c5.3,0,9.2,4.5,12.7,7.8L26.7,12.2z"
+        />
 
-        .particle {
-          position: absolute;
-          top: 0%;
-          left: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 100%;
-          width: 100%;
-        }
+        {/* Moving Car Path */}
+        <path
+          className="car"
+          fill="none"
+          strokeWidth="4"
+          pathLength="100"
+          stroke="url(#animatedGradient)"
+          filter="url(#animatedGlow)"
+          d="M26.7,12.2c3.5,3.4,7.4,7.8,12.7,7.8c5.5,0,9.6-4.4,9.6-9.5C49,5,45.1,1,39.8,1
+             c-5.5,0-9.5,4.2-13.1,7.8l-3.4,3.3c-3.6,3.6-7.6,7.8-13.1,7.8C4.9,20,1,16,1,10.5C1,5.4,5.1,1,10.6,1
+             c5.3,0,9.2,4.5,12.7,7.8L26.7,12.2z"
+        />
+      </svg>
 
-        .particle::before {
-          content: '';
-          position: absolute;
-          height: 17.5%;
-          width: 17.5%;
-          border-radius: 50%;
-          background-color: var(--uib-color);
-          flex-shrink: 0;
-          transition: background-color 0.3s ease;
-          animation: orbit var(--uib-speed) linear infinite;
-        }
+      {/* Animation Styles */}
+      <style>
+        {`
+          .container {
+            --uib-speed: 1.3s;
+            transform-origin: center;
+            overflow: visible;
+          }
 
-        /* Individual particle delay and rotation */
-        .particle:nth-child(1)  { transform: rotate(8deg);   --uib-delay: 0;     }
-        .particle:nth-child(2)  { transform: rotate(36deg);  --uib-delay: -0.4;  }
-        .particle:nth-child(3)  { transform: rotate(72deg);  --uib-delay: -0.9;  }
-        .particle:nth-child(4)  { transform: rotate(90deg);  --uib-delay: -0.5;  }
-        .particle:nth-child(5)  { transform: rotate(144deg); --uib-delay: -0.3;  }
-        .particle:nth-child(6)  { transform: rotate(180deg); --uib-delay: -0.2;  }
-        .particle:nth-child(7)  { transform: rotate(216deg); --uib-delay: -0.6;  }
-        .particle:nth-child(8)  { transform: rotate(252deg); --uib-delay: -0.7;  }
-        .particle:nth-child(9)  { transform: rotate(300deg); --uib-delay: -0.1;  }
-        .particle:nth-child(10) { transform: rotate(324deg); --uib-delay: -0.8;  }
-        .particle:nth-child(11) { transform: rotate(335deg); --uib-delay: -1.2;  }
-        .particle:nth-child(12) { transform: rotate(290deg); --uib-delay: -0.5;  }
-        .particle:nth-child(13) { transform: rotate(240deg); --uib-delay: -0.2;  }
+          .car {
+            stroke-dasharray: 15, 85;
+            stroke-dashoffset: 0;
+            stroke-linecap: round;
+            animation: travel var(--uib-speed) linear infinite;
+            will-change: stroke-dasharray, stroke-dashoffset;
+          }
 
-        .particle::before {
-          --uib-d: calc(var(--uib-delay) * var(--uib-speed));
-          animation-delay: var(--uib-d);
-        }
+          .track {
+            stroke: #cccccc;
+            opacity: 0.2;
+          }
 
-        @keyframes orbit {
-          0%   { transform: translate(calc(var(--uib-size) * 0.5)) scale(0.73684); opacity: 0.65; }
-          5%   { transform: translate(calc(var(--uib-size) * 0.4)) scale(0.684208); opacity: 0.58; }
-          10%  { transform: translate(calc(var(--uib-size) * 0.3)) scale(0.631576); opacity: 0.51; }
-          15%  { transform: translate(calc(var(--uib-size) * 0.2)) scale(0.578944); opacity: 0.44; }
-          20%  { transform: translate(calc(var(--uib-size) * 0.1)) scale(0.526312); opacity: 0.37; }
-          25%  { transform: translate(0%) scale(0.47368); opacity: 0.3; }
-          30%  { transform: translate(calc(var(--uib-size) * -0.1)) scale(0.526312); opacity: 0.37; }
-          35%  { transform: translate(calc(var(--uib-size) * -0.2)) scale(0.578944); opacity: 0.44; }
-          40%  { transform: translate(calc(var(--uib-size) * -0.3)) scale(0.631576); opacity: 0.51; }
-          45%  { transform: translate(calc(var(--uib-size) * -0.4)) scale(0.684208); opacity: 0.58; }
-          50%  { transform: translate(calc(var(--uib-size) * -0.5)) scale(0.73684); opacity: 0.65; }
-          55%  { transform: translate(calc(var(--uib-size) * -0.4)) scale(0.789472); opacity: 0.72; }
-          60%  { transform: translate(calc(var(--uib-size) * -0.3)) scale(0.842104); opacity: 0.79; }
-          65%  { transform: translate(calc(var(--uib-size) * -0.2)) scale(0.894736); opacity: 0.86; }
-          70%  { transform: translate(calc(var(--uib-size) * -0.1)) scale(0.947368); opacity: 0.93; }
-          75%  { transform: translate(0%) scale(1); opacity: 1; }
-          80%  { transform: translate(calc(var(--uib-size) * 0.1)) scale(0.947368); opacity: 0.93; }
-          85%  { transform: translate(calc(var(--uib-size) * 0.2)) scale(0.894736); opacity: 0.86; }
-          90%  { transform: translate(calc(var(--uib-size) * 0.3)) scale(0.842104); opacity: 0.79; }
-          95%  { transform: translate(calc(var(--uib-size) * 0.4)) scale(0.789472); opacity: 0.72; }
-          100% { transform: translate(calc(var(--uib-size) * 0.5)) scale(0.73684); opacity: 0.65; }
-        }
-      `}</style>
-    </>
+          @keyframes travel {
+            0% {
+              stroke-dashoffset: 0;
+            }
+            100% {
+              stroke-dashoffset: 100;
+            }
+          }
+        `}
+      </style>
+    </div>
   );
 };
 
-export default Loading;
+export default InfinityLoader;
