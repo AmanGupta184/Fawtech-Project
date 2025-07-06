@@ -2,7 +2,7 @@ import React from "react";
 
 const InfinityLoader = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-white">
+    <div className="flex items-center justify-center h-screen bg-white dark:bg-black">
       <svg
         className="container"
         x="0px"
@@ -84,6 +84,13 @@ const InfinityLoader = () => {
           .track {
             stroke: #cccccc;
             opacity: 0.2;
+          }
+
+          @media (prefers-color-scheme: dark) {
+            .track {
+              stroke: #888888;
+              opacity: 0.3;
+            }
           }
 
           @keyframes travel {
