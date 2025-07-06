@@ -30,11 +30,8 @@ import IpadImage from '../Assets/Images/Products/ipad.png';
 import MW123Image from '../Assets/Images/Products/MacMW123.png';
 import MW0Y3Image from '../Assets/Images/Products/MacMW0Y3.png';
 import MC6T4Image from '../Assets/Images/Products/MacMC6T4.png';
-import SamsungTabImage from '../Assets/Images/Products/samsungTab.png';
 
 import AppleWatchImage from '../Assets/Images/Products/appleWatch.png';
-import SamsungWatchImage from '../Assets/Images/Products/samsungWatch.png';
-import SamsungSDImage from '../Assets/Images/Products/samsungSD.png';
 
 import DJIImage from '../Assets/Images/Products/djiDrones.png';
 
@@ -46,7 +43,6 @@ import Aspire from '../Assets/Images/Products/aspire.png';
 import Predator from '../Assets/Images/Products/predator.png'; 
 
 import AppleAccessoriesImage from '../Assets/Images/Products/appleAccessories.png';
-import SamsungAccessoriesImage from '../Assets/Images/Products/Samsung_accessories.jpg';
 import LogitechImage from '../Assets/Images/Products/logitechPeripherals.png';
 import SonySDImage from '../Assets/Images/Products/SonySD.png';
 import PSVRImage from '../Assets/Images/Products/PSVR.png';
@@ -229,24 +225,6 @@ const ProductData = [
     description: "High-performance ASUS graphics card designed for gamers and creators."
   },
   {
-    name: "Samsung Galaxy Tab",
-    category: "Tablets",
-    images: [SamsungTabImage],
-    description: "Galaxy Tab built for productivity and entertainment."
-  },
-  {
-    name: "Samsung Galaxy Watch",
-    category: "Wearables",
-    images: [SamsungWatchImage],
-    description: "Smart features and fitness tracking on your wrist."
-  },
-  {
-    name: "Samsung EVO SD Card",
-    category: "Memory Cards",
-    images: [SamsungSDImage],
-    description: "High-speed and reliable SD card ideal for mobile and camera storage."
-  },
-  {
     name: "DJI Drone Pro",
     category: "Drones",
     images: [DJIImage],
@@ -283,12 +261,6 @@ const ProductData = [
     description: "High-end gaming beast with top specs and RGB keyboard."
   },
   {
-    name: "Samsung Accessories Kit",
-    category: "Accessories",
-    images: [SamsungAccessoriesImage],
-    description: "Chargers, covers, and more for your Galaxy devices."
-  },
-  {
     name: "Logitech Gaming Gear",
     category: "Accessories",
     images: [LogitechImage],
@@ -318,6 +290,7 @@ const ProductData = [
     images: [JBLImage],
     description: "Loud and clear audio with LED lights, perfect for parties."
   }
+
 ];
 
 export default ProductData;
