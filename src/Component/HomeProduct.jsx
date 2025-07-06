@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductData } from "../Context/ProductData";
+import ProductData from "../Context/ProductData";
 import { motion } from "framer-motion"; // Removed AnimatePresence
 
 const HomeProduct = () => {
