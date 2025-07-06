@@ -132,7 +132,7 @@ function Graph() {
             transition={{ duration: 0.5 }}
             className="mb-6 text-center"
           >
-            <h4 className="text-base sm:text-lg font-semibold text-blue-800">
+            <h4 className="text-base sm:text-lg font-semibold mb-10 md:mb-0 text-blue-800">
               From strategy to scalable business success
             </h4>
           </motion.div>
