@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-// import Image from "../Assets/Images/Image1.jpg";
-// import { Logo } from "../Context/Logo";
 import Layout from "../Layout/Layout";
-import { GiGameConsole } from "react-icons/gi";
-import { PiGraphicsCardLight, PiHairDryerLight } from "react-icons/pi";
-import { TfiApple } from "react-icons/tfi";
-import { BsSpeaker } from "react-icons/bs";
+import { GiVirtualMarker, GiGamepad, GiLaptop } from "react-icons/gi";
+import { PiHairDryerLight } from "react-icons/pi";
+import { MdOutlineDevicesOther } from "react-icons/md";
 import MissionSection from "../Component/MissionSection";
 import TeamMemberCard from "../Component/TeamMemberCard";
 import TestimonialsPage from "../Component/TestimonialsPage";
 import AboutHead from "../Component/AboutHead";
+import VisionMission from "../Component/VisionMission";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -19,34 +17,34 @@ const fadeUp = {
 
 const services = [
   {
-    title: "Gaming Consoles",
-    description:
-      "We offer a range of gaming consoles from top manufacturers, including PlayStation, Xbox, and Nintendo.",
-    icon: <GiGameConsole className="w-8 h-8 text-blue-600" />,
-  },
-  {
     title: "Dyson Products",
     description:
-      "Our selection includes Dyson vacuums, air purifiers, and more. Known for innovative design and performance.",
+      "Explore cutting-edge Dyson appliances like hair dryers, vacuums, and air purifiers built with advanced technology.",
     icon: <PiHairDryerLight className="w-8 h-8 text-blue-600" />,
   },
   {
-    title: "Graphic Cards",
+    title: "Gaming Laptop",
     description:
-      "For gamers and professionals, our graphic cards from NVIDIA and AMD deliver outstanding visuals and performance.",
-    icon: <PiGraphicsCardLight className="w-8 h-8 text-blue-600" />,
+      "Powerful gaming laptops built for high-performance gaming and graphics-intensive tasks with blazing speed.",
+    icon: <GiLaptop className="w-8 h-8 text-blue-600" />,
   },
   {
-    title: "Apple Accessories",
+    title: "VR World",
     description:
-      "We carry a variety of Apple accessories, including cases, chargers, and more, designed to complement your Apple devices.",
-    icon: <TfiApple className="w-8 h-8 text-blue-600" />,
+      "Dive into the immersive world of VR with the latest headsets and experiences that redefine reality.",
+    icon: <GiVirtualMarker className="w-8 h-8 text-blue-600" />,
   },
   {
-    title: "Speakers",
+    title: "Gaming Product",
     description:
-      "Experience premium sound with our JBL speakers,Harman Kardon suitable for music lovers and gamers alike.",
-    icon: <BsSpeaker className="w-8 h-8 text-blue-600" />,
+      "Enhance your setup with keyboards, mice, chairs, and more—everything you need for serious gaming.",
+    icon: <MdOutlineDevicesOther className="w-8 h-8 text-blue-600" />,
+  },
+  {
+    title: "Gaming Console",
+    description:
+      "From PlayStation to Xbox and Nintendo, find your favorite consoles and the latest gaming titles.",
+    icon: <GiGamepad className="w-8 h-8 text-blue-600" />,
   },
 ];
 
@@ -74,20 +72,23 @@ function AboutPage() {
         </header>
 
         {/* Mission Section */}
-        <AboutHead/>
+        <AboutHead />
+
+        {/* Vision Section */}
+        <VisionMission />
 
         {/* Mission Section */}
         <MissionSection />
 
         {/* Team Member Section */}
         <TeamMemberCard />
-        
+
         {/* Team Member Section */}
         <TestimonialsPage />
 
         {/* Services Flip Cards */}
-        <section className="bg-blue-50 dark:bg-gray-900 py-16 px-4">
-          <div className="flex justify-center overflow-x-auto gap-6">
+        <section className="bg-gray-50 dark:bg-gray-900 py-16 px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 max-w-8xl mx-auto">
             {services.map((service, index) => {
               const isHovered = hoveredIndex === index;
               return (
@@ -99,20 +100,25 @@ function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="perspective-1000 min-w-[16rem]"
+                  className="perspective-1000 w-full"
                 >
                   <div className="relative w-full h-80">
                     <motion.div
                       animate={{ rotateY: isHovered ? 180 : 0 }}
-                      transition={{ duration: 0.6 }}
-                      className="w-full h-full transform-style-preserve-3d transition-transform duration-500 rounded-xl shadow-lg"
+                      transition={{ duration: 0.5, ease: "easeInOut" }}
+                      className="w-full h-full transform-style-preserve-3d rounded-xl shadow-lg"
                     >
+                      {/* Front Side */}
                       <div className="absolute inset-0 backface-hidden bg-white dark:bg-gray-800 p-6 flex flex-col items-center justify-center text-center rounded-xl h-full">
-                        <div className="bg-blue-100 p-4 rounded-full mb-4">{service.icon}</div>
+                        <div className="bg-blue-100 p-4 rounded-full mb-4">
+                          {service.icon}
+                        </div>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                           {service.title}
                         </h3>
                       </div>
+
+                      {/* Back Side */}
                       <div className="absolute inset-0 rotate-y-180 backface-hidden bg-white dark:bg-gray-800 p-6 flex flex-col justify-center text-left rounded-xl h-full">
                         <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                           {service.title}

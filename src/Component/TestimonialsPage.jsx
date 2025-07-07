@@ -65,13 +65,13 @@ function TestimonialsPage() {
     },
     {
       img: p5,
-      name: "Sara",
+      name: "David",
       role: "E-commerce Manager, GadgetMart",
       text: "We’ve worked with several vendors, but none match Fawtech’s professionalism and product quality. They truly understand modern market needs.",
     },
     {
       img: p6,
-      name: "David",
+      name: "Sara",
       role: "IT Director, Visionware",
       text: "From high-performance graphics cards to tablets, Fawtech delivers excellence across the board. Highly recommended for enterprise partnerships.",
     },
