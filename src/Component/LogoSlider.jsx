@@ -29,7 +29,7 @@ const LogoSlider = () => {
         </h2>
         <div
           className="relative overflow-hidden group"
-          onMouseEnter={() => {
+          onMouseEnter={() => { 
             const swiper = document.querySelector(".mySwiper")?.swiper;
             if (swiper) swiper.autoplay.stop();
           }}
@@ -67,7 +67,7 @@ const LogoSlider = () => {
                   whileTap="tap"
                 >
                   <motion.div
-                    className="absolute inset-0 bg-gray-300 dark:bg-gray-700 opacity-20 rounded-lg transform rotate-6 scale-95"
+                    className="absolute inset-0 bg-blue-100 opacity-60 rounded-lg transform rotate-6 scale-95"
                     variants={hoverVariants}
                   />
                   <motion.img

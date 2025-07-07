@@ -22,10 +22,11 @@ const steps = [
 ];
 
 const chartData = [
-  { year: 2022, value: 25, color: "from-gray-300 to-blue-200" },
-  { year: 2023, value: 50, color: "from-blue-500 to-blue-300" },
-  { year: 2024, value: 75, color: "from-blue-600 to-blue-500" },
-  { year: 2025, value: 100, color: "from-blue-600 to-blue-950", highlight: true },
+  { year: 2023, value: 10, color: "from-gray-300 to-blue-200" },
+  { year: 2024, value: 25, color: "from-blue-500 to-blue-300" },
+  { year: 2025, value: 39, color: "from-blue-600 to-blue-500" },
+  { year: '2026-2030', value: 98, color: "from-blue-600 to-blue-950" },
+
 ];
 
 function Graph() {
@@ -133,7 +134,7 @@ function Graph() {
             className="mb-6 text-center"
           >
             <h4 className="text-base sm:text-lg font-semibold mb-10 md:mb-0 text-blue-800">
-              From strategy to scalable business success
+              Marking up memorable journey towards our goals.
             </h4>
           </motion.div>
 

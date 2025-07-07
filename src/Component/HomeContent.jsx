@@ -68,7 +68,7 @@ function HomeContent() {
             className="text-3xl sm:text-4xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white"
             variants={fadeInUp}
           >
-            Fawtech Electronics is UAE's leading online electronics store. {" "}
+            Fawtech Electronics is UAE's leading electronics store. {" "}
             <p className="text-blue-600 text-center">Modernization{" "}<span className="text-black dark:text-white">& Technologies</span> </p>
           </motion.h1>
 
@@ -76,7 +76,7 @@ function HomeContent() {
             className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            One stop destination for all electronics products like Mobiles,Laptops,Gaming PC,Drones,Dyson Products and many more..
+            One stop destination for all electronics products like Mobiles, Laptops, Gaming Products, Drones, Dyson Products and many more..
           </motion.p>
 
           <motion.div

@@ -109,7 +109,6 @@ const Footer = () => {
               whileHover="hover"
               whileTap="tap"
             >
-              Facebook
             </motion.a>
             <motion.a
               href="/"
@@ -118,7 +117,6 @@ const Footer = () => {
               whileHover="hover"
               whileTap="tap"
             >
-              Twitter
             </motion.a>
             <motion.a
               href="/"
@@ -127,7 +125,6 @@ const Footer = () => {
               whileHover="hover"
               whileTap="tap"
             >
-              Instagram
             </motion.a>
           </div>
         </motion.div>
