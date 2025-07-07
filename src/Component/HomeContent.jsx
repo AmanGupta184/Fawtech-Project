@@ -76,7 +76,7 @@ function HomeContent() {
             className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            One stop destination for all electronics products like Mobiles, Laptops, Gaming Products, Drones, Dyson Products and many more..
+            One stop destination for all electronics products like Mobiles, Laptops, Gaming Products, DJI Products, Dyson Products and many more..
           </motion.p>
 
           <motion.div
