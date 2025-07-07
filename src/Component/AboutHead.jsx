@@ -109,7 +109,7 @@ const SolutionsSection = () => {
       title: "Strategic planning",
       icon: <PiStrategyFill className="w-8 h-8 text-blue-600" />,
       description:
-        "Fawtech crafts scalable, future-ready plans leveraging its location in DAFZA and JAFZA for global logistics.",
+        "Expand product offerings, strengthen brand partnerships, and lead with innovation.Focus on customer trust and excellence in tech distribution.",
     },
     {
       title: "Efficient operations",
