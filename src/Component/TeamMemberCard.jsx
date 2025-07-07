@@ -64,7 +64,7 @@ const TeamMemberCard = () => {
             Noor Mohammed
           </h2>
         </div>
-        <p className="text-gray-500 dark:text-gray-300">Founder & CEO</p>
+        <p className="text-gray-500 dark:text-gray-300">Founder & Sales Director</p>
 
         <div className="flex gap-4 text-gray-600 dark:text-gray-300 text-xl mt-2">
           <FaFacebookF aria-label="Facebook" />
