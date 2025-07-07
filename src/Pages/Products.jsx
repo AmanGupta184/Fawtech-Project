@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination as SwiperPagination } from "swiper/modules";
-import { FaArrowRight,FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -112,7 +112,9 @@ const Product = () => {
     <Layout>
       <div className="min-h-screen p-6 transition-all bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100">
         <div className="flex flex-wrap justify-center items-center mt-20 gap-4 mb-6 animate-fadeDown">
-          <h1 className="text-3xl font-bold text-gray-950 dark:text-gray-50">Explore Our Electronics</h1>
+          <h1 className="text-3xl font-bold text-gray-950 dark:text-gray-50">
+            Explore Our Electronics
+          </h1>
         </div>
 
         <div className="flex flex-wrap gap-2 mb-6 animate-fadeIn">
@@ -159,8 +161,8 @@ const Product = () => {
               <motion.div
                 key={product.name + index}
                 variants={cardVariants}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-4 text-center cursor-pointer hover:shadow-lg transition"
                 onClick={() => setModalProduct(product)}
+                className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-4 text-center cursor-pointer transition duration-300 hover:shadow-xl hover:shadow-blue-500/50"
               >
                 <img
                   src={product.images?.[0] || product.image || "/fallback.jpg"}
@@ -168,7 +170,9 @@ const Product = () => {
                   className="w-full h-40 object-cover rounded-md mb-4"
                 />
                 <h3 className="text-lg font-semibold">{product.name}</h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{product.description}</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {product.description}
+                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -186,7 +190,7 @@ const Product = () => {
             disabled={currentPage === 1}
             className="px-4 py-2 rounded-full bg-blue-600 text-white disabled:bg-gray-400"
           >
-            <FaArrowLeft/>
+            <FaArrowLeft />
           </button>
           {Array.from({ length: totalPages }, (_, i) => (
             <button
@@ -206,7 +210,7 @@ const Product = () => {
             disabled={currentPage === totalPages}
             className="px-4 py-2 rounded-full bg-blue-600 text-white disabled:bg-gray-400"
           >
-            <FaArrowRight/>
+            <FaArrowRight />
           </button>
         </div>
 
