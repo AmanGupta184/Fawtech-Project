@@ -5,7 +5,7 @@ export const Logo = [
   },
   {
     id:2,
-    image: require('../Assets/Logo/DysonLogo.jpg')
+    image: require('../Assets/Logo/JBLLogo.jpg')
   },
   {
     id:3,
@@ -13,7 +13,7 @@ export const Logo = [
   },
   {
     id:4,
-    image: require('../Assets/Logo/JBLLogo.jpg')
+    image: require('../Assets/Logo/DysonLogo.jpg')
   },
   {
     id:5,
@@ -25,11 +25,11 @@ export const Logo = [
   },
   {
     id:7,
-    image: require('../Assets/Logo/NintendoLogo.jpg')
+    image: require('../Assets/Logo/XboxLogo.jpg')
   },
   {
     id:8,
-    image: require('../Assets/Logo/NvidiaLogo.jpg')
+    image: require('../Assets/Logo/SonyLogo.jpeg')
   },
   {
     id:9,
@@ -39,9 +39,13 @@ export const Logo = [
     id:10,
     image: require('../Assets/Logo/PnyLogo.jpg')
   },
+   {
+    id:11,
+    image: require('../Assets/Logo/MSI-Logo.png')
+  },
   {
     id:12,
-    image: require('../Assets/Logo/XboxLogo.jpg')
+    image: require('../Assets/Logo/NintendoLogo.jpg')
   },
   {
     id:13,
@@ -53,7 +57,7 @@ export const Logo = [
   },
   {
     id:15,
-    image: require('../Assets/Logo/AppleLogo.jpeg')
+    image: require('../Assets/Logo/AppleLogo.png')
   },
   {
     id:16,
@@ -69,7 +73,7 @@ export const Logo = [
   },
   {
     id:19,
-    image: require('../Assets/Logo/SonyLogo.jpeg')
+    image: require('../Assets/Logo/NvidiaLogo.jpg')
   },
   {
     id:20,

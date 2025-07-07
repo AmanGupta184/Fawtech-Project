@@ -6,17 +6,27 @@ const banners = [
   {
     title: "Explore Innovation",
     subtitle: "Discover cutting-edge electronics & IT solutions.",
-    image: require("../Assets/Images/appleBanner.jpg"),
+    image: require("../Assets/Images/InnovativeProducts.jpeg"),
   },
   {
     title: "Global Distribution",
-    subtitle: "Expanding across the Middle East, Asia & Europe.",
+    subtitle: "Expanding across Honkong, Middle East, Europe, South East Asia, Indonesia, North America.",
     image: require("../Assets/Images/dysonBanner.jpg"),
   },
   {
     title: "Fawtech Electronics",
     subtitle: "Your trusted partner in technology excellence.",
     image: require("../Assets/Images/gamingBanner.jpg"),
+  },
+    {
+    title: "Top Sellers",
+    subtitle: "Our best can be your best.",
+    image: require("../Assets/Images/TopSeller.jpg"),
+  },
+    {
+    title: "Experience VR World",
+    subtitle: "It's time to see world around you.",
+    image: require("../Assets/Images/VRBanner.jpg"),
   },
 ];
 
@@ -67,8 +77,8 @@ const BannerCarousel = () => {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center px-4 sm:px-6">
-              <h2 className="text-xl sm:text-3xl md:text-5xl font-bold">
+            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white pt-48 px-4 sm:px-6">
+              <h2 className="text-xl sm:text-3xl md:text-5xl font-bold ">
                 {banners[index].title}
               </h2>
               <p className="text-sm sm:text-lg md:text-2xl mt-2 sm:mt-4">
