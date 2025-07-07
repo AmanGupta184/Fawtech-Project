@@ -88,7 +88,7 @@ const HomeProduct = () => {
             <motion.img
               src={image}
               alt={category}
-              className="w-full h-60 object-cover group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-60 object-fill group-hover:scale-110 transition-transform duration-500"
               whileHover={{ scale: 1.1 }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-blue-600/80 dark:from-blue-800/80 to-transparent opacity-0 group-hover:opacity-65 transition-opacity duration-500"></div>

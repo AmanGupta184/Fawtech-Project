@@ -17,11 +17,11 @@ const fadeUp = {
 function Contact() {
   return (
     <Layout>
-      <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-100 pt-20 px-4">
+      <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-100 pt-28 px-4">
         <main className="max-w-6xl mx-auto">
           {/* Title */}
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-center mb-8"
+            className="text-3xl md:text-4xl font-bold text-center mb-5"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
