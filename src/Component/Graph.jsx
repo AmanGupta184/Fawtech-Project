@@ -25,7 +25,7 @@ const chartData = [
   { year: 2023, value: 10, color: "from-gray-300 to-blue-200" },
   { year: 2024, value: 25, color: "from-blue-500 to-blue-300" },
   { year: 2025, value: 39, color: "from-blue-600 to-blue-500" },
-  { year: "2026-2030", value: 98, color: "from-blue-600 to-blue-950", highlight: true },
+  { year: "2026-2030", value: 98, color: "from-blue-600 to-blue-950" },
 ];
 
 const yAxisTicks = [100, 75, 50, 25];
