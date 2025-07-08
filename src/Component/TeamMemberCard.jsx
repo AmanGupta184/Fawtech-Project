@@ -10,7 +10,7 @@ import {
 import QR from "../Assets/Person/QR.png";
 
 // Reusable Stat Circle Component
-const StatCircle = ({ percent, label }) => {
+const StatCircle = ({ percent, label, inView }) => {
   const circleVariants = {
     hidden: { pathLength: 0 },
     visible: {
@@ -39,7 +39,7 @@ const StatCircle = ({ percent, label }) => {
           fill="none"
           strokeLinecap="round"
           initial="hidden"
-          animate="visible"
+          animate={inView ? "visible" : "hidden"}
           variants={circleVariants}
         />
       </svg>
@@ -52,14 +52,17 @@ const StatCircle = ({ percent, label }) => {
 };
 
 const TeamMemberCard = () => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.3 });
 
   return (
-    <div className="bg-blue-50 dark:bg-gray-900 p-6 rounded-xl grid md:grid-cols-2 gap-8 items-center">
+    <div
+      className="bg-blue-50 dark:bg-gray-900 p-6 rounded-xl grid md:grid-cols-2 gap-8 items-center"
+      ref={ref}
+    >
       {/* Left Side - Info */}
       <div className="flex flex-col items-center gap-4 text-center">
         <div className="flex items-center gap-3">
-          <div className="w-5 h-5  " />
+          <div className="w-5 h-5" />
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Noor Mohammed
           </h2>
@@ -81,7 +84,7 @@ const TeamMemberCard = () => {
       </div>
 
       {/* Right Side - Mission and Stats */}
-      <div ref={ref} className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6">
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
           Founded and led by Noor Mohammed, a visionary entrepreneur with deep
           expertise in the tech and trading industry, Fawtech continues to grow
@@ -92,12 +95,8 @@ const TeamMemberCard = () => {
         </p>
 
         <div className="flex items-center gap-8">
-          {inView && (
-            <>
-              <StatCircle percent={92} label="Global Reach" />
-              <StatCircle percent={100} label="Client Satisfaction" />
-            </>
-          )}
+          <StatCircle percent={92} label="Global Reach" inView={inView} />
+          <StatCircle percent={100} label="Client Satisfaction" inView={inView} />
         </div>
       </div>
     </div>
