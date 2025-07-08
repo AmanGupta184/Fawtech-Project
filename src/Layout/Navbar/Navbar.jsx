@@ -82,10 +82,10 @@ const Navbar = () => {
       initial="hidden"
       animate="visible"
     >
-      <div className="max-w-7xl mx-auto p-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2" aria-label="Go to homepage">
-          <img src={logo} alt="FawTech Logo" className="h-12 w-auto object-contain" loading="lazy" />
+          <img src={logo} alt="FawTech Logo" className="max-h-[84px] w-auto object-contain" loading="lazy" />
           <span className={`font-extrabold text-xl ${isDark ? "text-gray-100" : "text-blue-600"}`}>
             FawTech
           </span>
