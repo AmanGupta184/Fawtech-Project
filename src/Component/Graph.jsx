@@ -25,7 +25,7 @@ const chartData = [
   { year: 2023, value: 10, color: "from-gray-300 to-blue-200" },
   { year: 2024, value: 25, color: "from-blue-500 to-blue-300" },
   { year: 2025, value: 39, color: "from-blue-600 to-blue-500" },
-  { year: "2026-2030", value: 98, color: "from-blue-600 to-blue-950" },
+  { year: "2026-2030", value: 95, color: "from-blue-600 to-blue-950" },
 ];
 
 const yAxisTicks = [100, 75, 50, 25];
@@ -117,7 +117,7 @@ const Graph = () => {
             Marking up memorable journey towards our goals.
           </h4>
 
-          <div className="relative w-full h-64">
+          <div className="relative w-full h-80">
             {/* Y-Axis Ticks */}
             <div className="absolute left-0 w-full h-full flex flex-col justify-between">
               {yAxisTicks.map((tick) => (
