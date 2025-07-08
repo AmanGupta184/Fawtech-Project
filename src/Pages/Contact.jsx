@@ -2,9 +2,9 @@ import React from "react";
 import Layout from "../Layout/Layout";
 import { motion } from "framer-motion";
 import Shopimg from "../Assets/Images/Shop.jpg";
-import { FaTags, FaUserTie, FaHeadset } from "react-icons/fa";
+import { FaTags, FaUserTie, FaHeadset, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
-// Animation variants
+// Animation
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i = 0) => ({
@@ -18,7 +18,20 @@ function Contact() {
   return (
     <Layout>
       <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-100 pt-28 px-4">
-        <main className="max-w-6xl mx-auto">
+        <main className="max-w-6xl mx-auto relative">
+          {/* Floating Icons */}
+          <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+            <a href="https://wa.me/971xxxxxxxxx" target="_blank" rel="noreferrer">
+              <FaWhatsapp className="text-green-500 w-10 h-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition" />
+            </a>
+            <a href="mailto:noor@fawtech.co">
+              <FaEnvelope className="text-blue-600 w-10 h-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition" />
+            </a>
+            <a href="https://goo.gl/maps/xyz" target="_blank" rel="noreferrer">
+              <FaMapMarkerAlt className="text-red-500 w-10 h-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition" />
+            </a>
+          </div>
+
           {/* Title */}
           <motion.h2
             className="text-3xl md:text-4xl font-bold text-center mb-5"
@@ -47,7 +60,7 @@ function Contact() {
             />
           </motion.div>
 
-          {/* Address & Why Choose Us */}
+          {/* Grid Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {/* Store Address */}
             <motion.div
@@ -69,7 +82,7 @@ function Contact() {
               </div>
             </motion.div>
 
-            {/* Why Choose Us with Icon Animations */}
+            {/* Why Choose Us */}
             <motion.div
               className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 rounded shadow hover:-translate-y-1 hover:shadow-lg transition duration-300"
               variants={fadeUp}
@@ -80,71 +93,61 @@ function Contact() {
             >
               <h3 className="text-xl font-bold mb-4">Why Choose Us?</h3>
               <ul className="space-y-6">
-                <li className="flex items-start">
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="text-blue-600 w-6 h-6 mr-3 mt-1"
-                  >
-                    <FaTags className="w-full h-full" />
-                  </motion.div>
-                  <div>
-                    <strong>Competitive Pricing</strong>
-                    <p className="text-sm font-medium mt-1 text-gray-700 dark:text-gray-300">
-                      We offer competitive pricing on all our products, ensuring you get the best value.
-                    </p>
-                  </div>
-                </li>
-
-                <li className="flex items-start">
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="text-blue-600 w-6 h-6 mr-3 mt-1"
-                  >
-                    <FaUserTie className="w-full h-full" />
-                  </motion.div>
-                  <div>
-                    <strong>Expert Knowledge</strong>
-                    <p className="text-sm font-medium mt-1 text-gray-700 dark:text-gray-300">
-                      Our team is knowledgeable and passionate, offering expert advice and recommendations.
-                    </p>
-                  </div>
-                </li>
-
-                <li className="flex items-start">
-                  <motion.div
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                    className="text-blue-600 w-6 h-6 mr-3 mt-1"
-                  >
-                    <FaHeadset className="w-full h-full" />
-                  </motion.div>
-                  <div>
-                    <strong>Excellent Customer Service</strong>
-                    <p className="text-sm font-medium mt-1 text-gray-700 dark:text-gray-300">
-                      We're dedicated to supporting customers before, during, and after their purchase.
-                    </p>
-                  </div>
-                </li>
+                {[
+                  {
+                    icon: FaTags,
+                    title: "Competitive Pricing",
+                    text: "We offer competitive pricing on all our products, ensuring you get the best value.",
+                  },
+                  {
+                    icon: FaUserTie,
+                    title: "Expert Knowledge",
+                    text: "Our team is knowledgeable and passionate, offering expert advice and recommendations.",
+                  },
+                  {
+                    icon: FaHeadset,
+                    title: "Excellent Customer Service",
+                    text: "We're dedicated to supporting customers before, during, and after their purchase.",
+                  },
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start">
+                    <motion.div
+                      whileHover={{ scale: 1.2, rotate: 5 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="text-blue-600 w-6 h-6 mr-3 mt-1"
+                    >
+                      <item.icon className="w-full h-full" />
+                    </motion.div>
+                    <div>
+                      <strong>{item.title}</strong>
+                      <p className="text-sm font-medium mt-1 text-gray-700 dark:text-gray-300">{item.text}</p>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </motion.div>
           </div>
 
-          {/* Get in Touch */}
-          <motion.section
-            className="text-center pb-10"
+          {/* Modern CTA Card */}
+          <motion.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             custom={4}
+            className="rounded-xl p-8 bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 text-white shadow-lg backdrop-blur-md"
           >
-            <h3 className="text-2xl font-bold mb-4">Get in Touch</h3>
-            <p className="max-w-2xl mx-auto font-medium text-gray-700 dark:text-gray-300">
-              Interested in our products or services? Reach out today and let Fawtech Electronics Trading L.L.C help you achieve your goals.
+            <h3 className="text-2xl font-bold mb-2">Let’s Build Something Great Together</h3>
+            <p className="text-sm md:text-base mb-4 max-w-2xl">
+              Whether you need enterprise tech solutions or consumer electronics, Fawtech is ready to partner with you. Connect with us now and elevate your business with smarter technology.
             </p>
-          </motion.section>
+            <a
+              href="mailto:noor@fawtech.co"
+              className="inline-block bg-white text-blue-600 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition"
+            >
+              Start a Conversation
+            </a>
+          </motion.div>
         </main>
       </div>
     </Layout>
