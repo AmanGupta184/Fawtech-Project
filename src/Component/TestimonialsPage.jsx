@@ -6,20 +6,20 @@ import { Autoplay } from "swiper/modules";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
 import "swiper/css";
 
-// ✅ Import local images
-import p4 from '../Assets/Person/p4.jpg';
-import p5 from '../Assets/Person/p5.jpg';
-import p6 from '../Assets/Person/p6.jpg';
+// ✅ Local images
+import p4 from "../Assets/Person/p4.jpg";
+import p5 from "../Assets/Person/p5.jpg";
+import p6 from "../Assets/Person/p6.jpg";
 
-// 🎯 Animation variants
+// 🎯 Animation variant
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 },
 };
 
-// ⭐ Testimonial Card Component
+// ⭐ Individual Testimonial Card
 const TestimonialCard = ({ img, text, name, role, index }) => {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
+  const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.2 });
 
   return (
     <motion.div
@@ -43,7 +43,9 @@ const TestimonialCard = ({ img, text, name, role, index }) => {
       <div className="flex items-center mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
         <img src={img} alt={name} className="w-10 h-10 rounded-full mr-4" />
         <div>
-          <p className="font-semibold text-sm text-gray-800 dark:text-white">{name}</p>
+          <p className="font-semibold text-sm text-gray-800 dark:text-white">
+            {name}
+          </p>
           <p className="text-xs text-gray-500 dark:text-gray-400">{role}</p>
         </div>
       </div>
@@ -51,11 +53,11 @@ const TestimonialCard = ({ img, text, name, role, index }) => {
   );
 };
 
-// 🧾 Testimonials Page Component
+// 🧾 Testimonials Section
 function TestimonialsPage() {
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [titleRef, titleInView] = useInView({ triggerOnce: false, threshold: 0.2 });
+  const [carouselRef, carouselInView] = useInView({ triggerOnce: false, threshold: 0.2 });
 
-  // 📋 Testimonial Data
   const testimonials = [
     {
       img: p4,
@@ -80,11 +82,11 @@ function TestimonialsPage() {
   return (
     <section className="py-20 min-h-fit bg-blue-50 dark:bg-gray-900 px-4 overflow-x-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
-        {/* 📣 Title Section */}
+        {/* 📣 Heading */}
         <motion.div
-          ref={ref}
+          ref={titleRef}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={titleInView ? "visible" : "hidden"}
           variants={fadeUp}
           transition={{ duration: 0.6 }}
           className="flex flex-col items-start"
@@ -97,9 +99,9 @@ function TestimonialsPage() {
 
         {/* 🌀 Testimonial Carousel */}
         <motion.div
-          ref={ref}
+          ref={carouselRef}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={carouselInView ? "visible" : "hidden"}
           variants={fadeUp}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="col-span-1 md:col-span-2"
