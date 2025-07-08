@@ -37,7 +37,7 @@ const services = [
   {
     title: "Gaming Product",
     description:
-      "Enhance your setup with keyboards, mice, chairs, and more—everything you need for serious gaming.",
+      "Enhance your setup with keyboards, mice, Headset, and more—everything you need for serious gaming.",
     icon: <MdOutlineDevicesOther className="w-8 h-8 text-blue-600" />,
   },
   {
