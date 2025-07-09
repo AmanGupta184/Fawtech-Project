@@ -342,7 +342,7 @@ const ProductData = [
   {
     name: 'DJI Drone Pro',
     brand: 'DJI',
-    category: 'Drones',
+    category: 'DJI',
     images: [DJIImage],
     description: 'High-resolution drone camera with smart tracking and GPS.',
     specs: 'DJI Air 3, Dual 4K Cameras, 46 min flight, O4 transmission, obstacle sensing'
@@ -358,7 +358,7 @@ const ProductData = [
   {
     name: 'Dyson Hair Tools',
     brand: 'Dyson',
-    category: 'Other Electronics',
+    category: 'Dyson Products',
     images: [DysonImage],
     description: 'Premium styling tools with airflow technology.',
     specs: 'Includes Dyson Airwrap, Supersonic Hair Dryer, intelligent heat control, multiple attachments'
@@ -559,7 +559,7 @@ const ProductData = [
 {
   name: 'Dyson Airwrap Multi-Styler',
   brand: 'Dyson',
-  category: 'Other Electronics',
+  category: 'Dyson Products',
   image: [DysonAirwrapMultiStyler],
   description: 'Versatile hair styler that curls, smooths, and volumizes using air.',
   specs: 'Multiple attachments, Coanda effect, intelligent heat control, storage case'
@@ -567,7 +567,7 @@ const ProductData = [
 {
   name: 'Dyson Supersonic Hair Dryer',
   brand: 'Dyson',
-  category: 'Other Electronics',
+  category: 'Dyson Products',
   image: [DysonSupersonicHairDryer],
   description: 'Fast-drying hair dryer with focused airflow and heat protection.',
   specs: '1600W digital motor, 3 speed + 4 heat settings, diffuser, magnetic attachments'
@@ -575,7 +575,7 @@ const ProductData = [
 {
   name: 'Dyson Corrale Hair Straightener',
   brand: 'Dyson',
-  category: 'Other Electronics',
+  category: 'Dyson Products',
   image: [DysonCorraleHairStraightener],
   description: 'Cordless straightener with flexing plates and battery power.',
   specs: 'Manganese copper plates, OLED display, 30min cordless use, intelligent heat'
@@ -583,7 +583,7 @@ const ProductData = [
 {
   name: 'Dyson V15 Detect Vacuum Cleaner',
   brand: 'Dyson',
-  category: 'Other Electronics',
+  category: 'Dyson Products',
   image: [DysonV15DetectVacuumCleaner],
   description: 'Smart cordless vacuum with laser dust detection.',
   specs: '230AW suction, HEPA filter, laser dust tech, LCD screen, 60min runtime'
@@ -591,7 +591,7 @@ const ProductData = [
 {
   name: 'DJI Avata FPV Drone',
   brand: 'DJI',
-  category: 'Drones',
+  category: 'DJI',
   image: [DJIAvataFPVDrone],
   description: 'Immersive FPV drone built for agile flying and indoor use.',
   specs: '1/1.7" CMOS sensor, 4K/60fps video, RockSteady, 18min flight, goggles support'
@@ -599,7 +599,7 @@ const ProductData = [
 {
   name: 'DJI Mini 4 Pro',
   brand: 'DJI',
-  category: 'Drones',
+  category: 'DJI',
   image: [DJIMini4Pro],
   description: 'Compact, high-quality drone with pro camera features.',
   specs: '4K/100fps, 1/1.3" CMOS, 34min flight, omnidirectional obstacle sensing, under 250g'
@@ -607,7 +607,7 @@ const ProductData = [
 {
   name: 'DJI Inspire 3',
   brand: 'DJI',
-  category: 'Drones',
+  category: 'DJI',
   image: [DJIInspire3],
   description: 'Professional cinema drone with full-frame camera and RTK GPS.',
   specs: '8K ProRes RAW, full-frame Zenmuse X9-8K Air, 28min flight, dual-antenna RTK'
@@ -615,7 +615,7 @@ const ProductData = [
 {
   name: 'DJI Mavic 3 Pro',
   brand: 'DJI',
-  category: 'Drones',
+  category: 'DJI',
   image: [DJIMavic3Pro],
   description: 'Triple-camera drone for aerial photography and video.',
   specs: '4/3 CMOS Hasselblad + 2 tele cams, 43min flight, omnidirectional sensing'
@@ -623,7 +623,7 @@ const ProductData = [
 {
   name: 'DJI Pocket 3 Gimbal Camera',
   brand: 'DJI',
-  category: 'Drones',
+  category: 'DJI',
   image: [DJIPocket3GimbalCamera],
   description: 'Compact gimbal camera for stabilized personal video recording.',
   specs: '1" CMOS, 4K/120fps video, 2" rotatable OLED, 3-axis stabilization, active tracking'
@@ -631,7 +631,7 @@ const ProductData = [
 {
   name: 'DJI Ronin 4D Camera Rig',
   brand: 'DJI',
-  category: 'Drones',
+  category: 'DJI',
   image: [DJIRonin4DCameraRig],
   description: 'Professional 4-axis cinema camera rig for filmmakers.',
   specs: '6K/8K RAW recording, full-frame sensor, Z-axis stabilization, LiDAR focus, modular'
