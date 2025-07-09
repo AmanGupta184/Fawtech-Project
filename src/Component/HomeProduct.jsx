@@ -107,7 +107,7 @@ const HomeProduct = () => {
       <div className="flex justify-center mt-12">
         <motion.a
           href="/products"
-          className="px-8 py-3 bg-gray-900 text-white rounded-full font-semibold transition-colors"
+          className="px-8 py-3 bg-gray-950 text-white rounded-full font-semibold "
           variants={buttonVariants}
           whileHover="hover"
           whileTap="tap"

@@ -67,7 +67,7 @@ const LogoSlider = () => {
                   whileTap="tap"
                 >
                   <motion.div
-                    className="absolute inset-0 bg-blue-100 opacity-60 rounded-lg transform rotate-6 scale-95"
+                    className="absolute inset-0 bg-blue-100 opacity-60 rounded-lg transform rotate-6 scale-95 shadow-lg shadow-blue-400 "
                     variants={hoverVariants}
                   />
                   <motion.img

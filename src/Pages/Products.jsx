@@ -104,7 +104,7 @@ const Product = () => {
     <Layout>
       <div className="min-h-screen p-6 bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-100 transition-all">
         <div className="flex flex-wrap justify-center items-center mt-20 gap-4 mb-6 animate-fadeDown">
-          <h1 className="text-3xl font-bold">Explore Our Electronics</h1>
+          <h1 className="text-3xl font-bold">Explore <span className="text-blue-700">Our</span> Electronics</h1>
         </div>
 
         {/* Category Filter */}
@@ -155,7 +155,7 @@ const Product = () => {
                 key={product.name + index}
                 variants={cardVariants}
                 onClick={() => setModalProduct(product)}
-                className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-4 text-center cursor-pointer hover:shadow-xl hover:shadow-blue-500/50 transition duration-300"
+                className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-4 text-center cursor-pointer hover:shadow-xl hover:shadow-blue-700/60 transition duration-300"
               >
                 <img
                   src={product.images?.[0] || product.image || "https://via.placeholder.com/300x200?text=No+Image"}

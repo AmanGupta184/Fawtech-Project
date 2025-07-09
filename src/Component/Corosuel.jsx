@@ -14,9 +14,9 @@ const banners = [
     image: require("../Assets/Images/dysonBanner.jpg"),
   },
   {
-    title: "Fawtech Electronics",
-    subtitle: "Your trusted partner in technology excellence.",
-    image: require("../Assets/Images/gamingBanner.jpg"),
+    title: "DJI Drones",
+    subtitle: "Always top of the Generation.",
+    image: require("../Assets/Images/DroneBanner4.png"),
   },
     {
     title: "Top Sellers",
@@ -77,11 +77,11 @@ const BannerCarousel = () => {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white pt-48 px-4 sm:px-6">
-              <h2 className="text-xl sm:text-3xl md:text-5xl font-bold ">
+            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white pt-56 px-4 sm:px-6">
+              <h2 className="text-xl sm:text-3xl md:text-5xl font-bold italic">
                 {banners[index].title}
               </h2>
-              <p className="text-sm sm:text-lg md:text-2xl mt-2 sm:mt-4">
+              <p className="text-sm sm:text-lg md:text-2xl mt-2 sm:mt-4 italic">
                 {banners[index].subtitle}
               </p>
             </div>

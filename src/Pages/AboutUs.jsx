@@ -64,9 +64,9 @@ function AboutPage() {
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white tracking-tight"
+              className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white tracking-tight"
             >
-              About Fawtech
+              About <span className="text-blue-700">Fawtech</span>
             </motion.h1>
           </div>
         </header>
@@ -109,8 +109,8 @@ function AboutPage() {
                       className="w-full h-full transform-style-preserve-3d rounded-xl shadow-lg"
                     >
                       {/* Front Side */}
-                      <div className="absolute inset-0 backface-hidden bg-white dark:bg-gray-800 p-6 flex flex-col items-center justify-center text-center rounded-xl h-full">
-                        <div className="bg-blue-100 p-4 rounded-full mb-4">
+                      <div className="absolute inset-0 backface-hidden bg-white dark:bg-gray-800 p-6 flex flex-col items-center justify-center text-center rounded-xl h-full shadow-2xl hover:shadow-blue-700/70 ">
+                        <div className="bg-blue-100 p-4 rounded-full mb-4 shadow-xl shadow-blue-400">
                           {service.icon}
                         </div>
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -119,7 +119,7 @@ function AboutPage() {
                       </div>
 
                       {/* Back Side */}
-                      <div className="absolute inset-0 rotate-y-180 backface-hidden bg-white dark:bg-gray-800 p-6 flex flex-col justify-center text-left rounded-xl h-full">
+                      <div className="absolute inset-0 rotate-y-180 backface-hidden bg-white dark:bg-gray-800 p-6 flex flex-col justify-center text-left rounded-xl h-full shadow-2xl hover:shadow-blue-700/70 ">
                         <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                           {service.title}
                         </h4>

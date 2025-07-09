@@ -39,7 +39,7 @@ const SolutionsGrid = ({
         {/* Title & Descriptions */}
         <div
           ref={ref}
-          className="mb-12 flex flex-col items-center justify-center text-center"
+          className="mb-12 flex flex-col items-center justify-center text-center "
         >
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
             {title}
@@ -55,7 +55,7 @@ const SolutionsGrid = ({
           {buttonText && (
             <button
               onClick={onButtonClick}
-              className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition"
+              className="mt-6 px-6 py-3 bg-gray-950 text-white rounded-full dark:hover:bg-blue-700 transition"
             >
               {buttonText}
             </button>
@@ -71,9 +71,9 @@ const SolutionsGrid = ({
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={cardVariants}
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-lg transition"
+              className="bg-blue-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-2xl "
             >
-              <div className="mb-4">{item.icon}</div>
+              <div className="mb-4">{item.icon}</div> 
               <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
                 {item.title}
               </h3>

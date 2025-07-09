@@ -85,7 +85,7 @@ function HomeContent() {
           >
             <motion.button
               onClick={handleLearnMore}
-              className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition dark:bg-gray-700 dark:hover:bg-gray-600"
+              className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full "
               variants={buttonHover}
               whileHover="hover"
               whileTap="tap"

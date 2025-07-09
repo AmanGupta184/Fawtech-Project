@@ -33,7 +33,7 @@ export const Logo = [
   },
   {
     id:9,
-    image: require('../Assets/Logo/PlayStationLogo.jpg')
+    image: require('../Assets/Logo/PlaystationLogo.jpg')
   },
   {
     id:10,

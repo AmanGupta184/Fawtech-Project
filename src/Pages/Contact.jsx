@@ -40,7 +40,7 @@ function Contact() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            Contact Us
+            <span className="text-blue-700">Contact</span> Us
           </motion.h2>
 
           {/* Cover Image */}
@@ -135,7 +135,7 @@ function Contact() {
             whileInView="visible"
             viewport={{ once: true }}
             custom={4}
-            className="rounded-xl p-8 bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 text-white shadow-lg backdrop-blur-md"
+            className="rounded-xl p-8 bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 text-white shadow-lg backdrop-blur-md "
           >
             <h3 className="text-2xl font-bold mb-2">Let’s Build Something Great Together</h3>
             <p className="text-sm md:text-base mb-4 max-w-2xl">
@@ -143,7 +143,7 @@ function Contact() {
             </p>
             <a
               href="mailto:noor@fawtech.co"
-              className="inline-block bg-white text-blue-600 font-semibold px-6 py-2 rounded-full hover:bg-gray-100 transition"
+              className="inline-block  bg-gray-900 text-white font-semibold px-6 py-2 rounded-full "
             >
               Start a Conversation
             </a>

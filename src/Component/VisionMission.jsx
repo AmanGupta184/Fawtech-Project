@@ -36,7 +36,7 @@ const VisionMission = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-            Our Vision & Mission
+            Our Vision <span className="text-blue-700">&</span> Mission
           </h2>
           <p className="mt-4 text-gray-600 dark:text-gray-300 text-base max-w-3xl mx-auto">
             At Fawtech, we innovate, connect, and elevate lives through premium, sustainable electronic solutions.
