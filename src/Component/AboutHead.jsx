@@ -6,7 +6,7 @@ import { SiQuicktime } from "react-icons/si";
 import { GrUserExpert } from "react-icons/gr";
 import { PiMathOperationsLight, PiStrategyFill } from "react-icons/pi";
 
-// ✅ Reusable Grid inside the same file
+// Animation for cards
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i) => ({
@@ -36,10 +36,10 @@ const SolutionsGrid = ({
       id={id}
     >
       <div className="max-w-7xl mx-auto">
-        {/* Title & Descriptions */}
+        {/* Title & Description */}
         <div
           ref={ref}
-          className="mb-12 flex flex-col items-center justify-center text-center "
+          className="mb-12 flex flex-col items-center justify-center text-center"
         >
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white">
             {title}
@@ -52,17 +52,24 @@ const SolutionsGrid = ({
               {para}
             </p>
           ))}
+
+          {/* Liquid Animated Button */}
           {buttonText && (
-            <button
+            <motion.button
               onClick={onButtonClick}
-              className="mt-6 px-6 py-3 bg-gray-950 text-white rounded-full dark:hover:bg-blue-700 transition"
+              className="relative overflow-hidden flex items-center justify-center px-6 py-3 bg-gray-950 text-white rounded-full mt-6 font-medium group transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
-              {buttonText}
-            </button>
+              <span className="relative z-10">{buttonText}</span>
+              <motion.div
+                className="absolute inset-0 bg-blue-600 rounded-full scale-y-0 origin-bottom group-hover:scale-y-100 transition-transform duration-500 ease-in-out z-0"
+              />
+            </motion.button>
           )}
         </div>
 
-        {/* Solution Cards */}
+        {/* Cards */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {solutions.map((item, index) => (
             <motion.div
@@ -71,9 +78,9 @@ const SolutionsGrid = ({
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={cardVariants}
-              className="bg-blue-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-2xl "
+              className="bg-blue-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-xl"
             >
-              <div className="mb-4">{item.icon}</div> 
+              <div className="mb-4">{item.icon}</div>
               <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2">
                 {item.title}
               </h3>
@@ -88,7 +95,6 @@ const SolutionsGrid = ({
   );
 };
 
-// ✅ Actual Section using the above grid
 const SolutionsSection = () => {
   const navigate = useNavigate();
 
@@ -109,7 +115,7 @@ const SolutionsSection = () => {
       title: "Strategic planning",
       icon: <PiStrategyFill className="w-8 h-8 text-blue-600" />,
       description:
-        "Expand product offerings, strengthen brand partnerships, and lead with innovation.Focus on customer trust and excellence in tech distribution.",
+        "Expand product offerings, strengthen brand partnerships, and lead with innovation. Focus on customer trust and excellence in tech distribution.",
     },
     {
       title: "Efficient operations",
