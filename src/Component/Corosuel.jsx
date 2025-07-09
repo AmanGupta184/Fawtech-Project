@@ -14,9 +14,9 @@ const banners = [
     image: require("../Assets/Images/dysonBanner.jpg"),
   },
   {
-    title: "DJI Drones",
-    subtitle: "Always top of the Generation.",
-    image: require("../Assets/Images/DroneBanner4.png"),
+    title: "Discover DJI",
+    subtitle: "Smart. Stable. Spectacular.",
+    image: require("../Assets/Images/DJI_Products.png"),
   },
     {
     title: "Top Sellers",
