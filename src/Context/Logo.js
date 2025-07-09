@@ -6,7 +6,7 @@ import LenovoLogo from '../Assets/Logo/LenovoLogo.jpg';
 import LogitechLogo from '../Assets/Logo/LogitechLogo.jpg';
 import XboxLogo from '../Assets/Logo/XboxLogo.jpg';
 import SonyLogo from '../Assets/Logo/SonyLogo.jpeg';
-import PlayStationLogo from '../Assets/Logo/PlaystationLogo.jpg';
+import PlayStationLogo from '../Assets/Logo/PlayStationLogo.jpg';
 import PnyLogo from '../Assets/Logo/PnyLogo.jpg';
 import MSILogo from '../Assets/Logo/MSI-Logo.png';
 import NintendoLogo from '../Assets/Logo/NintendoLogo.jpg';
