@@ -21,13 +21,13 @@ function Contact() {
         <main className="max-w-6xl mx-auto relative">
           {/* Floating Icons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-            <a href="https://wa.me/971xxxxxxxxx" target="_blank" rel="noreferrer">
+            {/* <a href="https://wa.me/971xxxxxxxxx" target="_blank" rel="noreferrer">
               <FaWhatsapp className="text-green-500 w-10 h-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition" />
-            </a>
+            </a> */}
             <a href="mailto:noor@fawtech.co">
               <FaEnvelope className="text-blue-600 w-10 h-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition" />
             </a>
-            <a href="https://goo.gl/maps/xyz" target="_blank" rel="noreferrer">
+            <a href="https://maps.app.goo.gl/ByZNCWe619m6g8Ar7" target="_blank" rel="noreferrer">
               <FaMapMarkerAlt className="text-red-500 w-10 h-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition" />
             </a>
           </div>

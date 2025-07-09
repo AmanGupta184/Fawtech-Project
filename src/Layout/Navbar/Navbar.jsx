@@ -86,7 +86,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2" aria-label="Go to homepage">
           <img src={logo} alt="FawTech Logo" className="max-h-[84px] w-auto object-contain" loading="lazy" />
-          <span className={`font-extrabold text-xl ${isDark ? "text-gray-100" : "text-blue-600"}`}>
+          <span className={`hidden md:inline font-extrabold text-xl ${isDark ? "text-gray-100" : "text-blue-600"}`}>
             FawTech
           </span>
         </Link>

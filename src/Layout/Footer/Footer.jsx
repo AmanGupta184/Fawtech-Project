@@ -190,7 +190,7 @@ const Footer = () => {
             Timings: 11am - 6pm (Mon–Sat), Sunday Holiday
           </p>
           <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
-            E-mail: <a href="mailto:noor@fawtech.com">noor@fawtech.com</a>
+            E-mail: <a href="mailto:noor@fawtech.co">noor@fawtech.co</a>
           </p>
         </motion.div>
       </div>

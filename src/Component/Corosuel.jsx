@@ -77,7 +77,7 @@ const BannerCarousel = () => {
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white pt-56 px-4 sm:px-6">
+            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white pt-32 px-4 sm:px-6">
               <h2 className="text-xl sm:text-3xl md:text-5xl font-bold italic">
                 {banners[index].title}
               </h2>
