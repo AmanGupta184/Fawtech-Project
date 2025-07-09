@@ -17,7 +17,7 @@ const fadeUp = {
 function Contact() {
   return (
     <Layout>
-      <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-100 pt-28 px-4">
+      <div className="bg-gray-50 dark:bg-gray-950 min-h-screen text-gray-800 dark:text-gray-100 pb-5 pt-28 px-4">
         <main className="max-w-6xl mx-auto relative">
           {/* Floating Icons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
