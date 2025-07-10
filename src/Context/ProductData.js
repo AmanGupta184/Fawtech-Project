@@ -20,7 +20,7 @@ import NvidiaImage from '../Assets/Images/Products/nvidia_graphics_card.jpg';
 import PNYImage from '../Assets/Images/Products/pnyGPU.png';
 import AsusImage from '../Assets/Images/Products/asusGPU.png';
 
-import SandiskImage from '../Assets/Images/Products/sandiskProduct.png';
+
 import LexarImage from '../Assets/Images/Products/lexar.png';
 import ToshibaImage from '../Assets/Images/Products/toshibaMemory.png';
 import TranscendImage from '../Assets/Images/Products/Transcend.png';
@@ -242,14 +242,6 @@ const ProductData = [
     images: [AsusImage],
     description: 'High-performance ASUS graphics card designed for gamers and creators.',
     specs: 'ASUS ROG Strix RTX 4080, 16GB GDDR6X, Triple Fan, 2.7-Slot, RGB Aura Sync'
-  },
-  {
-    name: 'SanDisk',
-    brand: 'SanDisk',
-    category: 'Memory Cards',
-    images: [SandiskImage],
-    description: 'High-quality SD cards across use cases.',
-    specs: 'SanDisk Extreme PRO SDXC UHS-I, 128GB, up to 200MB/s, Class 10, V30'
   },
   {
     name: 'Lexar',
