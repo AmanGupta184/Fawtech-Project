@@ -40,7 +40,7 @@ function HomeContent() {
     <div className="bg-white dark:bg-gray-950 mb-auto transition-colors duration-500">
       <motion.section
         ref={ref}
-        className="flex items-center justify-center px-6 py-24 min-h-[80vh]"
+        className="flex items-center justify-center px-6 pb-10  pt-28"
         variants={containerVariants}
         initial="hidden"
         animate={controls}
