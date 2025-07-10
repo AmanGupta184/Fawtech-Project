@@ -11,14 +11,14 @@ const ProductByCategoryCardView = () => {
   const [isMobile, setIsMobile] = useState(isMobileDevice());
   const hoverTimeoutRef = useRef(null);
 
-  // Update mobile detection on resize
+  // Mobile detection on resize
   useEffect(() => {
     const handleResize = () => setIsMobile(isMobileDevice());
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Lock scroll when modal is open
+  // Lock scroll on modal open
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", Boolean(activeCategory));
     return () => document.body.classList.remove("overflow-hidden");
@@ -38,20 +38,19 @@ const ProductByCategoryCardView = () => {
 
   const categories = useMemo(() => Object.keys(productsByCategory), [productsByCategory]);
 
-  // Hover / tap modal control
+  // Hover / tap control
   const showOverlay = (category) => {
     clearTimeout(hoverTimeoutRef.current);
-    hoverTimeoutRef.current = setTimeout(() => setActiveCategory(category), 150);
+    hoverTimeoutRef.current = setTimeout(() => setActiveCategory(category), 100);
   };
 
   const hideOverlay = () => {
     clearTimeout(hoverTimeoutRef.current);
-    hoverTimeoutRef.current = setTimeout(() => setActiveCategory(null), 250);
+    hoverTimeoutRef.current = setTimeout(() => setActiveCategory(null), 300);
   };
 
   const cancelHoverTimeout = () => clearTimeout(hoverTimeoutRef.current);
 
-  // Utility to clean category title
   const formatCategory = (cat) => {
     const parts = cat.split(" - ");
     return parts.length > 1 ? parts[1] : cat;
@@ -60,7 +59,7 @@ const ProductByCategoryCardView = () => {
   return (
     <Layout>
       <div className="min-h-screen px-6 py-24 bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-        <h1 className="text-3xl font-bold mb-10 text-center">Explore Our </h1>
+        <h1 className="text-3xl font-bold mb-10 text-center">Explore Our Products</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category) => {
@@ -73,7 +72,7 @@ const ProductByCategoryCardView = () => {
                 key={category}
                 layoutId={`card-${category}`}
                 layout
-                transition={{ layout: { duration: 0.4, ease: "easeInOut" } }}
+                transition={{ layout: { duration: 0.5, ease: "easeInOut" } }}
                 onMouseEnter={() => !isMobile && showOverlay(category)}
                 onMouseLeave={() => !isMobile && hideOverlay()}
                 onClick={() => isMobile && setActiveCategory(category)}
@@ -109,6 +108,7 @@ const ProductByCategoryCardView = () => {
           })}
         </div>
 
+        {/* Overlay */}
         <AnimatePresence>
           {activeCategory && (
             <motion.div
@@ -116,6 +116,7 @@ const ProductByCategoryCardView = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
               className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
               onClick={() => setActiveCategory(null)}
               onMouseEnter={!isMobile ? cancelHoverTimeout : undefined}
@@ -124,10 +125,10 @@ const ProductByCategoryCardView = () => {
               <motion.div
                 layoutId={`card-${activeCategory}`}
                 layout
-                initial={{ scale: 0.95, opacity: 0 }}
+                initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.95, opacity: 0 }}
-                transition={{ duration: 0.35, ease: "easeInOut" }}
+                transition={{ duration: 0.45, ease: "easeInOut" }}
                 className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-lg p-6 relative shadow-xl"
                 onClick={(e) => e.stopPropagation()}
               >
@@ -145,10 +146,10 @@ const ProductByCategoryCardView = () => {
                     <motion.div
                       key={`${product.name}-${idx}`}
                       layout
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      transition={{ duration: 0.25, delay: idx * 0.05 }}
+                      exit={{ opacity: 0, y: 20 }}
+                      transition={{ duration: 0.4, delay: idx * 0.08, ease: "easeOut" }}
                       className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg flex flex-col sm:flex-row gap-4 items-start shadow"
                     >
                       <img
