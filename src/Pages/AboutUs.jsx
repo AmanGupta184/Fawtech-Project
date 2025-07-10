@@ -9,7 +9,6 @@ import {
 import { PiHairDryerLight } from "react-icons/pi";
 import { MdOutlineDevicesOther } from "react-icons/md";
 import MissionSection from "../Component/MissionSection";
-import TeamMemberCard from "../Component/TeamMemberCard";
 import TestimonialsPage from "../Component/TestimonialsPage";
 import AboutHead from "../Component/AboutHead";
 import VisionMission from "../Component/VisionMission";
@@ -92,9 +91,9 @@ function AboutPage() {
 
         {/* Sections */}
         <AboutHead />
+        
         <VisionMission />
         <MissionSection />
-        <TeamMemberCard />
         <TestimonialsPage />
 
         {/* Services Flip Cards */}
