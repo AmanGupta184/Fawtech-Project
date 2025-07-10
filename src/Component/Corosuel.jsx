@@ -11,7 +11,7 @@ const banners = [
   {
     title: "Global Distribution",
     subtitle: "Expanding across North America ,Europe, Middle East, India, South East Asia, Australia",
-    image: require("../Assets/Images/globalDistribution.png"),
+    image: require("../Assets/Images/Globaldistributions.png"),
   },
   {
     title: "Discover DJI",
