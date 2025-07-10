@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import VRWorldImg from "../Assets/Images/VR-World.jpg";
 import DysonImg from "../Assets/Images/DysonProducts.jpeg";
 import GamingSystemImg from "../Assets/Images/GamingSystem.jpg";
-import GamingProductsImg from "../Assets/Images/GamingProducts2.png";
+import GamingProductsImg from "../Assets/Images/GamingProducts.png";
 
 const products = [
   {
