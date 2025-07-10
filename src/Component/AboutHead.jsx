@@ -6,6 +6,7 @@ import { SiQuicktime } from "react-icons/si";
 import { GrUserExpert } from "react-icons/gr";
 import { PiMathOperationsLight, PiStrategyFill } from "react-icons/pi";
 
+import TeamMemberCard from "../Component/TeamMemberCard";
 // Animation for cards
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -32,7 +33,7 @@ const SolutionsGrid = ({
 
   return (
     <section
-      className="bg-gray-50 dark:bg-[#0f172a] py-20 px-4 sm:px-8 lg:px-16"
+      className="bg-gray-50 dark:bg-[#0f172a] py-5 px-4 w-auto sm:px-8 lg:px-16"
       id={id}
     >
       <div className="max-w-7xl mx-auto">
@@ -69,6 +70,7 @@ const SolutionsGrid = ({
           )}
         </div>
 
+        <TeamMemberCard />
         {/* Cards */}
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {solutions.map((item, index) => (
