@@ -2,10 +2,10 @@ import React, { useState, useMemo, useCallback } from "react";
 import { motion } from "framer-motion";
 import Layout from "../Layout/Layout";
 import {
-  GiVirtualMarker,
-  GiGamepad,
+  GiGameConsole ,
   GiLaptop,
 } from "react-icons/gi";
+import { BsHeadsetVr } from "react-icons/bs";
 import { PiHairDryerLight } from "react-icons/pi";
 import { MdOutlineDevicesOther } from "react-icons/md";
 import MissionSection from "../Component/MissionSection";
@@ -27,31 +27,31 @@ const useServices = () =>
         title: "Dyson Products",
         description:
           "Explore cutting-edge Dyson appliances like hair dryers, vacuums, and air purifiers built with advanced technology.",
-        icon: <PiHairDryerLight className="w-8 h-8 text-blue-600" />,
+        icon: <PiHairDryerLight className="w-10 h-10 text-blue-600" />,
       },
       {
         title: "Gaming Laptop",
         description:
           "Powerful gaming laptops built for high-performance gaming and graphics-intensive tasks with blazing speed.",
-        icon: <GiLaptop className="w-8 h-8 text-blue-600" />,
+        icon: <GiLaptop className="w-10 h-10 text-blue-600" />,
       },
       {
         title: "VR World",
         description:
           "Dive into the immersive world of VR with the latest headsets and experiences that redefine reality.",
-        icon: <GiVirtualMarker className="w-8 h-8 text-blue-600" />,
+        icon: <BsHeadsetVr className="w-10 h-10 text-blue-600" />,
       },
       {
         title: "Gaming Product",
         description:
           "Enhance your setup with keyboards, mice, Headset, and more—everything you need for serious gaming.",
-        icon: <MdOutlineDevicesOther className="w-8 h-8 text-blue-600" />,
+        icon: <MdOutlineDevicesOther className="w-10 h-10 text-blue-600" />,
       },
       {
         title: "Gaming Console",
         description:
           "From PlayStation to Xbox and Nintendo, find your favorite consoles and the latest gaming titles.",
-        icon: <GiGamepad className="w-8 h-8 text-blue-600" />,
+        icon: <GiGameConsole  className="w-10 h-10 text-blue-600" />,
       },
     ],
     []
