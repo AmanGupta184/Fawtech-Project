@@ -18,7 +18,7 @@ const InfinityLoader = () => {
             <stop offset="0%" stopColor="cyan">
               <animate
                 attributeName="stop-color"
-                values="cyan;magenta;yellow;cyan"
+                values="cyan;blue;black;cyan"
                 dur="4s"
                 repeatCount="indefinite"
               />
@@ -26,7 +26,7 @@ const InfinityLoader = () => {
             <stop offset="100%" stopColor="blue">
               <animate
                 attributeName="stop-color"
-                values="blue;purple;red;blue"
+                values="blue;black;red;blue"
                 dur="4s"
                 repeatCount="indefinite"
               />
