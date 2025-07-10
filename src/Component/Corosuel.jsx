@@ -10,7 +10,7 @@ const banners = [
   },
   {
     title: "Global Distribution",
-    subtitle: "Expanding across Honkong, Middle East, Europe, South East Asia, Indonesia, North America.",
+    subtitle: "Expanding across Hongkong, Middle East, Europe, Asia, North America.",
     image: require("../Assets/Images/dysonBanner.jpg"),
   },
   {
@@ -19,8 +19,8 @@ const banners = [
     image: require("../Assets/Images/DJI_Products.png"),
   },
     {
-    title: "Top Sellers",
-    subtitle: "Our best can be your best.",
+    title: "Best Sellers",
+    subtitle: "Excellence, chosen by many.",
     image: require("../Assets/Images/TopSeller.jpg"),
   },
     {
@@ -58,7 +58,7 @@ const BannerCarousel = () => {
   }, [index]);
 
   return (
-    <div className="relative w-full h-[250px] sm:h-[500px] overflow-hidden shadow-lg dark:bg-black">
+    <div className="relative w-full h-[200px] sm:h-[500px] overflow-hidden shadow-lg dark:bg-black">
       {isImageLoaded ? (
         <AnimatePresence mode="sync">
           <motion.div
