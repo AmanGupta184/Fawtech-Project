@@ -65,7 +65,7 @@ const HomeProduct = () => {
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
       >
-        Explore <span className="text-blue-600">Our</span> Categories
+        Explore <span className="text-blue-600">Our</span> Products
       </motion.h2>
 
       <motion.div
