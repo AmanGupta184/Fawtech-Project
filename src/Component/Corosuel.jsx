@@ -10,8 +10,8 @@ const banners = [
   },
   {
     title: "Global Distribution",
-    subtitle: "Expanding across Hong Kong, the Middle East, Europe, Asia, and North America",
-    image: require("../Assets/Images/Globaldistribution.png"),
+    subtitle: "Expanding across North America ,Europe, Middle East, India, South East Asia ,Australia",
+    image: require("../Assets/Images/globalDistribution.png"),
   },
   {
     title: "Discover DJI",
@@ -58,7 +58,7 @@ const BannerCarousel = () => {
   }, [index]);
 
   return (
-    <div className="relative w-full h-[200px] sm:h-[500px] overflow-hidden shadow-lg dark:bg-black">
+    <div className="relative w-full h-[180px] sm:h-[480px] overflow-hidden shadow-lg dark:bg-black">
       {isImageLoaded ? (
         <AnimatePresence mode="sync">
           <motion.div
