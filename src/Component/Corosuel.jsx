@@ -6,22 +6,22 @@ const banners = [
   {
     title: "Explore Innovation",
     subtitle: "Discover cutting-edge electronics & IT solutions.",
-    image: require("../Assets/Images/InnovativeProducts.jpeg"),
+    image: require("../Assets/Images/InnovativeProducts.png"),
   },
   {
     title: "Global Distribution",
-    subtitle: "Expanding across Hongkong, Middle East, Europe, Asia, North America.",
-    image: require("../Assets/Images/dysonBanner.jpg"),
+    subtitle: "Expanding across Hong Kong, the Middle East, Europe, Asia, and North America",
+    image: require("../Assets/Images/Globaldistribution.png"),
   },
   {
-    title: "Discover DJI",
+    title: "Discover DJI",
     subtitle: "Smart. Stable. Spectacular.",
     image: require("../Assets/Images/DJI_Products.png"),
   },
     {
     title: "Best Sellers",
     subtitle: "Excellence, chosen by many.",
-    image: require("../Assets/Images/TopSeller.jpg"),
+    image: require("../Assets/Images/TopSeller.png"),
   },
     {
     title: "Experience VR World",
