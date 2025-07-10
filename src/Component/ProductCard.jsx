@@ -1,7 +1,8 @@
-import React from "react";
+// 
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 
-const ProductCard = ({ product }) => {
+const ProductCard = memo(({ product }) => {
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
@@ -14,15 +15,14 @@ const ProductCard = ({ product }) => {
         src={product.image}
         alt={product.name}
         className="w-full h-40 object-cover rounded-md mb-4"
+        loading="lazy"
       />
       <h3 className="text-lg font-semibold">{product.name}</h3>
       <p className="text-sm text-gray-500 dark:text-gray-300">{product.brand}</p>
-      <p className="text-blue-600 font-medium">${product.price}</p>
-      <button className="mt-3 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
-        Buy Now
-      </button>
+      <p className="text-blue-600 font-medium">${product.price.toFixed(2)}</p>
+      {/* The "Buy Now" button has been removed from here */}
     </motion.div>
   );
-};
+});
 
 export default ProductCard;
