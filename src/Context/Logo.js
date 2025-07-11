@@ -1,24 +1,24 @@
 import AsusLogo from '../Assets/Logo/AsusLogo.png';
 import JBLLogo from '../Assets/Logo/JBLLogo.jpg';
-import HPLogo from '../Assets/Logo/HPLogo.jpg';
-import DysonLogo from '../Assets/Logo/DysonLogo.jpg';
+import HPLogo from '../Assets/Logo/HPLogo.png';
+import DysonLogo from '../Assets/Logo/DysonLogo.png';
 import LenovoLogo from '../Assets/Logo/LenovoLogo.jpg';
-import LogitechLogo from '../Assets/Logo/LogitechLogo.jpg';
-import XboxLogo from '../Assets/Logo/XboxLogo.jpg';
+import LogitechLogo from '../Assets/Logo/LogitechLogo.png';
+import XboxLogo from '../Assets/Logo/XboxLogo.png';
 import SonyLogo from '../Assets/Logo/SonyLogo.jpeg';
-import PlayStationLogo from '../Assets/Logo/PlayStationLogo.jpg';
-import PnyLogo from '../Assets/Logo/PnyLogo.jpg';
+import PlayStationLogo from '../Assets/Logo/PlayStationLogo.png';
+import PnyLogo from '../Assets/Logo/PnyLogo.png';
 import MSILogo from '../Assets/Logo/MSI-Logo.png';
 import NintendoLogo from '../Assets/Logo/NintendoLogo.jpg';
 import AMDLogo from '../Assets/Logo/AMDLogo.png';
 import AcerLogo from '../Assets/Logo/AcerLogo.png';
 import AppleLogo from '../Assets/Logo/AppleLogo.png';
-import DellLogo from '../Assets/Logo/DellLogo.jpeg';
-import HarmonKardonLogo from '../Assets/Logo/HarmonKardonLogo.jpeg';
+import DellLogo from '../Assets/Logo/DellLogo.png';
+import HarmonKardonLogo from '../Assets/Logo/HarmonKardonLogo.png';
 import IntelLogo from '../Assets/Logo/IntelLogo.jpg';
-import NvidiaLogo from '../Assets/Logo/NvidiaLogo.jpg';
+import NvidiaLogo from '../Assets/Logo/NvidiaLogo.png';
 import ToshibaLogo from '../Assets/Logo/ToshibaLogo.jpeg';
-import BoseLogo from '../Assets/Logo/BoseLogo.jpg';
+import BoseLogo from '../Assets/Logo/BoseLogo.png';
 
 export const Logo = [
   { id: 1, image: AsusLogo },
