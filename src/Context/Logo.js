@@ -1,4 +1,4 @@
-import AsusLogo from '../Assets/Logo/AsusLogo.jpg';
+import AsusLogo from '../Assets/Logo/AsusLogo.png';
 import JBLLogo from '../Assets/Logo/JBLLogo.jpg';
 import HPLogo from '../Assets/Logo/HPLogo.jpg';
 import DysonLogo from '../Assets/Logo/DysonLogo.jpg';
@@ -10,14 +10,15 @@ import PlayStationLogo from '../Assets/Logo/PlayStationLogo.jpg';
 import PnyLogo from '../Assets/Logo/PnyLogo.jpg';
 import MSILogo from '../Assets/Logo/MSI-Logo.png';
 import NintendoLogo from '../Assets/Logo/NintendoLogo.jpg';
-import AMDLogo from '../Assets/Logo/AMDLogo.jpeg';
-import AcerLogo from '../Assets/Logo/AcerLogo.jpeg';
+import AMDLogo from '../Assets/Logo/AMDLogo.png';
+import AcerLogo from '../Assets/Logo/AcerLogo.png';
 import AppleLogo from '../Assets/Logo/AppleLogo.png';
 import DellLogo from '../Assets/Logo/DellLogo.jpeg';
 import HarmonKardonLogo from '../Assets/Logo/HarmonKardonLogo.jpeg';
 import IntelLogo from '../Assets/Logo/IntelLogo.jpg';
 import NvidiaLogo from '../Assets/Logo/NvidiaLogo.jpg';
 import ToshibaLogo from '../Assets/Logo/ToshibaLogo.jpeg';
+import BoseLogo from '../Assets/Logo/BoseLogo.jpg';
 
 export const Logo = [
   { id: 1, image: AsusLogo },
@@ -40,4 +41,5 @@ export const Logo = [
   { id: 18, image: IntelLogo },
   { id: 19, image: NvidiaLogo },
   { id: 20, image: ToshibaLogo },
+   { id: 21, image: BoseLogo },
 ];
