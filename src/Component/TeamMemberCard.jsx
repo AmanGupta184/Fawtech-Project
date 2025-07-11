@@ -95,8 +95,8 @@ const TeamMemberCard = () => {
         </p>
 
         <div className="flex items-center gap-8">
-          <StatCircle percent={92} label="Global Reach" inView={inView} />
-          <StatCircle percent={100} label="Client Satisfaction" inView={inView} />
+          <StatCircle percent={83} label="Global Reach" inView={inView} />
+          <StatCircle percent={94} label="Client Satisfaction" inView={inView} />
         </div>
       </div>
     </div>
