@@ -23,8 +23,8 @@ const LogoSlider = () => {
 
   return (
     <div className="bg-gray-50 md:mt-0 dark:bg-gray-900 transition-colors duration-300">
-      <section className="max-w-8xl mx-auto py-12 px-4">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white mb-10">
+      <section className="max-w-8xl mx-auto py-4 px-4">
+        <h2 className="text-3xl md:text-4xl font-semibold text-center text-gray-800 dark:text-white mb-5">
           Featured Brands
         </h2>
         <div
