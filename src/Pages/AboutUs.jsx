@@ -97,7 +97,7 @@ function AboutPage() {
         <TestimonialsPage />
 
         {/* Services Flip Cards */}
-        <section className="bg-gray-50 dark:bg-gray-900 py-16 px-4">
+        <section className="bg-gray-50 dark:bg-gray-900 py-6 px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => {
               const isHovered = hoveredIndex === index;

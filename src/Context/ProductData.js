@@ -1,71 +1,72 @@
-import PS5Image from "../Assets/Images/Products/PS5_Image_Edited.png";
-import XboxImage from "../Assets/Images/Products/xboxConsole.png";
-import SwitchImage from "../Assets/Images/Products/switch.jpg";
-import SteamDeck from "../Assets/Images/Products/steamDeck.png";
-import MetaQuest from "../Assets/Images/Products/metaQuest.png";
-import PS5ProImage from "../Assets/Images/Products/PS5ProImage.jpg";
-import PS4Image from "../Assets/Images/Products/PS4Image.jpg";
+import PS5Image from "../Assets/Products/PS5_Image_Edited.png";
+import XboxImage from "../Assets/Products/xboxConsole.png";
+import SwitchImage from "../Assets/Products/switch.png";
+import SteamDeck from "../Assets/Products/steamDeck.png";
+import MetaQuest from "../Assets/Products/metaQuest.png";
+import PS5ProImage from "../Assets/Products/PS5ProImage.png";
+import PS4Image from "../Assets/Products/PS4Image.png";
 
-import PlayStation5PortalImage from "../Assets/Images/Products/PlayStation5PortalImage.jpg";
-import MSIClawImage from "../Assets/Images/Products/MSIClawImage.jpg";
+import PlayStation5PortalImage from "../Assets/Products/PlayStation5PortalImage.png";
+import MSIClawImage from "../Assets/Products/MSIClawImage.png";
 
-import LenovoLegionImage from "../Assets/Images/Products/LenovoLegion.png";
-import LenovoLOQImage from "../Assets/Images/Products/LenovoLOQ.png";
-import HPImage from "../Assets/Images/Products/HP_laptop.jpg";
-import SurfacePro from "../Assets/Images/Products/SurfacePro.png";
+import LenovoLegionImage from "../Assets/Products/LenovoLegion.png";
+import LenovoLOQImage from "../Assets/Products/LenovoLOQ.png";
+import HPImage from "../Assets/Products/HP_laptop.png";
+import SurfacePro from "../Assets/Products/SurfacePro.png";
 
-import MacBookPro1416Image from "../Assets/Images/Products/MacBookPro1416Image.jpg";
-import MacMiniImage from "../Assets/Images/Products/MacMiniImage.jpg";
-import PencilImage from "../Assets/Images/Products/PencilImage.png";
-import AirpodsAirpodsMaxImage from "../Assets/Images/Products/AirpodsAirpodsMaxImage.jpg";
+import MacBookPro1416Image from "../Assets/Products/MacBookPro1416Image.jpg";
+import MacMiniImage from "../Assets/Products/MacMiniImage.png";
+import PencilImage from "../Assets/Products/PencilImage.png";
+import AirpodsAirpodsMaxImage from "../Assets/Products/AirpodsAirpodsMaxImage.png";
 
-import Sandisk from "../Assets/Images/Products/Sandisk1.png";
-import LexarImage from "../Assets/Images/Products/lexar.png";
-import ToshibaImage from "../Assets/Images/Products/toshibaMemory.png";
-import TranscendImage from "../Assets/Images/Products/Transcend.png";
-import KingstonImage from "../Assets/Images/Products/Kingston.png";
+import Sandisk from "../Assets/Products/Sandisk1.png";
+import LexarImage from "../Assets/Products/lexar.png";
+import ToshibaImage from "../Assets/Products/toshibaMemory.png";
+import TranscendImage from "../Assets/Products/Transcend.png";
+import KingstonImage from "../Assets/Products/Kingston.png";
 
-import IpadImage from "../Assets/Images/Products/ipad.png";
-import MW0Y3Image from "../Assets/Images/Products/MacMW0Y3.png";
+import IpadImage from "../Assets/Products/ipad.png";
+import MW0Y3Image from "../Assets/Products/MacMW0Y3.png";
 
-import AirSeriesImage from "../Assets/Images/Products/AirSeriesImage.jpg";
-import NeoSeriesImage from "../Assets/Images/Products/NeoSeriesImage.jpg";
+import AirSeriesImage from "../Assets/Products/AirSeriesImage.png";
+import NeoSeriesImage from "../Assets/Products/NeoSeriesImage.png";
 
-import Nitro from "../Assets/Images/Products/nitro.png";
-import Aspire from "../Assets/Images/Products/aspire.png";
-import Predator from "../Assets/Images/Products/predator.png";
+import Nitro from "../Assets/Products/nitro.png";
+import Aspire from "../Assets/Products/aspire.png";
+import Predator from "../Assets/Products/predator.png";
 
-import SonySDImage from "../Assets/Images/Products/SonySD.png";
-import PSVRImage from "../Assets/Images/Products/PSVR.png";
-import DysonImage from "../Assets/Images/Products/dyson.jpg";
-import JBLImage from "../Assets/Images/Products/jbl_speakers.jpg";
-import HarmanKardonImage from "../Assets/Images/Products/HarmanKardonImage.jpg";
-import BoseImage from "../Assets/Images/Products/BoseImage.jpg";
-import MarshallImage from "../Assets/Images/Products/MarshallImage.jpg";
-import SonyImage from "../Assets/Images/Products/SonyImage.jpg";
-import BangAndOlufsenImage from "../Assets/Images/Products/BangAndOlufsenImage.jpg";
+import SonySDImage from "../Assets/Products/SonySD.png";
+import PSVRImage from "../Assets/Products/PSVR.png";
+import DysonImage from "../Assets/Products/dyson.png";
+import JBLImage from "../Assets/Products/jbl_speakers.png";
+import HarmanKardonImage from "../Assets/Products/HarmanKardonImage.png";
+import BoseImage from "../Assets/Products/BoseImage.png";
+import MarshallImage from "../Assets/Products/MarshallImage.png";
+import SonyImage from "../Assets/Products/SonyImage.png";
+import BangAndOlufsenImage from "../Assets/Products/BangAndOlufsenImage.png";
 
-import MetaProAdvanced from "../Assets/Images/Products/MetaProAdvanced.jpg";
+import MetaProAdvanced from "../Assets/Products/MetaProAdvanced.png";
 
-import ROGAlly from "../Assets/Images/Products/asusRogAlly.png";
-import LegionGo from "../Assets/Images/Products/LegionGo.png";
+import ROGAlly from "../Assets/Products/asusRogAlly.png";
+import LegionGo from "../Assets/Products/LegionGo.png";
 
-import SurfaceProCoPilotPlus from "../Assets/Images/Products/SurfaceProCo-Pilot+.png";
-import HPVictusGamingLaptop from "../Assets/Images/Products/HPVictusGamingLaptop.png";
-import HPOMEN16 from "../Assets/Images/Products/HPOMEN16.png";
-import ASUSTUFGamingF15 from "../Assets/Images/Products/ASUSTUFGamingF15.png";
+import SurfaceProCoPilotPlus from "../Assets/Products/SurfaceProCo-Pilot+.png";
+import HPVictusGamingLaptop from "../Assets/Products/HPVictusGamingLaptop.png";
+import HPOMEN16 from "../Assets/Products/HPOMEN16.png";
+import ASUSTUFGamingF15 from "../Assets/Products/ASUSTUFGamingF15.png";
 
-import DysonAirwrapMultiStyler from "../Assets/Images/Products/DysonAirwrapMultiStyler.png";
-import DysonCorraleHairStraightener from "../Assets/Images/Products/DysonCorraleHairStraightener.png";
-import DysonV15DetectVacuumCleaner from "../Assets/Images/Products/DysonV15DetectVacuumCleaner.png";
-import DysonAirstraitImage from "../Assets/Images/Products/DysonAirstraitImage.jpg";
-import DysonPurifierHotAndCoolImage from "../Assets/Images/Products/DysonPurifierHotAndCoolImage.jpg";
+import DysonAirwrapMultiStyler from "../Assets/Products/DysonAirwrapMultiStyler.png";
+import DysonCorraleHairStraightener from "../Assets/Products/DysonCorraleHairStraightener.png";
+import DysonV15DetectVacuumCleaner from "../Assets/Products/DysonV15DetectVacuumCleaner.png";
+import DysonAirstraitImage from "../Assets/Products/DysonAirstraitImage.png";
+import DysonPurifierHotAndCoolImage from "../Assets/Products/DysonPurifierHotAndCoolImage.png";
 
-import DJIAvataFPVDrone from "../Assets/Images/Products/DJIAvataFPVDrone.png";
-import DJIMini4Pro from "../Assets/Images/Products/DJIMini4Pro.png";
-import DJIInspire3 from "../Assets/Images/Products/DJIInspire3.png";
-import DJIMavic3Pro from "../Assets/Images/Products/DJIMavic3Pro.png";
-import FPVImage from "../Assets/Images/Products/FPVImage.jpg";
+import DJIAvataFPVDrone from "../Assets/Products/DJIAvataFPVDrone.png";
+import DJIMini4Pro from "../Assets/Products/DJIMini4Pro.png";
+import DJIInspire3 from "../Assets/Products/DJIInspire3.png";
+import DJIMavic3Pro from "../Assets/Products/DJIMavic3Pro.png";
+import FPVImage from "../Assets/Products/FPVImage.png";
+
 
 const ProductData = [
     {

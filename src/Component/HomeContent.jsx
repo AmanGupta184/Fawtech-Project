@@ -37,10 +37,10 @@ function HomeContent() {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-950 mb-auto transition-colors duration-500">
+    <div className="bg-white dark:bg-gray-950  transition-colors duration-500">
       <motion.section
         ref={ref}
-        className="flex items-center justify-center px-6 pb-10  pt-24"
+        className="flex items-center justify-center px-6 pb-6  pt-24"
         variants={containerVariants}
         initial="hidden"
         animate={controls}
@@ -74,7 +74,7 @@ function HomeContent() {
           </motion.p>
 
           <motion.div
-            className="mt-2 flex flex-col sm:flex-row justify-center items-center gap-4"
+            className=" flex flex-col sm:flex-row justify-center items-center gap-4"
             variants={fadeInUp}
           >
             <motion.button

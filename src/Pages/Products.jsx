@@ -149,7 +149,7 @@ const ProductByCategoryCardView = () => {
                         src={product.images?.[0] || product.image}
                         alt={product.name}
                         loading="lazy"
-                        className="w-full sm:w-40 h-40 object-contain rounded"
+                        className="w-full sm:w-48 h-56 object-contain rounded"
                       />
                       <div className="flex-1">
                         <h3 className="text-md font-semibold">{product.name}</h3>

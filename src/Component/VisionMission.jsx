@@ -39,7 +39,7 @@ const VisionMission = () => {
   };
 
   return (
-    <section className="relative py-16 sm:py-20 bg-blue-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative py-16 sm:py-6 bg-blue-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full box-sizing-border-box">
         <motion.div
           variants={containerVariants}
@@ -47,7 +47,7 @@ const VisionMission = () => {
           whileInView="animate"
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-12 sm:mb-6"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
             Our Vision <span className="text-blue-700">&</span> Mission
@@ -57,7 +57,7 @@ const VisionMission = () => {
           </p>
         </motion.div>
 
-        <div className="space-y-12 sm:space-y-16">
+        <div className="space-y-12 sm:space-y-6">
           {items.map((item, idx) => {
             const Icon = item.icon;
             return (

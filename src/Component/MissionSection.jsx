@@ -58,7 +58,7 @@ const ImpactStatsSection = () => {
 
   return (
     <motion.section
-      className="px-6 py-10 lg:py-14 bg-white dark:bg-[#0f172a] text-black dark:text-white"
+      className="px-6 py-10 lg:py-6 bg-white dark:bg-[#0f172a] text-black dark:text-white"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}

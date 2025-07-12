@@ -80,7 +80,7 @@ function TestimonialsPage() {
   ];
 
   return (
-    <section className="py-10 bg-blue-50 dark:bg-gray-900 px-4 overflow-x-hidden">
+    <section className="py-6 bg-blue-50 dark:bg-gray-900 px-4 overflow-x-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
         {/* 📣 Heading */}
         <motion.div

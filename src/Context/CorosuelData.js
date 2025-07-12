@@ -5,15 +5,14 @@ export const banners = [
     image: require("../Assets/Images/InnovativeProducts.png"),
   },
   {
-    title: "Global Distribution",
-    subtitle:
-      "Expanding across North America, Europe, Middle East, India, South East Asia, Australia",
-    image: require("../Assets/Images/Globaldistributions.png"),
-  },
-  {
     title: "Discover DJI",
     subtitle: "Smart. Stable. Spectacular.",
     image: require("../Assets/Images/DJI_Products.png"),
+  },
+  {
+    title: "Unleash Gaming Power",
+    subtitle: "Experience unmatched performance and next-gen graphics.",
+    image: require("../Assets/Images/alian.png"),
   },
   {
     title: "Best Sellers",
@@ -25,9 +24,11 @@ export const banners = [
     subtitle: "It's time to see world around you.",
     image: require("../Assets/Images/VRBanner.png"),
   },
+  
   {
-    title: "Unleash Gaming Power",
-    subtitle: "Experience unmatched performance and next-gen graphics.",
-    image: require("../Assets/Images/alian.png"),
+    title: "Global Distribution",
+    subtitle:
+      "Expanding across North America, Europe, Middle East, India, South East Asia, Australia",
+    image: require("../Assets/Images/Globaldistributions.png"),
   },
 ];
