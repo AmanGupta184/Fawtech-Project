@@ -55,7 +55,7 @@ const BannerCarousel = () => {
   return (
     <div
       ref={carouselRef}
-      className="relative w-full h-[150px] sm:h-[480px] overflow-hidden shadow-lg dark:bg-black"
+      className="relative w-full h-[180px] sm:h-[430px] overflow-hidden shadow-lg dark:bg-black"
       onMouseEnter={stopAutoSlide}
       onMouseLeave={startAutoSlide}
       onTouchStart={handleTouchStart}

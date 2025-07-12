@@ -55,7 +55,7 @@ function HomeContent() {
           </motion.div>
 
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+            className="text-2xl sm:text-3xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
             variants={fadeInUp}
           >
             Fawtech Electronics is UAE's leading electronics store.
