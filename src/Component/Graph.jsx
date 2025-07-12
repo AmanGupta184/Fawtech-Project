@@ -20,7 +20,7 @@ const Graph = () => {
 
   return (
     <div className="bg-white dark:bg-gray-950 transition-colors duration-500 overflow-x-hidden">
-      <section className="max-w-7xl mx-auto py-16 px-4 grid md:grid-cols-2 gap-8 sm:gap-12">
+      <section className="max-w-7xl mx-auto py-6 px-4 grid md:grid-cols-2 gap-8 sm:gap-12">
         {/* Accordion Section */}
         <motion.div
           className="w-full"
@@ -89,7 +89,7 @@ const Graph = () => {
           }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h4 className="text-base sm:text-lg font-semibold mb-10 text-blue-800 text-center">
+          <h4 className="text-base sm:text-lg font-semibold  text-blue-800 text-center">
             Marking up memorable journey towards our goals.
           </h4>
 
