@@ -77,7 +77,7 @@ const BannerCarousel = () => {
               alt={banners[index].title}
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white pt-24 sm:pt-32 px-4 sm:px-6 text-center">
+            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white  sm:pt-32 px-4 sm:px-6 text-center">
               <h2 className="text-xl sm:text-3xl md:text-5xl font-bold italic drop-shadow-md">
                 {banners[index].title}
               </h2>
