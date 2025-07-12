@@ -68,6 +68,16 @@ import DJIMavic3Pro from "../Assets/Images/Products/DJIMavic3Pro.png";
 import FPVImage from "../Assets/Images/Products/FPVImage.jpg";
 
 const ProductData = [
+    {
+    name: "PlayStation 5 Pro",
+    brand: "Sony",
+    category: "Gaming Consoles",
+    images: [PS5ProImage],
+    description:
+      "Upgraded version of PlayStation 5 with better GPU and 4K gaming support.",
+    specs:
+      "Custom AMD RDNA 3 GPU, 1TB SSD, 4K/120Hz support, Ray Tracing, DualSense controller",
+  },
   {
     name: "Xbox Series X",
     brand: "Microsoft",
@@ -87,16 +97,6 @@ const ProductData = [
       "Sony’s next-gen console with immersive haptics, ray tracing, and ultra-fast SSD.",
     specs:
       "AMD Zen 2 CPU, RDNA 2 GPU, 16GB GDDR6, 825GB SSD, 4K Gaming, HDR, Wi-Fi 6",
-  },
-  {
-    name: "PlayStation 5 Pro",
-    brand: "Sony",
-    category: "Gaming Consoles",
-    images: [PS5ProImage],
-    description:
-      "Upgraded version of PlayStation 5 with better GPU and 4K gaming support.",
-    specs:
-      "Custom AMD RDNA 3 GPU, 1TB SSD, 4K/120Hz support, Ray Tracing, DualSense controller",
   },
   {
     name: "PlayStation 4",
@@ -180,7 +180,14 @@ const ProductData = [
     specs:
       "2000x2040 OLED per eye, 120Hz refresh rate, 110° FOV, eye tracking, haptic feedback, adaptive triggers",
   },
-
+  {
+    name: "Acer Predator Helios",
+    brand: "Acer",
+    category: "Gaming and Professional Laptops",
+    images: [Predator],
+    description: "High-end gaming beast with top specs and RGB keyboard.",
+    specs: 'Intel Core i9, RTX 4080, 32GB RAM, 1TB SSD, 16" QHD 240Hz',
+  },
   {
     name: "Lenovo Legion",
     brand: "Lenovo",
@@ -239,14 +246,6 @@ const ProductData = [
       'AMD Ryzen 7, Radeon Graphics, 16GB RAM, 512GB SSD, 15.6" FHD display',
   },
   {
-    name: "Acer Predator Helios",
-    brand: "Acer",
-    category: "Gaming and Professional Laptops",
-    images: [Predator],
-    description: "High-end gaming beast with top specs and RGB keyboard.",
-    specs: 'Intel Core i9, RTX 4080, 32GB RAM, 1TB SSD, 16" QHD 240Hz',
-  },
-  {
     name: "SanDisk",
     brand: "SanDisk",
     category: "Memory Cards",
@@ -303,6 +302,16 @@ const ProductData = [
       "Sony SF-G Tough Series, 4GB to 256GB, UHS-II, up to 300MB/s read, IP68",
   },
   {
+    name: "MacBook Air",
+    brand: "Apple",
+    category: "Apple",
+    images: [MW0Y3Image],
+    description:
+      "Apple's most powerful product is built for extreme performance, handling pro-level tasks with unmatched speed and efficiency.",
+    specs:
+      '13-inch and 15-inch models, Apple M1 to M4 chip, 13.6" Liquid Retina display',
+  },
+  {
     name: "iPad",
     brand: "Apple",
     category: "Apple",
@@ -310,16 +319,6 @@ const ProductData = [
     description: "iPads with powerful chips and premium design.",
     specs:
       " Ultra Retina XDR (OLED),Apple M4 chip (first to feature M4),11-inch and 13-inch, Wi‑Fi 6E",
-  },
-  {
-    name: "MacBook Air",
-    brand: "Apple",
-    category: "Apple",
-    images: [MW0Y3Image],
-    description:
-      "M2-powered MacBook Air with ultra-slim design and all-day battery.",
-    specs:
-      '13-inch and 15-inch models, Apple M1 to M4 chip, 13.6" Liquid Retina display',
   },
   {
     name: 'MacBook Pro 14"/16"',
