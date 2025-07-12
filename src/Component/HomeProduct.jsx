@@ -23,7 +23,7 @@ const productVariants = {
 const HomeProduct = () => {
   return (
     <motion.section
-      className="py-16 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
+      className="py-6 px-4 bg-gray-50 dark:bg-gray-900 transition-colors duration-300"
       variants={sectionVariants}
       initial="hidden"
       animate="visible"
