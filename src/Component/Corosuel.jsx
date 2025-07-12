@@ -55,7 +55,7 @@ const BannerCarousel = () => {
   return (
     <div
       ref={carouselRef}
-      className="relative w-full h-[180px] sm:h-[430px] overflow-hidden shadow-lg dark:bg-black"
+      className="relative w-full h-[250px] sm:h-[430px] overflow-hidden shadow-lg dark:bg-black"
       onMouseEnter={stopAutoSlide}
       onMouseLeave={startAutoSlide}
       onTouchStart={handleTouchStart}
@@ -75,7 +75,7 @@ const BannerCarousel = () => {
             <img
               src={banners[index].image}
               alt={banners[index].title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-fill"
             />
             <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white  sm:pt-32 px-4 sm:px-6 text-center">
               <h2 className="text-xl sm:text-3xl md:text-5xl font-bold italic drop-shadow-md">
