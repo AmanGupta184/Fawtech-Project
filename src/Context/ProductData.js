@@ -152,7 +152,7 @@ const ProductData = [
   {
   name: 'PlayStation VR 2',
   brand: 'Sony',
-  category: 'Gaming Consoles',
+  category: 'VR',
   images: [PSVRImage],
   description: 'Next-gen VR headset for PS5 with advanced haptics, eye tracking, and stunning visual fidelity.',
   specs: '2000x2040 OLED per eye, 120Hz refresh rate, 110° FOV, eye tracking, haptic feedback, adaptive triggers'
@@ -220,7 +220,7 @@ const ProductData = [
     category: 'Memory Cards',
     images: [LexarImage],
     description: 'High-speed SD cards for prosumers and professionals.',
-    specs: 'Lexar Professional 1066x SDXC, 128GB, up to 160MB/s read, UHS-I, V30'
+    specs: 'Lexar Professional 1066x SDXC,From 4GB to 512GB, up to 160MB/s read, UHS-I, V30'
   },
   {
     name: 'Toshiba',
@@ -228,7 +228,7 @@ const ProductData = [
     category: 'Memory Cards',
     images: [ToshibaImage],
     description: 'Durable, high-capacity cards ideal for cameras and mobile devices.',
-    specs: 'Toshiba Exceria Pro N502, 128GB, UHS-II, up to 270MB/s read, waterproof'
+    specs: 'Toshiba Exceria Pro N502,From 4GB to 128GB, UHS-II, up to 270MB/s read, waterproof'
   },
   {
     name: 'Transcend',
@@ -236,7 +236,7 @@ const ProductData = [
     category: 'Memory Cards',
     images: [TranscendImage],
     description: 'Affordable and reliable cards for everyday use.',
-    specs: 'Transcend 300S SDHC UHS-I, 64GB, up to 95MB/s read, Class 10'
+    specs: 'Transcend 300S SDHC UHS-I,From 4GB to 512GB, up to 95MB/s read, Class 10'
   },
   {
     name: 'Kingston',
@@ -244,7 +244,7 @@ const ProductData = [
     category: 'Memory Cards',
     images: [KingstonImage],
     description: 'Memory solutions known for durability and value.',
-    specs: 'Kingston Canvas Go! Plus, 128GB microSD, UHS-I, A2, V30, 170MB/s'
+    specs: 'Kingston Canvas Go! Plus,4GB to 256GB microSD, UHS-I, A2, V30, 170MB/s'
   },
   {
     name: 'Sony SD Card',
@@ -252,7 +252,7 @@ const ProductData = [
     category: 'Memory Cards',
     images: [SonySDImage],
     description: 'Professional-grade SD card with ultra-fast read/write speeds.',
-    specs: 'Sony SF-G Tough Series, 128GB, UHS-II, up to 300MB/s read, IP68'
+    specs: 'Sony SF-G Tough Series, 4GB to 256GB, UHS-II, up to 300MB/s read, IP68'
   },
   {
     name: 'iPad',
@@ -260,7 +260,7 @@ const ProductData = [
     category: 'Apple',
     images: [IpadImage],
     description: 'iPads with powerful chips and premium design.',
-    specs: 'Apple iPad 10th Gen, A14 Bionic, 64GB/256GB, 10.9" Liquid Retina, Wi-Fi 6'
+    specs: 'Apple iPad 10th Gen, A14 Bionic, 10.9" Liquid Retina, Wi-Fi 6'
   },
   {
     name: 'MacBook Air',
@@ -268,7 +268,7 @@ const ProductData = [
     category: 'Apple',
     images: [MW0Y3Image],
     description: 'M2-powered MacBook Air with ultra-slim design and all-day battery.',
-    specs: '13-inch and 15-inch, Apple M2 chip, 8-core CPU, 8GB RAM, 256GB SSD, 13.6" Retina Display'
+    specs: '13-inch and 15-inch, Apple M2 chip, 13.6" Retina Display'
   },
   {
   name: "MacBook Pro 14'16",
@@ -276,7 +276,7 @@ const ProductData = [
   category: 'Apple',
   images: [MacBookPro1416Image],
   description: 'Apple’s flagship laptop with powerful M-series chips for pros.',
-  specs: 'Apple M3/M3 Pro/M3 Max, Liquid Retina XDR, up to 96GB RAM, 22-hour battery'
+  specs: 'Apple M3/M3 Pro/M3 Max, Liquid Retina XDR'
 },
 {
   name: 'Mac Mini',
@@ -284,7 +284,7 @@ const ProductData = [
   category: 'Apple',
   images: [MacMiniImage],
   description: 'Compact desktop Mac with M-series performance in a tiny footprint.',
-  specs: 'Apple M2/M2 Pro, up to 32GB RAM, 512GB–2TB SSD, multiple I/O ports'
+  specs: 'Apple M2/M2 Pro, multiple I/O ports'
 },
 {
   name: 'Pencil',
@@ -305,7 +305,7 @@ const ProductData = [
 {
   name: 'Dyson Airstrait',
   brand: 'Dyson',
-  category: 'Dyson',
+  category: 'Dyson Products',
   images: [DysonAirstraitImage],
   description: 'Hair straightener that styles wet hair with air, no hot plates.',
   specs: 'Air-powered styling, wet-to-dry, precise airflow, heat protection'
@@ -313,7 +313,7 @@ const ProductData = [
 {
   name: 'Dyson Purifier Hot & Cool',
   brand: 'Dyson',
-  category: 'Dyson',
+  category: 'Dyson Products',
   images: [DysonPurifierHotAndCoolImage],
   description: '3-in-1 air purifier, fan, and heater with HEPA filtration.',
   specs: 'HEPA H13 filter, real-time air monitoring, heating & cooling modes'
@@ -428,7 +428,7 @@ const ProductData = [
 {
   name: 'Dyson Airwrap Multi-Styler',
   brand: 'Dyson',
-  category: 'Dyson',
+  category: 'Dyson Products',
   image: [DysonAirwrapMultiStyler],
   description: 'Versatile hair styler that curls, smooths, and volumizes using air.',
   specs: 'Multiple attachments, Coanda effect, intelligent heat control, storage case'
@@ -436,7 +436,7 @@ const ProductData = [
 {
   name: 'Dyson Corrale Hair Straightener',
   brand: 'Dyson',
-  category: 'Dyson',
+  category: 'Dyson Products',
   image: [DysonCorraleHairStraightener],
   description: 'Cordless straightener with flexing plates and battery power.',
   specs: 'Manganese copper plates, OLED display, 30min cordless use, intelligent heat'
@@ -444,7 +444,7 @@ const ProductData = [
 {
   name: 'Dyson V12 Detect Vacuum Cleaner',
   brand: 'Dyson',
-  category: 'Dyson',
+  category: 'Dyson Products',
   image: [DysonV15DetectVacuumCleaner],
   description: 'Smart cordless vacuum with laser dust detection.',
   specs: '230AW suction, HEPA filter, laser dust tech, LCD screen, 60min runtime'
