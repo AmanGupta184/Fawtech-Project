@@ -27,6 +27,11 @@ const banners = [
     subtitle: "It's time to see world around you.",
     image: require("../Assets/Images/VRBanner.png"),
   },
+  {
+    title: "Unleash Gaming Power",
+subtitle: "Experience unmatched performance and next-gen graphics.",
+image: require("../Assets/Images/alian.png"),
+  },
 ];
 
 const BannerCarousel = () => {
@@ -83,7 +88,7 @@ const BannerCarousel = () => {
   return (
     <div
       ref={carouselRef}
-      className="relative w-full h-[180px] sm:h-[480px] overflow-hidden shadow-lg dark:bg-black"
+      className="relative w-full h-[150px] sm:h-[480px] overflow-hidden shadow-lg dark:bg-black"
       onMouseEnter={stopAutoSlide}
       onMouseLeave={startAutoSlide}
       onTouchStart={handleTouchStart}
