@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import VRWorldImg from "../Assets/Images/VR-World.jpg";
+import VRWorldImg from "../Assets/Images/VRWorld.jpg";
 import DysonImg from "../Assets/Images/DysonProducts.jpeg";
 import GamingSystemImg from "../Assets/Images/GamingSystem.jpg";
 import GamingProductsImg from "../Assets/Images/GamingProducts.png";
