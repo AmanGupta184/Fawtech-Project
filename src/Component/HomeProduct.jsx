@@ -21,7 +21,7 @@ const products = [
   },
   {
     image: GamingSystemImg,
-    category: "Gaming Systems",
+    category: "Professional & Gaming Systems",
     description:
       "Discover accessories and gear built for elite gaming: laptops, GPUs, monitors, and more.",
   },
