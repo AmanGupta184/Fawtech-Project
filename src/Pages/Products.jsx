@@ -55,9 +55,9 @@ const ProductByCategoryCardView = () => {
   return (
     <Layout>
       <div className="min-h-screen px-6 py-24 bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-        <h1 className="text-3xl font-bold mb-10 text-center">Explore Our Products</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center">Explore Our Products</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category) => {
             const products = productsByCategory[category];
             const [firstProduct] = products;
@@ -81,7 +81,7 @@ const ProductByCategoryCardView = () => {
                       key={idx}
                       src={logo}
                       alt="brand"
-                      className="w-8 h-8 object-contain"
+                      className="w-20 h-20 object-contain"
                       loading="lazy"
                     />
                   ))}
@@ -91,7 +91,7 @@ const ProductByCategoryCardView = () => {
                   <img
                     src={firstProduct.images?.[0] || firstProduct.image}
                     alt={firstProduct.name}
-                    className="w-full h-24 object-contain mb-2"
+                    className="w-full h-40 object-contain "
                     loading="lazy"
                   />
                   <h3 className="text-sm font-medium">{firstProduct.name}</h3>
@@ -149,7 +149,7 @@ const ProductByCategoryCardView = () => {
                         src={product.images?.[0] || product.image}
                         alt={product.name}
                         loading="lazy"
-                        className="w-full sm:w-36 h-32 object-contain rounded"
+                        className="w-full sm:w-40 h-40 object-contain rounded"
                       />
                       <div className="flex-1">
                         <h3 className="text-md font-semibold">{product.name}</h3>
