@@ -57,7 +57,7 @@ const ProductByCategoryCardView = () => {
       <div className="min-h-screen px-6 py-24 bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
         <h1 className="text-3xl font-bold mb-10 text-center">Explore Our Products</h1>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {categories.map((category) => {
             const products = productsByCategory[category];
             const [firstProduct] = products;
