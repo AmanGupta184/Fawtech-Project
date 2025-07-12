@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { SiQuicktime } from "react-icons/si";
 import { GrUserExpert } from "react-icons/gr";
 import { PiMathOperationsLight, PiStrategyFill } from "react-icons/pi";
-
 import TeamMemberCard from "../Component/TeamMemberCard";
+
 // Animation for cards
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },

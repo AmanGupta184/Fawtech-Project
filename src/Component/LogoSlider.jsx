@@ -73,7 +73,7 @@ const LogoSlider = () => {
                   <motion.img
                     src={logo.image}
                     alt={`Logo ${logo.id}`}
-                    className="h-16 object-contain z-10"
+                    className={logo.className}
                     variants={hoverVariants}
                   />
                 </motion.div>

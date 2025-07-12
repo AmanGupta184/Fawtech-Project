@@ -5,30 +5,7 @@ import { FaPlus, FaTimes } from "react-icons/fa";
 import p1 from "../Assets/Person/p1.jpg";
 import p2 from "../Assets/Person/p2.jpg";
 import p3 from "../Assets/Person/p3.jpg";
-
-const stats = [
-  {
-    value: 20,
-    suffix: "M",
-    label: "Reach Worldwide",
-    description:
-      "Creating a global electronics hub that enhances how people live, work, and connect.",
-  },
-  {
-    value: 8.5,
-    suffix: "x",
-    label: "Faster Growth",
-    description:
-      "Rapid expansion by offering cutting-edge products, great service, and global reach.",
-  },
-  {
-    value: 100,
-    suffix: "+",
-    label: "Global Brands",
-    description:
-      "Partnering with top-tier IT & Electronics brands to lead the future of smart living.",
-  },
-];
+import {stats} from "../Context/MissionSectionData";
 
 const avatars = [p1, p2, p3];
 

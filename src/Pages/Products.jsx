@@ -11,20 +11,17 @@ const ProductByCategoryCardView = () => {
   const [isMobile, setIsMobile] = useState(isMobileDevice());
   const hoverTimeoutRef = useRef(null);
 
-  // Mobile detection on resize
   useEffect(() => {
     const handleResize = () => setIsMobile(isMobileDevice());
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Lock scroll on modal open
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", Boolean(activeCategory));
     return () => document.body.classList.remove("overflow-hidden");
   }, [activeCategory]);
 
-  // Group products by category
   const productsByCategory = useMemo(() => {
     return ProductData.reduce((acc, product) => {
       const { category, brand, name, description } = product;
@@ -38,7 +35,6 @@ const ProductByCategoryCardView = () => {
 
   const categories = useMemo(() => Object.keys(productsByCategory), [productsByCategory]);
 
-  // Hover / tap control
   const showOverlay = (category) => {
     clearTimeout(hoverTimeoutRef.current);
     hoverTimeoutRef.current = setTimeout(() => setActiveCategory(category), 100);
@@ -70,7 +66,6 @@ const ProductByCategoryCardView = () => {
             return (
               <motion.div
                 key={category}
-                layoutId={`card-${category}`}
                 layout
                 transition={{ layout: { duration: 0.5, ease: "easeInOut" } }}
                 onMouseEnter={() => !isMobile && showOverlay(category)}
@@ -97,6 +92,7 @@ const ProductByCategoryCardView = () => {
                     src={firstProduct.images?.[0] || firstProduct.image}
                     alt={firstProduct.name}
                     className="w-full h-24 object-contain mb-2"
+                    loading="lazy"
                   />
                   <h3 className="text-sm font-medium">{firstProduct.name}</h3>
                   <p className="text-xs text-gray-600 dark:text-gray-400 truncate">
@@ -116,20 +112,18 @@ const ProductByCategoryCardView = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
               onClick={() => setActiveCategory(null)}
               onMouseEnter={!isMobile ? cancelHoverTimeout : undefined}
               onMouseLeave={!isMobile ? hideOverlay : undefined}
             >
               <motion.div
-                layoutId={`card-${activeCategory}`}
-                layout
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.95, opacity: 0 }}
-                transition={{ duration: 0.45, ease: "easeInOut" }}
-                className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-lg p-6 relative shadow-xl"
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: 30, opacity: 0 }}
+                transition={{ duration: 0.35, ease: "easeOut" }}
+                className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-lg p-6 relative shadow-xl will-change-transform"
                 onClick={(e) => e.stopPropagation()}
               >
                 <button
@@ -145,16 +139,16 @@ const ProductByCategoryCardView = () => {
                   {productsByCategory[activeCategory].map((product, idx) => (
                     <motion.div
                       key={`${product.name}-${idx}`}
-                      layout
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: 20 }}
-                      transition={{ duration: 0.4, delay: idx * 0.08, ease: "easeOut" }}
+                      transition={{ duration: 0.3, delay: idx * 0.06, ease: "easeOut" }}
                       className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg flex flex-col sm:flex-row gap-4 items-start shadow"
                     >
                       <img
                         src={product.images?.[0] || product.image}
                         alt={product.name}
+                        loading="lazy"
                         className="w-full sm:w-36 h-32 object-contain rounded"
                       />
                       <div className="flex-1">

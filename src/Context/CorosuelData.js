@@ -1,22 +1,33 @@
-export const CorosuelData = [
+export const banners = [
   {
-    id:1,
-    image: require('../Assets/Images/laptop.jpg'),
+    title: "Explore Innovation",
+    subtitle: "Discover cutting-edge electronics & IT solutions.",
+    image: require("../Assets/Images/InnovativeProducts.png"),
   },
   {
-    id:2,
-    image: require('../Assets/Images/drones2.jpg'),
+    title: "Global Distribution",
+    subtitle:
+      "Expanding across North America, Europe, Middle East, India, South East Asia, Australia",
+    image: require("../Assets/Images/Globaldistributions.png"),
   },
   {
-    id:3,
-    image: require('../Assets/Images/pc.png'),
+    title: "Discover DJI",
+    subtitle: "Smart. Stable. Spectacular.",
+    image: require("../Assets/Images/DJI_Products.png"),
   },
   {
-    id:4,
-    image: require('../Assets/Images/vr5.png'),
+    title: "Best Sellers",
+    subtitle: "Excellence, chosen by many.",
+    image: require("../Assets/Images/TopSeller.png"),
   },
   {
-    id:5,
-    image: require('../Assets/Images/console.png'),
-  }
-]
+    title: "Experience VR World",
+    subtitle: "It's time to see world around you.",
+    image: require("../Assets/Images/VRBanner.png"),
+  },
+  {
+    title: "Unleash Gaming Power",
+    subtitle: "Experience unmatched performance and next-gen graphics.",
+    image: require("../Assets/Images/alian.png"),
+  },
+];
