@@ -24,18 +24,10 @@ const BannerCarousel = () => {
   }, []);
 
   useEffect(() => {
-    const img = new Image();
-    img.src = banners[index].image;
-    img.onload = () => setIsImageLoaded(true);
-    img.onerror = () => setIsImageLoaded(true);
-    return () => {
-      img.onload = null;
-      img.onerror = null;
-    };
+    setIsImageLoaded(false); // Reset loading state when index changes
   }, [index]);
 
   const goToSlide = (i) => {
-    setIsImageLoaded(false);
     setIndex(i);
   };
 
@@ -63,21 +55,28 @@ const BannerCarousel = () => {
       onTouchEnd={handleTouchEnd}
     >
       <AnimatePresence mode="wait">
-        {isImageLoaded ? (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.5 }}
-            className="absolute inset-0 w-full h-full"
-          >
-            <img
-              src={banners[index].image}
-              alt={banners[index].title}
-              className="w-full h-full object-fill"
-            />
-            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white  sm:pt-32 px-4 sm:px-6 text-center">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -50 }}
+          transition={{ duration: 0.5 }}
+          className="absolute inset-0 w-full h-full"
+        >
+          {!isImageLoaded && (
+            <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-800 z-10">
+              <span className="text-white animate-pulse">Loading...</span>
+            </div>
+          )}
+          <img
+            src={banners[index].image}
+            alt={banners[index].title}
+            className={`w-full h-full object-fill ${isImageLoaded ? "block" : "hidden"}`}
+            onLoad={() => setIsImageLoaded(true)}
+            onError={() => setIsImageLoaded(true)}
+          />
+          {isImageLoaded && (
+            <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white sm:pt-32 px-4 sm:px-6 text-center">
               <h2 className="text-xl sm:text-3xl md:text-5xl font-bold italic drop-shadow-md">
                 {banners[index].title}
               </h2>
@@ -85,12 +84,8 @@ const BannerCarousel = () => {
                 {banners[index].subtitle}
               </p>
             </div>
-          </motion.div>
-        ) : (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-800">
-            <span className="text-white animate-pulse">Loading...</span>
-          </div>
-        )}
+          )}
+        </motion.div>
       </AnimatePresence>
 
       {/* Navigation Arrows */}
