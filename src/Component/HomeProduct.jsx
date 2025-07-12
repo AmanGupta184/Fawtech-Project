@@ -29,7 +29,7 @@ const HomeProduct = () => {
       animate="visible"
     >
       <motion.h2
-        className="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-12"
+        className="text-4xl font-extrabold text-center text-gray-900 dark:text-white mb-10"
         initial={{ scale: 0.9 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -52,7 +52,7 @@ const HomeProduct = () => {
             <motion.img
               src={image}
               alt={category}
-              className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-blue-600/80 dark:from-blue-800/80 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-500" />
             <div className="p-6 relative z-10">
