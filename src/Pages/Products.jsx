@@ -55,7 +55,7 @@ const ProductByCategoryCardView = () => {
   return (
     <Layout>
       <div className="min-h-screen px-6 py-24 bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-        <h1 className="text-3xl font-bold mb-8 text-center">Explore Our Products</h1>
+        <h1 className="text-3xl font-bold mb-2 text-center">Explore Our Products</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
           {categories.map((category) => {
@@ -71,7 +71,7 @@ const ProductByCategoryCardView = () => {
                 onMouseEnter={() => !isMobile && showOverlay(category)}
                 onMouseLeave={() => !isMobile && hideOverlay()}
                 onClick={() => isMobile && setActiveCategory(category)}
-                className="cursor-pointer bg-white dark:bg-gray-900 rounded-xl shadow-md p-4 hover:shadow-lg transition-all duration-300"
+                className="cursor-pointer bg-white dark:bg-gray-900 rounded-xl shadow-md p-2 hover:shadow-lg transition-all duration-300"
               >
                 <h2 className="text-xl font-semibold mb-2 text-blue-600">{formatCategory(category)}</h2>
 
@@ -81,7 +81,7 @@ const ProductByCategoryCardView = () => {
                       key={idx}
                       src={logo}
                       alt="brand"
-                      className="w-50 h-50 object-contain"
+                      className="w-auto h-auto object-fill"
                       loading="lazy"
                     />
                   ))}
@@ -91,7 +91,7 @@ const ProductByCategoryCardView = () => {
                   <img
                     src={firstProduct.images?.[0] || firstProduct.image}
                     alt={firstProduct.name}
-                    className="w-full h-40 object-contain "
+                    className="w-full h-60 object-contain "
                     loading="lazy"
                   />
                   <h3 className="text-sm font-medium">{firstProduct.name}</h3>

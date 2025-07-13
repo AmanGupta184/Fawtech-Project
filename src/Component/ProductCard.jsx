@@ -14,14 +14,13 @@ const ProductCard = memo(({ product }) => {
       <img
         src={product.image}
         alt={product.name}
-        className="w-100 h-64 object-cover rounded-md mb-2"
+        className="w-96 h-64 object-fill rounded-md mb-2"
         loading="lazy"
       />
       <h3 className="text-lg font-semibold">{product.name}</h3>
       <p className="text-sm text-gray-500 dark:text-gray-300">{product.brand}</p>
       <p className="text-blue-600 font-medium">${product.price.toFixed(2)}</p>
-      {/* The "Buy Now" button has been removed from here */}
-    </motion.div>
+          </motion.div>
   );
 });
 
