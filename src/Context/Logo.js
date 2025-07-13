@@ -20,6 +20,8 @@ import NvidiaLogo from "../Assets/Logo/NvidiaLogo.png";
 import ToshibaLogo from "../Assets/Logo/ToshibaLogo.jpeg";
 import BoseLogo from "../Assets/Logo/BoseLogo.png";
 import AlienWareLogo from "../Assets/Logo/AlienwareLogo.png";
+import DJILogo from '../Assets/Logo/DJILogo.png'
+
 
 export const Logo = [
   { id: 1, image: JBLLogo, className: "h-20 object-contain z-10" },
@@ -35,13 +37,14 @@ export const Logo = [
   { id: 11, image: NintendoLogo, className: "h-20 object-contain z-10" },
   { id: 12, image: PnyLogo, className: "h-6 object-contain z-10" },
   { id: 13, image: MSILogo, className: "h-16 object-contain z-10" },
-  { id: 14, image: AMDLogo, className: "h-12 object-contain z-10" },
-  { id: 15, image: AcerLogo, className: "h-12 object-contain z-10" },
-  { id: 16, image: HarmonKardonLogo, className: "h-7 object-contain z-10" },
-  { id: 17, image: IntelLogo, className: "h-20 object-contain z-10" },
-  { id: 18, image: ToshibaLogo, className: "h-20 object-contain z-10" },
-  { id: 19, image: DellLogo, className: "h-28 object-contain z-10" },
-  { id: 20, image: BoseLogo, className: "h-20 object-contain z-10" },
-  { id: 21, image: NvidiaLogo, className: "h-7 object-contain z-10" },
-  { id: 22, image: AlienWareLogo, className: "h-24 object-contain z-10" },
+  { id: 14, image: DJILogo, className: "h-24 object-contain z-10" },
+  { id: 15, image: AMDLogo, className: "h-12 object-contain z-10" },
+  { id: 16, image: AcerLogo, className: "h-12 object-contain z-10" },
+  { id: 17, image: HarmonKardonLogo, className: "h-7 object-contain z-10" },
+  { id: 18, image: IntelLogo, className: "h-20 object-contain z-10" },
+  { id: 19, image: ToshibaLogo, className: "h-20 object-contain z-10" },
+  { id: 20, image: DellLogo, className: "h-28 object-contain z-10" },
+  { id: 21, image: BoseLogo, className: "h-20 object-contain z-10" },
+  { id: 22, image: NvidiaLogo, className: "h-7 object-contain z-10" },
+  { id: 23, image: AlienWareLogo, className: "h-24 object-contain z-10" },
 ];
