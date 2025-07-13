@@ -14,7 +14,7 @@ const ProductCard = memo(({ product }) => {
       <img
         src={product.image}
         alt={product.name}
-        className="w-80 h-64 object-cover rounded-md mb-2"
+        className="w-100 h-64 object-cover rounded-md mb-2"
         loading="lazy"
       />
       <h3 className="text-lg font-semibold">{product.name}</h3>
