@@ -44,7 +44,7 @@ const useServices = () =>
       {
         title: "DJI Products",
         description:
-          "Enhance your setup with keyboards, mice, Headset, and more—everything you need for serious gaming.",
+          "DJI is a global leader in drone and camera technology. Capturing stunning aerial photos and videos, enabling industries and creators worldwide.",
         icon: <GiDeliveryDrone  className="w-10 h-10 text-blue-600" />,
       },
       {
