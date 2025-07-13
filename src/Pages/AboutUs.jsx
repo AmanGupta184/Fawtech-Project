@@ -7,7 +7,7 @@ import {
 } from "react-icons/gi";
 import { BsHeadsetVr } from "react-icons/bs";
 import { PiHairDryerLight } from "react-icons/pi";
-import { MdOutlineDevicesOther } from "react-icons/md";
+import { GiDeliveryDrone } from "react-icons/gi";
 import MissionSection from "../Component/MissionSection";
 import TestimonialsPage from "../Component/TestimonialsPage";
 import AboutHead from "../Component/AboutHead";
@@ -42,10 +42,10 @@ const useServices = () =>
         icon: <BsHeadsetVr className="w-10 h-10 text-blue-600" />,
       },
       {
-        title: "Gaming Product",
+        title: "DJI Products",
         description:
           "Enhance your setup with keyboards, mice, Headset, and more—everything you need for serious gaming.",
-        icon: <MdOutlineDevicesOther className="w-10 h-10 text-blue-600" />,
+        icon: <GiDeliveryDrone  className="w-10 h-10 text-blue-600" />,
       },
       {
         title: "Gaming Console",

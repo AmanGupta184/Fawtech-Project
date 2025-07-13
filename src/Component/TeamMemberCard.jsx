@@ -86,7 +86,7 @@ const TeamMemberCard = () => {
       {/* Right Side - Mission and Stats */}
       <div className="flex flex-col gap-6">
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
-          Founded and led by Noor Mohammed, a visionary entrepreneur with deep
+          Founded and led by Noor Mohammed in 2023, a visionary entrepreneur with deep
           expertise in the tech and trading industry, Fawtech continues to grow
           by building strong relationships with global suppliers and clients.
           Under his leadership, the company emphasizes swift delivery,
