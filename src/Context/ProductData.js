@@ -68,7 +68,7 @@ import DJIAvataFPVDrone from "../Assets/Products/DJIAvataFPVDrone.png";
 import DJIMini4Pro from "../Assets/Products/DJIMini4Pro.png";
 import DJIInspire3 from "../Assets/Products/DJIInspire3.png";
 // import DJIMavic3Pro from "../Assets/Products/DJIMavic3Pro.png";
-import DJIIM from '../Assets/Products/DJIIM.jpg'
+import DJIIM from '../Assets/Products/DJIIM.png'
 import FPVImage from "../Assets/Products/FPVImage.png";
 
 
