@@ -8,7 +8,7 @@ const InfinityLoader = () => {
         x="0px"
         y="0px"
         viewBox="0 0 55 23.1"
-        height="80"
+        height="60"
         width="200"
         preserveAspectRatio="xMidYMid meet"
       >
