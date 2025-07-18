@@ -2,7 +2,13 @@ import React from "react";
 import Layout from "../Layout/Layout";
 import { motion } from "framer-motion";
 import Shopimg from "../Assets/Images/Shop.jpg";
-import { FaTags, FaUserTie, FaHeadset, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaTags,
+  FaUserTie,
+  FaHeadset,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
 
 // Animation
 const fadeUp = {
@@ -21,11 +27,14 @@ function Contact() {
         <main className="max-w-6xl mx-auto relative">
           {/* Floating Icons */}
           <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-            
             <a href="mailto:noor@fawtech.co">
               <FaEnvelope className="text-blue-600 w-10 h-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition" />
             </a>
-            <a href="https://maps.app.goo.gl/ByZNCWe619m6g8Ar7" target="_blank" rel="noreferrer">
+            <a
+              href="https://maps.app.goo.gl/pWjg6xkGbkDsvqPJ8"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaMapMarkerAlt className="text-red-500 w-10 h-10 p-2 bg-white dark:bg-gray-800 rounded-full shadow-md hover:scale-110 transition" />
             </a>
           </div>
@@ -71,8 +80,10 @@ function Contact() {
             >
               <h3 className="text-xl font-bold mb-4">Store Address</h3>
               <address className="not-italic font-semibold space-y-1">
-                <p>Office No: 113, ELHAM MOHAMED AMIN MIRZA</p>
-                <p>22B St, ABU HAIL, DUBAI, U.A.E</p>
+                Westburry Tower 1, Office No. 2103-33, Business Bay, Dubai,
+                U.A.E
+                <br />
+                P.O. Box 231381
               </address>
               <div className="mt-6">
                 <h4 className="text-lg font-bold mb-1">E-Mail</h4>
@@ -118,7 +129,9 @@ function Contact() {
                     </motion.div>
                     <div>
                       <strong>{item.title}</strong>
-                      <p className="text-sm font-medium mt-1 text-gray-700 dark:text-gray-300">{item.text}</p>
+                      <p className="text-sm font-medium mt-1 text-gray-700 dark:text-gray-300">
+                        {item.text}
+                      </p>
                     </div>
                   </li>
                 ))}
@@ -135,9 +148,13 @@ function Contact() {
             custom={4}
             className="rounded-xl p-8 bg-gradient-to-r from-blue-900 via-blue-600 to-blue-400 text-white shadow-lg backdrop-blur-md "
           >
-            <h3 className="text-2xl font-bold mb-2">Let’s Build Something Great Together</h3>
+            <h3 className="text-2xl font-bold mb-2">
+              Let’s Build Something Great Together
+            </h3>
             <p className="text-sm md:text-base mb-4 max-w-2xl">
-              Whether you need enterprise tech solutions or consumer electronics, Fawtech is ready to partner with you. Connect with us now and elevate your business with smarter technology.
+              Whether you need enterprise tech solutions or consumer
+              electronics, Fawtech is ready to partner with you. Connect with us
+              now and elevate your business with smarter technology.
             </p>
             <a
               href="mailto:noor@fawtech.co"

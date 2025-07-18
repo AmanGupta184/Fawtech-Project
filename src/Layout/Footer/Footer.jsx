@@ -154,7 +154,8 @@ const Footer = () => {
             className="h-20 w-40 pl-2 object-contain"
           />
           <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-            Your one-stop shop for the latest electronics and gadgets. Stay connected with us!
+            Your one-stop shop for the latest electronics and gadgets. Stay
+            connected with us!
           </p>
         </motion.div>
 
@@ -183,8 +184,11 @@ const Footer = () => {
         <motion.div variants={sectionVariants(0.3)}>
           <h4 className="font-semibold mb-2">Contact Us</h4>
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            113, ELHAM MOHAMED AMIN MIRZA,<br />
-            ABU HAIL DUBAI, U.A.E
+            Westburry Tower 1, Office No. 2103-33,
+            <br />
+            Business Bay, Dubai, U.A.E
+            <br />
+            P.O. Box 231381
           </p>
           <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">
             Timings: 11am - 6pm (Mon–Sat), Sunday Holiday
